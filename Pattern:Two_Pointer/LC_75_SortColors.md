@@ -1,6 +1,6 @@
 ## Dutch National Flag Problem
 
-**Problem Statment(https://leetcode.com/problems/sort-colors/)**
+**[Problem Statment](https://leetcode.com/problems/sort-colors/)**
 
 
 <p align="center"> 
