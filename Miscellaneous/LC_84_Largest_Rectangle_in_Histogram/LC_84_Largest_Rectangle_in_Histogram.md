@@ -24,3 +24,9 @@ Constraints:
 
 - `1 <= heights.length <= 105`
 - `0 <= heights[i] <= 104`
+
+
+
+<p align="center"> 
+    <img src="/submissionImages/LC_84_Largest_Rectangle_in_Histogram.png" align="center" height=""></img>
+</p>
