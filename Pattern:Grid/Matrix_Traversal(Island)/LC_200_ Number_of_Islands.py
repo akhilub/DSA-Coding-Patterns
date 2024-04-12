@@ -1,8 +1,9 @@
 #Note: Dont go for DFS Stick to BFS 
+#Interviewers do not want you to modify the input array
+#Stick to BFS for interviews
 
 #Input modification is not allowed
 #BFS Algorithm
-#Stick to BFS for interviews
 from collections import deque
 class Solution:
     def numIslands(self,grid:List[List[str]])-> int:
@@ -37,7 +38,7 @@ class Solution:
 
 
 
-#Interviewers do not want you to modify the input array
+
 #When input modification is allowed
 #DFS Algorithm 
 class Solution:
