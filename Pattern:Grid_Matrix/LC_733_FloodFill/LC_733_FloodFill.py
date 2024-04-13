@@ -42,7 +42,7 @@ class Solution:
 
 
 #Approach 2  
-#RECURSIVE DFS FLOOD FILL (Using Stack)
+#RECURSIVE DFS FLOOD FILL 
 #Start filling the pixel as long as they have not been seen and also are the same color with the start pixel
 #This recursive dfs is fine in small image but tend to cause stack overflow in practical use
 class Solution:
@@ -60,7 +60,7 @@ class Solution:
                 nr = r+dr
                 nc = c+dc
                 if 0<=nr<R and 0<=nc<C:
-                    if image[nr][nc]==intialColor:
+                    if image[nr][nc]==initialColor:
                         dfs(nr,nc)
         dfs(sr,sc)
         return image
@@ -92,6 +92,7 @@ class Solution:
         return image
 
 
+#(Using Stack)
 #By replacing the queue with stack - this is similar to Recursion
 class Solution:
     def floodFill(self,image,sr,sc,newColor):
