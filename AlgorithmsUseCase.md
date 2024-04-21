@@ -1,0 +1,1 @@
+- If the problem requires finding all permutations or combinations , we can use **backtracking** or BFS or DFS

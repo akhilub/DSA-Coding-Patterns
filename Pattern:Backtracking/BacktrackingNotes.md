@@ -1,0 +1,1 @@
+- In backtracking we incrementally build a solution and follow the approach if the current solution can't take us to the valid solution, we abandon it and backtrack( go back) to try another solution
