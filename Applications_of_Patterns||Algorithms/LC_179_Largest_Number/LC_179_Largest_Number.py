@@ -1,6 +1,6 @@
 class Solution:
     def largestNumber(self, nums: List[int]) -> str:
-        # Build nums contains all numbers in the String format.
+        # Build nums containing all numbers in the String format.
         for i,n in enummerate(nums):
             nums[i] = str(n)
 
