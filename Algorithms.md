@@ -1,4 +1,4 @@
-##Dutch National Flag 
+## Dutch National Flag 
 
 
 **Pseudocode**
@@ -9,37 +9,38 @@ The following pseudocode for three-way partitioning which assumes zero-based arr
 - entries from j up to (and including) k are values not yet sorted, and
 - entries from k + 1 to the end of the array are values greater than mid.
 
-
-`procedure` three-way-partition(A : array of values, mid : value):
-    i ← 0
-    j ← 0
-    k ← size of A - 1
-
-    `while` j <= k:
-        `if` A[j] < mid:
-            `swap` A[i] and A[j]
-            i ← i + 1
-            j ← j + 1
-        `else if` A[j] > mid:
-            `swap` A[j] and A[k]
-            k ← k - 1
-        `else`:
-            j ← j + 1
-
 ```
-__`procedure`__ three-way-partition(A : array of values, mid : value):
+procedure three-way-partition(A : array of values, mid : value):
     i ← 0
     j ← 0
     k ← size of A - 1
 
-    __`while`__ j <= k:
-        __`if`__ A[j] < mid:
-            __`swap`__ A[i] and A[j]
+    while j <= k:
+        if A[j] < mid:
+            swap A[i] and A[j]
             i ← i + 1
             j ← j + 1
-        __`else if`__ A[j] > mid:
+        else if A[j] > mid:
             swap A[j] and A[k]
             k ← k - 1
-        __`else`__:
+        else:
             j ← j + 1
 ```
+
+<code>
+<strong>procedure</strong> three-way-partition(A : array of values, mid : value):<br>
+&nbsp;&nbsp;&nbsp;&nbsp;i ← 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;j ← 0<br>
+&nbsp;&nbsp;&nbsp;&nbsp;k ← size of A - 1<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;while j ≤ k:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if A[j] &lt; mid:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap A[i] and A[j]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;i ← i + 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j ← j + 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else if A[j] > mid:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;swap A[j] and A[k]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;k ← k - 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;else:<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;j ← j + 1<br>
+</code>
