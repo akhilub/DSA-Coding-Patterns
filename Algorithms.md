@@ -10,18 +10,36 @@ The following pseudocode for three-way partitioning which assumes zero-based arr
 - entries from k + 1 to the end of the array are values greater than mid.
 
 
-**procedure** three-way-partition(A : array of values, mid : value):
+`procedure` three-way-partition(A : array of values, mid : value):
     i ← 0
     j ← 0
     k ← size of A - 1
 
-    **while** j <= k:
-        **if** A[j] < mid:
-            **swap** A[i] and A[j]
+    `while` j <= k:
+        `if` A[j] < mid:
+            `swap` A[i] and A[j]
             i ← i + 1
             j ← j + 1
-        **else** if A[j] > mid:
+        `else if` A[j] > mid:
+            `swap` A[j] and A[k]
+            k ← k - 1
+        `else`:
+            j ← j + 1
+
+```
+__`procedure`__ three-way-partition(A : array of values, mid : value):
+    i ← 0
+    j ← 0
+    k ← size of A - 1
+
+    __`while`__ j <= k:
+        __`if`__ A[j] < mid:
+            __`swap`__ A[i] and A[j]
+            i ← i + 1
+            j ← j + 1
+        __`else if`__ A[j] > mid:
             swap A[j] and A[k]
             k ← k - 1
-        **else**:
+        __`else`__:
             j ← j + 1
+```
