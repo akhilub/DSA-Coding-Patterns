@@ -26,5 +26,5 @@ class Solution:
         return min_w
 
 
-#Follow Up Using Binary Search in O(nlogn)# Ignore .DS_Store files
-.DS_Store
+#Follow Up Using Binary Search in O(nlogn)
+
