@@ -8,6 +8,7 @@ The word can be constructed from letters of sequentially adjacent cells, where a
  
 
 Example 1:
+
 ![Example_1_img](https://assets.leetcode.com/uploads/2020/11/04/word2.jpg)
 
 ```
@@ -15,6 +16,7 @@ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "
 Output: true
 ```
 Example 2:
+
 ![Example_2_img](https://assets.leetcode.com/uploads/2020/11/04/word-1.jpg)
 ```
 
@@ -22,6 +24,7 @@ Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "
 Output: true
 ```
 Example 3:
+
 ![Example_3_img](https://assets.leetcode.com/uploads/2020/10/15/word3.jpg)
 ```
 Input: board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"
@@ -30,11 +33,11 @@ Output: false
 
 Constraints:
 
-m == board.length
-n = board[i].length
-1 <= m, n <= 6
-1 <= word.length <= 15
-board and word consists of only lowercase and uppercase English letters.
+- `m == board.length`
+- `n = board[i].length`
+- `1 <= m, n <= 6`
+- `1 <= word.length <= 15`
+- `board and word consists of only lowercase and uppercase English letters.`
  
 
 Follow up: Could you use search pruning to make your solution faster with a larger board?
