@@ -11,8 +11,9 @@ The following pseudocode for three-way partitioning which assumes zero-based arr
 
 
 
-**procedure** three-way-partition(A : array of values, mid : value):
+**procedure** 
 
+three-way-partition(A : array of values, mid : value):
     i ← 0
     j ← 0
     k ← size of A - 1
