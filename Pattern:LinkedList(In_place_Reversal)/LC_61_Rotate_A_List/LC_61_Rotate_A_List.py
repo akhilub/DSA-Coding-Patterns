@@ -2,7 +2,8 @@
 #1) Find the length of the LList and the tail position
 #2) Keep the rotation within the length
 #3) Find the pivot position , remove the connection and stich it to the front
-
+#TC: O(N)
+#SC:O(1)
 
 # nums = [1,2,3,4,5], k=2 places to the right  
 
