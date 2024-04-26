@@ -28,5 +28,5 @@ Constraints:
 
 
 <p align = "center">
-    <img src = "/submissionImages/LC_46_Permutations.png" align ="center" height= "1000"></img>
+    <img src = "/submissionImages/LC_46_Permutations.png" align ="center" width="1000" height= "1000"></img>
 </p>
