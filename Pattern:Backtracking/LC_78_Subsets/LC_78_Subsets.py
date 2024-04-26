@@ -30,6 +30,7 @@
 class Solution:
     def subsets(self,nums):
         ans = []
+        n = len(nums)
         def backtrack(cur,i):
             if i == n:
                 ans.append(cur[:])     #ans.append(copy.deepcopy(cur))  # cur[:] means deepcopy of 

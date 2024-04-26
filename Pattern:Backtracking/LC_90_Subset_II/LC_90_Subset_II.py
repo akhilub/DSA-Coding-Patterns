@@ -5,7 +5,7 @@
 #3) If the current element is the same as the previous element and the previous element was excluded, then we skip the current element to avoid duplicate subsets
 
 #TC:O(2^N)
-#SC:O
+#SC:O()
 
 
 class Solution:
@@ -35,3 +35,31 @@ class Solution:
 
         backtrack([],0)
         return ans
+
+
+
+#Competative Programming Approach 
+#1) Get all subsets via recursive backtracking
+#2) Then pull out the unique sets from the all subsets
+class Solution:
+    def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+        all_sets = []
+        n = len(nums)
+        def backtrack(cur,i):
+            if i == n:
+                all_sets.append(cur[::])
+                return
+            
+            
+            backtrack(cur+[nums[i]],i+1)
+            
+            backtrack(cur,i+1)
+                   
+        backtrack([],0)
+        
+        #all_sets has all subsets 
+        #From all_sets just pick the unique list elements by converting the all_sets list to set
+        
+        unique_sets = [list(s) for s in set([tuple(l) for l in all_sets])]
+        
+        return unique_sets 
