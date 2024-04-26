@@ -34,5 +34,5 @@ Constraints:
 
 
 <p align = "center">
-    <img src = "/submissionImages/LC_39_Combination_Sum.png" align ="center" width="500" height= "500"></img>
+    <img src = "/submissionImages/LC_39_Combination_Sum.png" align ="center" width="1000" height= "500"></img>
 </p>
