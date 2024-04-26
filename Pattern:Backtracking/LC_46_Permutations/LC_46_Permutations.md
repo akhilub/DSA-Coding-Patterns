@@ -27,6 +27,6 @@ Constraints:
 - `All the integers of nums are unique.`
 
 
-<p align = "center"> 
-    <img src = "/submissionImages/LC_46_Permutations.png" align ="center" height= ""></img>
+<p align = "center">
+    <img src = "/submissionImages/LC_46_Permutations.png" align ="center" height= "100"></img>
 </p>
