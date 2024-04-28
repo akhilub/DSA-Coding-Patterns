@@ -42,3 +42,27 @@ class Solution:
 
         backtrack([],0)
         return ans
+        
+#Approach 2) DFS
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        ans = []
+        def dfs(s: int, path: List[int]) -> None:
+            ans.append(path)
+
+            for i in range(s, len(nums)):
+                dfs(i + 1, path + [nums[i]])
+
+        dfs(0, [])
+        
+        return ans
+
+# ans = [[],[1],[1,2],[1,2,3],[1,3],[2],[2,3],[3]]
+#
+#   s=0             path <---[    ]
+#                  i=0   /   i=1|   i=2  \      #for loop
+#   s=1                [1]     [2]       [3]
+#                     / \       |        
+#   s=2            [1,2] [1,3] [2,3]      
+#                   /      
+#   s=3         [1,2,3] 

@@ -36,3 +36,7 @@ Constraints:
 <p align = "center">
     <img src = "/submissionImages/LC_39_Combination_Sum.png" align ="center" width="1000" height= "800"></img>
 </p>
+
+<p align = "center">
+    <img src = "/submissionImages/LC_39_Combination_Sum_2.png" align ="center" width="1000" height= "800"></img>
+</p>

@@ -35,6 +35,29 @@ class Solution:
         return ans
 
 
+#My Approach 2) 
+#DFS 
+#TC : O(N*2^N)
+#SC : O(N*2^N)
+class Solution:
+  def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
+     ans = []
+     nums.sort()
+    def dfs(s: int, path: List[int]) -> None:
+      ans.append(path)
+      
+      if s == len(nums):
+        return
+
+      for i in range(s, len(nums)):
+        if i > s and nums[i] == nums[i - 1]:
+          continue
+        dfs(i + 1, path + [nums[i]])
+
+    dfs(0, [])
+    return ans
+
+
 
 #Competative Programming Approach 
 #1) Get all subsets via recursive backtracking
@@ -47,7 +70,6 @@ class Solution:
             if i == n:
                 all_sets.append(cur[::])
                 return
-            
             
             backtrack(cur+[nums[i]],i+1)
             

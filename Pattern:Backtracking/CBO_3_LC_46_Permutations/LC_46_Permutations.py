@@ -20,12 +20,36 @@ class Solution:
                 ans.append(deepcopy(curSol))
                 return 
 
-           for x in nums:
-            if x not in curSol:
-                curSol.append(x)
-                backtrack(cur,i+1)
+           for ele in nums:
+            if ele not in curSol:
+                curSol.append(ele)
+                backtrack(curSol,i+1)
                 curSol.pop()
         
         backtrack([],0)
         return ans
 
+
+#Approach 2 
+#Standard Backtrack DFS
+class Solution:
+  def permute(self, nums: List[int]) -> List[List[int]]:
+    ans = []
+    used = [False] * len(nums)
+
+    def dfs(path: List[int]) -> None:
+      if len(path) == len(nums):
+        ans.append(path.copy())
+        return
+
+      for i, num in enumerate(nums):
+        if used[i]:
+          continue
+        used[i] = True
+        path.append(num)
+        dfs(path)
+        path.pop()
+        used[i] = False
+
+    dfs([])
+    return ans
