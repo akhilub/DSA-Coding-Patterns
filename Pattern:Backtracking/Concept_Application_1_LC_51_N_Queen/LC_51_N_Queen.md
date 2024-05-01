@@ -9,6 +9,7 @@ Each solution contains a distinct board configuration of the n-queens' placement
  
 
 Example 1:
+
 ![Example_1_img](https://assets.leetcode.com/uploads/2020/11/13/queens.jpg)
 
 ```

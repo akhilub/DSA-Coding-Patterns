@@ -24,7 +24,8 @@
 
 #In the main function , we call dfs(0,[]) to start the array and return the answer array
 
-
+#TC :O(n*n!)
+#SC :O(2*n-1)
 
 class Solution:
     def solveNQueen(self,n):

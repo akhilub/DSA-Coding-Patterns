@@ -5,6 +5,8 @@
 #And Update the answer to the maximum difference.Then update mi = min(mi,v).
 #Continue to traverse the array prices until the traversal ends.Finally return the answer
 
+#TC:O(n)
+#SC:O(1)
 
 #Python Language Concepts
 '''
@@ -39,8 +41,10 @@ class Solution:
 class Solution:
     def maxProfit(self,prices:List[int])-> int:
         if not prices: return 0
+        
         ans = 0
         pre = prices[0]
+
         for i in range(1,len(prices)):
             pre = min(pre, prices[i])
             ans = max(ans, prices[i]-pre)
