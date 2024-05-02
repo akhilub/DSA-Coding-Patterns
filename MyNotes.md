@@ -1,6 +1,6 @@
 # In Python
 
-- To split a string into a list of characters?
+## To split a string into a list of characters?
 
 ```
 "foobar"    →    ['f', 'o', 'o', 'b', 'a', 'r']
@@ -46,6 +46,6 @@ C = 'ABA'
 <map object at 0x102d9eac0>
 >>>list(map(lambda ch: "B" if ch =="A" else "A", C))
 ['B', 'A', 'B']
-''.join(['B', 'A', 'B'])
+>>>''.join(['B', 'A', 'B'])
 'BAB'
 ```
