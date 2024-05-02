@@ -5,13 +5,19 @@
 ```
 "foobar"    →    ['f', 'o', 'o', 'b', 'a', 'r']
 ```
+
 Using list Constructor
+```
 >>> list("foobar")
+['f', 'o', 'o', 'b', 'a', 'r']
+```
 
 Using List Comprehension
+```
 >>> str = 'foobar'
 >>> [ch for ch in str]
-
+['f', 'o', 'o', 'b', 'a', 'r']
+```
 - Syntax of lambda function
 
 ```
@@ -32,7 +38,14 @@ map(lambda item: item[] expression, iterable)
 
 ```
 Input : C = 'ABA' 
-Output: C = 'BAB'
+Output: 'BAB'
 ```
-
->>> map(lambda ch: if "B" ch =="A" else "A", C)
+```
+C = 'ABA'
+>>> map(lambda ch: "B" if ch =="A" else "A", C)
+<map object at 0x102d9eac0>
+>>>list(map(lambda ch: "B" if ch =="A" else "A", C))
+['B', 'A', 'B']
+''.join(['B', 'A', 'B'])
+'BAB'
+```
