@@ -41,7 +41,7 @@ Input : C = 'ABA'
 Output: 'BAB'
 ```
 ```
-C = 'ABA'
+>>> C = 'ABA'
 >>> map(lambda ch: "B" if ch =="A" else "A", C)
 <map object at 0x102d9eac0>
 >>>list(map(lambda ch: "B" if ch =="A" else "A", C))
