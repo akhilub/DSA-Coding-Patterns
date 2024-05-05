@@ -28,12 +28,11 @@ Constraints:
 Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
 
-```
-Solution: Operations Research Iterative Algo
+
+- Solution: Operations Research Iterative Algo
 
 ![Example_1_img](/submissionImages/LC_53_Maximum_Sum_Subarray.jpg)
 
-```
 
 
 <p align = "center">
