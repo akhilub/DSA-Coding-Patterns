@@ -5,7 +5,7 @@
 
 # Core idea is  f(i) = max(f(i-1),0) + nums[i]   , 1=<i<n
 
-# Initially, f[0] = nums[0] . The final answer we are looking for is  max(f[i]) for  0=<i< n  
+# Initially, F(0) = f[0] = nums[0] . The final answer we are looking for is F(i) = max(F(i),f[i]) for  0=<i< n  
 
 class Solution:
     def maxSubarray(self,nums):

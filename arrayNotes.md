@@ -16,3 +16,36 @@ Subarray = n*(n+1)/2
 Subseqeunce = (2^n) -1 (non-empty subsequences)
 Subset = 2^n
 ```
+
+
+# Array Operations Time Complexity
+
+```
+-----------------------------------------------------------    
+|    Operations              |      Time Complexity       |                               
+-----------------------------------------------------------               
+|  Add or Remove Element     |      O(1)  Amortized       |                               
+|  at the end of Array       |                            |                               
+|                            |                            |                               
+|  Add or Remove Element     |          O(n)              |                               
+|  NOT at the end of Array   |                            |                               
+|                            |                            |                               
+|   Access Element at an     |          O(1)              |                               
+|       Index                |                            |                               
+|                            |                            |                               
+|  Searching Array for an    |          O(n)              |                               
+|       Element              |                            |                               
+|                            |                            |                               
+|  Searching Sorted Array    |          O(log(n))         |                               
+|    for an Element          |      Binary Search         |                               
+|                            |                            |                               
+|     Copying  Array         |          O(n)              |                               
+|                            |                            |                               
+|     Sliding Window         |          O(n)              |                               
+|                            |                            |                               
+|     All Pairs of Array     |          O(n^2)            |                               
+|         Elements           |                            |                               
+|                            |                            |                               
+|                            |                            |                               ------------------------------------------------------------
+
+```
