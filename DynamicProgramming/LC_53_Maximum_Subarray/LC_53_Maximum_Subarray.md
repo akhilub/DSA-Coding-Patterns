@@ -28,18 +28,14 @@ Constraints:
 Follow up: If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
 
 
-
+```
 Solution: Operations Research Iterative Algo
 
+![Example_1_img](/submissionImages/LC_53_Maximum_Sum_Subarray.jpg)
+
 ```
-    f(i) = nums [ i]     , i = 0
-    f(i) = max(f(i-1),0) + nums[i] ,   1=<i<n
 
 
-    \[ f(i) = 
-    \begin{cases} 
-    nums[i] & \text{if } i = 0 \\ 
-    \max(f(i-1), 0) + nums[i] & \text{if } 1 \leq i < n 
-    \end{cases} \]
-
- ```
+<p align = "center">
+    <img src = "/submissionImages/LC_53_Maximum_Sum_Subarray.jpg" align ="center" width="1000" height= "1000"></img>
+</p>
