@@ -49,3 +49,24 @@ Output: 'BAB'
 >>>''.join(['B', 'A', 'B'])
 'BAB'
 ```
+
+
+
+## String manipulation?
+
+- To convert string into uppercase,lowercase 
+```
+>>> string = "A man, a plan, a canal: Panama"
+>>> string.upper()
+'A MAN, A PLAN, A CANAL: PANAMA'
+>>> string.lower()
+'a man, a plan, a canal: panama'
+```
+
+- To remove all non alphanumeric characters from the string
+```
+>>>string = "A man, a plan, a canal: Panama"
+>>>import re
+>>>re.sub(r'[^a-zA-Z0-9]','',string)
+'AmanaplanacanalPanama'
+```

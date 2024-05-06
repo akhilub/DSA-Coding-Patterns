@@ -10,7 +10,7 @@
 class Solution:
     def maxSubarray(self,nums):
         res = curSum = 0
-        for i in range(i,len(nums)):
+        for i in range(1,len(nums)):
             curSum = max(curSum,0) + nums[i]
             res = max(res,curSum)
 
