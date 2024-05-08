@@ -35,6 +35,5 @@ For `n = 3`, the output should be
 
 # Answer
 
-           {     n , n=1
-    f(n) = {    f(n-1) + 4*n - 4 , $\forall$ n $\in$ (1,104)
-           {
+    f(i) = | i , if i = 1
+    | f(i-1) + 4*i - 4, for all i in (1,n)
