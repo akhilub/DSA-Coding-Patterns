@@ -76,12 +76,12 @@ Output: 'BAB'
 
 # Counter()
 
-    - count of missing values is 0
-    ```
-    >>>c = Counter(['eggs', 'ham'])
-    >>>c['bacon']                              # count of a missing element is zero
-    0
-    ```
+- count of missing values is 0
+```
+>>>c = Counter(['eggs', 'ham'])
+>>>c['bacon']                              # count of a missing element is zero
+0
+```
 
 
 # To get Quotient & Remainder in Python 
@@ -104,4 +104,24 @@ q = dividend//divisor
 r = dividend % divisor
 >>>17%3
 2
+```
+
+
+# To reverse a string 
+
+### Using Slicing
+Slice notation takes the form [start:stop:step]. In this case, we omit the start and stop positions since we want the whole string. We also use step = -1, which means, "repeatedly step from right to left by 1 character".
+
+- Faster Way
+```
+>>> s = 'hello world'
+>>>s[::-1]
+'dlrow olleh'
+```
+### Using str.join
+- Readable
+```
+>>> s = 'hello world'
+>>> ''.join(reversed(s))
+'dlrow olleh'
 ```
