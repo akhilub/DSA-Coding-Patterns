@@ -32,9 +32,8 @@ For `n = 3`, the output should be
    The area of the n-interesting polygon.
    
 
-
 # Answer
 
-           {     i , i=1
+           {     1 , i=1
     f(i) = {    f(i-1) + 4*i - 4 , $\forall$ i $\in$ {2,3,4,....,n}
            {
