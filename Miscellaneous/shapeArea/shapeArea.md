@@ -17,15 +17,16 @@ For `n = 3`, the output should be
 
 Input/Output
 
-[execution time limit] 4 seconds (py3)
+- [execution time limit] 4 seconds (py3)
 
-[memory limit] 1 GB
+- [memory limit] 1 GB
 
-[input] integer n
+- [input] integer n
 
-Guaranteed constraints:
-1 ≤ n < 104.
+- Guaranteed constraints:
 
-[output] integer
+`1 ≤ n < 104.`
+
+- [output] integer
 
 The area of the n-interesting polygon.
