@@ -7,7 +7,7 @@ A 1-interesting polygon is just a square with a side of length 1. An n-interesti
 <img src = "/submissionImages/shapeArea.png"></img>
 </p>
 
-Example
+# Example
 
 For `n = 2`, the output should be
 `solution(n) = 5`;
@@ -15,7 +15,7 @@ For `n = 3`, the output should be
 `solution(n) = 13`.
 
 
-Input/Output
+# Input/Output
 
 - **[execution time limit] 4 seconds (py3)**
 
@@ -23,10 +23,9 @@ Input/Output
 
 - **[input] integer n**
 
-*Guaranteed constraints:*
-
-
-`1 ≤ n < 104.`
+  *Guaranteed constraints:*
+  
+  `1 ≤ n < 104.`
 
 - [output] integer
 
