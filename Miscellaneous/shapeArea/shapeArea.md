@@ -30,3 +30,11 @@ For `n = 3`, the output should be
 - [output] integer
 
    The area of the n-interesting polygon.
+   
+
+
+# Answer
+
+           {     n , n=1
+    f(n) = {    f(n-1) + 4*n - 4 , $\forall$ n $\in$ (1,104)
+           {
