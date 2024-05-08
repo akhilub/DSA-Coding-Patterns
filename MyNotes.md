@@ -1,3 +1,5 @@
+- In DSA for FAAANG Always learn the best algorithmic solution for a coding problem
+
 # In Python
 
 ## To split a string into a list of characters?
@@ -69,4 +71,32 @@ Output: 'BAB'
 >>>import re
 >>>re.sub(r'[^a-zA-Z0-9]','',string)
 'AmanaplanacanalPanama'
+```
+
+
+# Counter()
+
+    - count of missing values is 0
+    ```
+    >>>c = Counter(['eggs', 'ham'])
+    >>>c['bacon']                              # count of a missing element is zero
+    0
+    ```
+
+
+# To get Quotient & Remainder in Python 
+```
+divmod(dividend,divisor)
+>>> divmod(17,3)
+(5, 2)
+
+# using the floor Division operator '//’ one can derive the quotient
+q = dividend//divisor
+>>> 17//3
+5
+
+# using the modulus operator '%' one can derive the remainder
+r = dividend % divisor
+>>>17%3
+2
 ```
