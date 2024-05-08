@@ -85,17 +85,22 @@ Output: 'BAB'
 
 
 # To get Quotient & Remainder in Python 
+
 ```
 divmod(dividend,divisor)
 >>> divmod(17,3)
 (5, 2)
+```
 
-# using the floor Division operator '//’ one can derive the quotient
+- using the floor Division operator '//’ one can derive the quotient
+```
 q = dividend//divisor
 >>> 17//3
 5
+```
 
-# using the modulus operator '%' one can derive the remainder
+- using the modulus operator '%' one can derive the remainder
+```
 r = dividend % divisor
 >>>17%3
 2
