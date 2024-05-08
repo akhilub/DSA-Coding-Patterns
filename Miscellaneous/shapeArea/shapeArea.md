@@ -35,5 +35,6 @@ For `n = 3`, the output should be
 
 # Answer
 
-    f(i) = | i , if i = 1
-    | f(i-1) + 4*i - 4, for all i in (1,n)
+           {     i , i=1
+    f(i) = {    f(i-1) + 4*i - 4 , $\forall$ i $\in$ {2,3,4,....,n}
+           {
