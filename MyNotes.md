@@ -125,3 +125,21 @@ Slice notation takes the form [start:stop:step]. In this case, we omit the start
 >>> ''.join(reversed(s))
 'dlrow olleh'
 ```
+
+
+### zip_longest()
+
+```
+Syntax:
+
+zip_longest( iterable1, iterable2, fillval)
+
+```
+
+```
+>>>from itertools import zip_longest
+>>> word1 = "ab"
+>>> word2 = "pqrs"
+>>> print(*(zip_longest(word1,word2,fillvalue = "")))
+('a', 'p') ('b', 'q') ('', 'r') ('', 's')
+```
