@@ -1,4 +1,4 @@
-#Approach 1: DP
+#Approach 1: Greedy DP
 #We can enumerate each element of the prices array as the SP.Then we need to find a minimum value in front of it as the purchase price to maximize the profit
 #Therefore we use a variable mi to maintain the prefix minimum value of the array prices
 #Then we traverse the array prices for each element v , calculate the difference between it and the minimum value mi in front of it.
@@ -28,7 +28,7 @@ True
 
 class Solution:
     def maxProfit(self,prices):
-        ans,mi = 0 , inf
+        ans,mi = 0 , math.inf
         for v in prices:
             mi = min(mi,v)
             ans = max(ans,v-mi)

@@ -9,7 +9,7 @@
 
 class Solution:
     def maxSubarray(self,nums):
-        res = curSum = 0
+        res = curSum = nums[0]
         for i in range(1,len(nums)):
             curSum = max(curSum,0) + nums[i]
             res = max(res,curSum)
@@ -24,7 +24,7 @@ class Solution:
 
 #Another way : Kaden's Algorithm
 #We define dp[i] to represent the maximum sum of the continuous subarray ending with the element nums[i]. 
-#Initially, dp [0] = nums [0 ]. The final answer we are looking for is max(dp) 
+#Initially, dp [0] = nums [0]. The final answer we are looking for is max(dp) 
 
 #Consider dp[i], where i>=1, its state transition equation is: dp[i] = max(nums[i], dp[i-1]+nums[i])
 
