@@ -2,6 +2,17 @@
 
 # In Python
 
+
+## Python Data Structure
+
+[] is a list, and is mutable, in that its size can vary.
+
+() is a tuple. Tuples are immutable, in that their sizes cannot vary. Immutable objects can be hashed, which is an important property. You can concatenate tuples, but it returns a new tuple, not the same one. Extending / appending to a list returns the same list object.
+
+{} is a set, in that it contains unique, immutable objects. {} is also used to create a dictionary, where the dictionary has a set of keys.
+
+
+
 ## To split a string into a list of characters?
 
 ```
