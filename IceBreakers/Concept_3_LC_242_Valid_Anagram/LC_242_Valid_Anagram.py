@@ -77,6 +77,7 @@ class Solution:
 #Also with the usage of defaultdict we dont need to check if a key is existent before the 
 #we update the item , just make sure to specify a default type/constructor- which is int type:
 
+from collections import defaultdict
 class Solution:
     def validAnagram(self,s,t):
         s_dict = defaultdict(int)

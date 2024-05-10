@@ -1,6 +1,6 @@
 # Lamda Function
 # In python lambda functions are anonymous function that is defined without a name.
-# We use `lambda` keyword to instead of `def` create it.
+# We use `lambda` keyword instead of `def` to create it.
 # lambda argument(s) :expression  #Syntax
 # To sort the list based on the first index 
 # we use list.sort(key = lambda x:x[0])   where list could be list = [[1,3],[8,10],[15,18],[2,6]]
