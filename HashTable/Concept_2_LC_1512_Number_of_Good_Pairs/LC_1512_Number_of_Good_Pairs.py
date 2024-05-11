@@ -30,12 +30,13 @@ class Solution:
         seen = {}
         for ele in nums:
             pairCount+=seen.get(ele,0)
-            seen[num]=seen.get(ele,0) + 1
+            seen[ele]=seen.get(ele,0) + 1
         return pairCount
 
 
 
 #Competative Programming Approach
+
 from collections import Counter
 class Solution:
     def numIdenticalPairs(self,nums):
