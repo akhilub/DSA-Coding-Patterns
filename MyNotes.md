@@ -154,3 +154,47 @@ zip_longest( iterable1, iterable2, fillval)
 >>> print(*(zip_longest(word1,word2,fillvalue = "")))
 ('a', 'p') ('b', 'q') ('', 'r') ('', 's')
 ```
+
+
+
+
+
+# Break Statement in Python
+
+- break statement terminates the loop containing it.
+
+```
+>>> for num in range(0,10):
+...     if num == 5:
+...             break
+...     print(f'Iteration: {num}')
+... 
+Iteration: 0
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+>>> 
+```
+
+# Continue Statement in Python
+
+- continue statement is used to skip the remaining code inside a loop for the current iteration only.
+
+```
+>>> for num in range(0,10):
+...     if num == 5:
+...             continue
+...     print(f'Iteration: {num}')
+... 
+Iteration: 0
+Iteration: 1
+Iteration: 2
+Iteration: 3
+Iteration: 4
+Iteration: 6
+Iteration: 7
+Iteration: 8
+Iteration: 9
+>>> 
+```
