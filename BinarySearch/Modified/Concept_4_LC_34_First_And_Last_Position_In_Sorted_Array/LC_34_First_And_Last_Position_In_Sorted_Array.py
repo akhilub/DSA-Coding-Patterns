@@ -19,7 +19,7 @@ class Solution:
             R = len(A)
             while L < R:
                 m = floor((L + R) / 2)
-                if A[m] > T: #there is a difference in these if and else conditions when finding left and rightmost functions
+                if A[m] > T: #there is a difference in these if and else conditions when finding left and rightmost target values in array
                     R = m
                 else:
                     L = m + 1

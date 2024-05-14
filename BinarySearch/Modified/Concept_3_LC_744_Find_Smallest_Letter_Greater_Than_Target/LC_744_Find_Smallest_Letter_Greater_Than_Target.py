@@ -11,7 +11,7 @@ class Solution:
     def searchNextLetters(self,letters,target):
         l = 0 
         r = len(letters)
-        while l < r: #left <right
+        while l < r: #see when left <right , assign mid to right
             m = (l+r) // 2
             if ord(letter[m]) > ord(target):
                 r = m
