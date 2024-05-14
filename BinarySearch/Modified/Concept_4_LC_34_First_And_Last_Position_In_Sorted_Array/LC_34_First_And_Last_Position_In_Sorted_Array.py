@@ -1,5 +1,5 @@
 #Approach: Modified Binary Search
-
+#TC:O(log(N))
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         
@@ -19,7 +19,7 @@ class Solution:
             R = len(A)
             while L < R:
                 m = floor((L + R) / 2)
-                if A[m] > T:
+                if A[m] > T: #there is a difference in these if and else conditions when finding left and rightmost functions
                     R = m
                 else:
                     L = m + 1
@@ -83,4 +83,24 @@ class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         l = bisect_left(nums, target)
         r = bisect_left(nums, target + 1)
+        return [-1, -1] if l == r else [l, r - 1]
+
+
+
+
+#Approach :Using bisect_left and bisect_right
+
+'''
+>>> bisect.bisect_left([1,1,1,2,2,2,7,7,7], 2)
+3
+>>> bisect.bisect_right([1,1,1,2,2,2,7,7,7], 2)
+6
+'''
+
+import bisect
+
+class Solution:
+    def searchRange(self, nums: List[int], target: int) -> List[int]:
+        l = bisect_left(nums, target)
+        r = bisect_right(nums, target)
         return [-1, -1] if l == r else [l, r - 1]

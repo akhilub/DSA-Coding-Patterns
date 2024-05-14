@@ -215,7 +215,7 @@ list: Contains a list of sorted integers.
 element: Provides an element that needs to be inserted into the sorted list.
 
 Return value
-The bisect_right() method is provided by the bisect module, which returns the right-most index to insert the given element while maintaining the sorted order.
+The bisect_right() method is provided by the bisect module, which returns the **right-most index to insert the given element while maintaining the sorted order**.
 
 Example
 
