@@ -201,6 +201,8 @@ Iteration: 9
 
 # Python  bisect_right(list, element)
 
+
+
 ```
 Syntax
 import bisect
@@ -250,7 +252,9 @@ The bisect_left() method is provided by the bisect module, which returns the lef
 
 
 Example
+
 ```
+
 #import the module
 >>>import bisect
 >>>bisect.bisect_left([1,3,5,7,10,25,49,55],25)
@@ -272,4 +276,26 @@ idx = bisect.bisect_left(nums, ele, lo=4, hi=len(nums))
 
 #print the index
 print(f"Insert element {ele} at index {idx} in nums list to maintain sorted order.")
+```
+
+```
+
+
+
+
+
+# Python sorted() vs sort()
+
+
+```
+sorted() returns a new sorted list, leaving the original list unaffected. list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).
+
+sorted() works on any iterable, not just lists. Strings, tuples, dictionaries (you'll get the keys), generators, etc., returning a list containing all elements, sorted.
+
+Use list.sort() when you want to mutate the list, sorted() when you want a new sorted object back. Use sorted() when you want to sort something that is an iterable, not a list yet.
+
+For lists, list.sort() is faster than sorted() because it doesn't have to create a copy. For any other iterable, you have no choice.
+
+No, you cannot retrieve the original positions. Once you called list.sort() the original order is gone.
+
 ```
