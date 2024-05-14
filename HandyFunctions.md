@@ -1,6 +1,6 @@
 # Reverse a positive integer
 
-- Given x is a positive integer i.e <p>x ∈ ℤ<sup>+</sup></p> return its reverse integer
+- Given x is a positive integer i.e <span>x ∈ ℤ<sup>+</sup></span> return its reverse integer
 
 ```
 def reverse(x):
