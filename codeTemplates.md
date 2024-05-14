@@ -131,3 +131,72 @@
             dfs(start_index + len(edge), path, [...additional states])
             # revert(...additional states) if necessary e.g. permutations
             path.pop()
+
+
+# Build a prefix sum
+    def fn(arr):
+        prefix = [arr[0]]
+        for i in range(1, len(arr)):
+            prefix.append(prefix[-1] + arr[i])
+        
+        return prefix
+
+
+# Binary Search
+    def fn(arr, target):
+        left = 0
+        right = len(arr) - 1
+        while left <= right:
+            mid = (left + right) // 2
+            if arr[mid] == target:  # found the target
+                # do something
+                return
+            if arr[mid] > target:
+            #update right pointer because target lies in left half
+                right = mid - 1
+            else:
+            #update left pointer because target lies in right half
+                left = mid + 1
+        
+        # left is the insertion point
+        return left
+
+# Binary search: for greedy problems
+
+- If looking for a minimum
+
+    def fn(arr):
+        def check(x):
+            # this function is implemented depending on the problem
+            return BOOLEAN
+
+        left = MINIMUM_POSSIBLE_ANSWER
+        right = MAXIMUM_POSSIBLE_ANSWER
+        while left <= right:
+            mid = (left + right) // 2
+            if check(mid):
+                right = mid - 1
+            else:
+                left = mid + 1
+        
+        return left
+
+
+- Just do opposite if looking for maximum
+
+    def fn(arr):
+        def check(x):
+            # this function is implemented depending on the problem
+            return BOOLEAN
+
+        left = MINIMUM_POSSIBLE_ANSWER
+        right = MAXIMUM_POSSIBLE_ANSWER
+        while left <= right:
+            mid = (left + right) // 2
+            if check(mid):
+                left = mid + 1
+            else:
+                right = mid - 1
+        
+    return right
+

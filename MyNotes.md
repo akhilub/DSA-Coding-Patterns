@@ -198,3 +198,78 @@ Iteration: 8
 Iteration: 9
 >>> 
 ```
+
+# Python  bisect_right(list, element)
+
+```
+Syntax
+import bisect
+bisect.bisect_right(list, element)
+
+```
+
+Parameters
+list: Contains a list of sorted integers.
+element: Provides an element that needs to be inserted into the sorted list.
+
+Return value
+The bisect_right() method is provided by the bisect module, which returns the right-most index to insert the given element while maintaining the sorted order.
+
+Example
+
+```
+#import the module
+>>>import bisect
+>>>bisect.bisect_right([1,3,5,7,10,25,49,55],25)
+6
+```
+
+
+#Python bisect_left(list,element)
+
+The syntax of the bisect_left() function is given below:
+
+Syntax
+
+```
+import bisect
+bisect.bisect_left(list, element, lo=0, hi=len(list), key=None)
+
+```
+
+Parameters
+list: This contains a list of sorted integers.
+element: This provides an element that needs to be inserted into the sorted list.
+lo (Optional): Default is 0. It defines the starting position within the list for the search.
+hi (Optional): Default is len(list). It defines the ending position within the list for the search.
+key (Optional): If the key parameter is None, the elements are compared directly without invoking any key function.
+```
+
+Return value
+The bisect_left() method is provided by the bisect module, which returns the left-most index to insert the given element, while maintaining the sorted order.
+
+
+Example
+```
+#import the module
+>>>import bisect
+>>>bisect.bisect_left([1,3,5,7,10,25,49,55],25)
+5
+```
+
+```
+#import the module
+import bisect
+
+#given sorted list of numbers
+nums = [1,3,5,7,10,25,49,55]
+
+#given element to be inserted into the list
+ele = 50
+
+#get index where to insert the element
+idx = bisect.bisect_left(nums, ele, lo=4, hi=len(nums))
+
+#print the index
+print(f"Insert element {ele} at index {idx} in nums list to maintain sorted order.")
+```

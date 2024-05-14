@@ -31,5 +31,72 @@ three-way-partition(A : array of values, mid : value):
 
 
 
+## Binary Search
 
+**procedure**
+```
+function binary_search(A: array of values, n:last index value, T:target value) is
+    L := 0
+    R := n − 1
+    while L ≤ R do
+        m := floor((L + R) / 2)
+        if A[m] < T then
+            L := m + 1
+        else if A[m] > T then
+            R := m − 1
+        else:
+            return m
+    return unsuccessful
+```
+
+**alternative procedure**
+
+- In the above procedure, the algorithm checks whether the middle element (𝑚 {\displaystyle m}) is equal to the target ( 𝑇 {\displaystyle T}) in every iteration. Some implementations leave out this check during each iteration. The algorithm would perform this check only when one element is left (when 𝐿 =𝑅 {\displaystyle L=R}). This results in a faster comparison loop, as one comparison is eliminated per iteration, while it requires only one more iteration on average
+
+```
+function binary_search_alternative(A, n, T) is
+    L := 0
+    R := n − 1
+    while L != R do
+        m := ceil((L + R) / 2)
+        if A[m] > T then
+            R := m − 1
+        else:
+            L := m
+    if A[L] = T then
+        return L
+    return unsuccessful
+```
+
+# For Duplicate elements
+
+**Procedure for finding the leftmost element**
+
+```
+function binary_search_leftmost(A, n, T):
+    L := 0
+    R := n
+    while L < R:
+        m := floor((L + R) / 2)
+        if A[m] < T:
+            L := m + 1
+        else:
+            R := m
+    return L
+```
+
+**Procedure for finding the rightmost element**
+
+```
+function binary_search_rightmost(A, n, T):
+    L := 0
+    R := n
+    while L < R:
+        m := floor((L + R) / 2)
+        if A[m] > T:
+            R := m
+        else:
+            L := m + 1
+    return R - 1
+```
 
