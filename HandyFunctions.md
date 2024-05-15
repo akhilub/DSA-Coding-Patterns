@@ -1,13 +1,13 @@
 # Reverse a positive integer
 
-- Given x is a positive integer i.e <span>x ∈ ℤ<sup>+</sup></span> return its reverse integer
+- Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its reverse integer
 
 ```
-def reverse(x):
-    y = 0
-    while x!=0:
-        r = x%10
+def reverse(n):
+    ans = 0
+    while n!=0:
+        r = n%10
         y = y*10+r
-        x = x//10
-    return y
+        n = n//10
+    return ans
 ```
