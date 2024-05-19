@@ -299,3 +299,48 @@ For lists, list.sort() is faster than sorted() because it doesn't have to create
 No, you cannot retrieve the original positions. Once you called list.sort() the original order is gone.
 
 ```
+
+
+
+# Python String join()
+
+- The string `join()` method returns a string by joining all the elements of an iterable (list, string, tuple), separated by the given separator.
+
+Syntax
+```
+string.join(iterable)
+```
+
+### Example
+```
+# .join() with lists
+numList = ['1', '2', '3', '4']
+separator = ', '
+print(separator.join(numList))
+#1, 2, 3, 4
+
+
+# .join() with tuples
+numTuple = ('1', '2', '3', '4')
+separator = ', '
+print(separator.join(numTuple))
+#1, 2, 3, 4
+
+
+
+>>> s1 = 'abc'
+>>> s2 = '123'
+>>> print('s1.join(s2):', s1.join(s2))
+s1.join(s2): 1abc2abc3
+
+# each element of s2 is separated by s1
+# '1'+ 'abc'+ '2'+ 'abc'+ '3'
+
+
+>>> print('s2.join(s1):', s2.join(s1))
+s2.join(s1): a123b123c
+
+# each element of s1 is separated by s2
+# 'a'+ '123'+ 'b'+ '123'+ 'b'
+
+```

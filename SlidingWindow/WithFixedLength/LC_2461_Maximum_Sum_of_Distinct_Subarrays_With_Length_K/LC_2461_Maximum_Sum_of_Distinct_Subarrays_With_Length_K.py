@@ -17,8 +17,11 @@ class Solution:
             cnt[nums[i-k]]-=1
             s-=nums[i-k]
             #apply conditions
+            #1)#apply condition all elements needs to be distinct in window/subarray?
+            #How? by checking the key value in the hashtable when 0 remove that key
             if cnt[nums[i-k]]==0:
                 del cnt[nums[i-k]]
+            #2)#apply condition length of subarray needs to be k and distinct
             if len(cnt)==k:
                 ans = max(ans,s)
             return ans
