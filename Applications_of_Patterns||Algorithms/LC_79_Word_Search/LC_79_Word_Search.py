@@ -73,7 +73,7 @@ class Solution:
             visited.add((i, j))
             while q:
                 r, c, idx = q.popleft()
-                #
+                
                 idx += 1              # Incrementing the word index
                 if idx == len(word):  # Check if we've reached the end of the word
                     return True
