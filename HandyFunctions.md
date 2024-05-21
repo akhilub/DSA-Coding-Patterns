@@ -50,3 +50,24 @@ reverseString = lambda s:s[::-1]
 
 
 # Reverse a List/Array
+
+```
+def reverseList(arr):
+    return arr[::-1]
+```
+
+
+
+
+
+
+
+# Function To Check if all character are unique in a string:
+
+```
+def checkUniqueCharacter(s:str):
+    len(s) == len(set(s))
+
+TC:O(N)
+```
+

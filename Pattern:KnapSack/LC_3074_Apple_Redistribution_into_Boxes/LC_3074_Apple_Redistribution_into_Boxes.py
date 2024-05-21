@@ -23,8 +23,8 @@ class Soluton:
         ##O(M)
         while T_apples:
             if T_apples>C[i]:
-                T_apples-C[i]
+                T_apples-=C[i]
                 i+=1
-            else:
+            else:#apples are 0 or -ve
                 break
         return i+1
