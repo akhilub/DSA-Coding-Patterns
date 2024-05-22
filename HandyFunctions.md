@@ -71,3 +71,42 @@ def checkUniqueCharacter(s:str):
 TC:O(N)
 ```
 
+
+# Function to Check if a number is even or odd
+
+- Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return whether it is odd or even
+
+- Using Bitwise AND operator (&)
+
+If we observe the binary representation of a number we will know that the rightmost bit of every odd number is 1 for even numbers it is 0. Bitwise AND (&) operator gives 1 only for (1&1) otherwise it gives 0. So, knowing this we are going to evaluate the bitwise AND of a number with 1 and if the result is 1 number is odd, and if it is 0 number is even
+
+```
+def isEvenOdd(n):
+ 
+  # if n&1 == 0, then num is even
+  if n & 1:
+    return False
+  # if n&1 == 1, then num is odd
+  else:
+    return True
+
+```
+
+- Using Modulus Operator (%)
+
+The % sign is like division only it checks for the remainder, so if the number divided by 2 has a remainder of 0 it's even otherwise odd.
+
+Or reverse them for a little speed improvement, since any number above 0 is also considered "True" you can skip needing to do any equality check:
+
+```
+def isEvenOdd(n):
+ 
+  # if n%2 == 0, then num is even
+  if n%2:
+    return False
+  # if n%2 == 1, then num is odd
+  else:
+    return True
+
+```
+

@@ -75,7 +75,7 @@ def reverseInorder(root):
 
 
 ## Level-By-Level Traversal or BFS traversal
-It traverses the binary tree in level-by-level order.The implementation of a BFS is usually based on queue:
+It traverses the binary tree in level by level order, and each level from left to right..The implementation of a BFS is usually based on queue:
 
 ```
 def bfs(root):                                                      
@@ -92,7 +92,7 @@ def bfs(root):
 ```
 - The BFS or Level-By-Level of above tree is: 1,2,3,4,5,6
 
-- Just Another way of implementation Using a stack or basically a list
+- Just Another way of implementation Using a stack/basically a list
 ```
 def bfs(root):
     if root is None:
@@ -109,7 +109,7 @@ def bfs(root):
 ```
 
 
-
+## All Binary Tree Traversal Algorithms run at O(N) time and O(N) space (due to recursion/stack or queue).
 
 
 
