@@ -52,9 +52,21 @@ reverseString = lambda s:s[::-1]
 # Reverse a List/Array
 
 ```
-def reverseList(arr):
+def reverseList(arr:List):
+    l,r = 0,len(arr)-1
+    while l<r:
+        arr[l],arr[r]=arr[r],arr[l]
+        l+=1
+        r-=1
+    return arr
+```
+OR 
+```
+def reverseList(arr:List):
     return arr[::-1]
 ```
+or
+reverseList = lambda arr: arr[::-1]
 
 
 

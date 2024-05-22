@@ -25,7 +25,7 @@ def preOrder(root):
     if root is None:
         return
     print(root.val) # visit Node
-    preOrder(root.right)
+    preOrder(root.left)
     preOrder(root.right)
 ```
 - The NLR of above tree is: 1,2,4,5,3,6

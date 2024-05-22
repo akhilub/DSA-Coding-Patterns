@@ -30,3 +30,31 @@ class Solution:
 # Most of this is all abstracted away by the Python implementations of the algorithms leading to a lovely simple solution.
 
 # Note: This can probably be sped up using the slice notation [::-1] on the split() over reversed, but is slightly less readable.
+
+
+
+
+#For interviews
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.split()
+        
+        def reverseList(arr):
+            l,r = 0,len(arr)-1
+            while l<r:
+                arr[l],arr[r]=arr[r],arr[l]
+                l+=1
+                r-=1
+            return arr
+        
+        return ' '.join(reverseList(s))
+
+
+#Pythonic way same using lambda function
+class Solution:
+    def reverseWords(self, s: str) -> str:
+        s = s.split()
+        
+        reverseList = lambda arr: arr[::-1]
+        
+        return ' '.join(reverseList(s))
