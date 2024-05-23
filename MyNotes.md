@@ -344,3 +344,19 @@ s2.join(s1): a123b123c
 # 'a'+ '123'+ 'b'+ '123'+ 'b'
 
 ```
+
+
+## Python Bitwise Right-Shift >> Operator
+
+The Python bitwise right-shift operator x >> n shifts the binary representation of integer x by n positions to the right. It inserts a 0 bit on the left and removes the right-most bit. For example, if you right-shift the binary representation 0101 by one position, you’d obtain 0010. Semantically, the bitwise right-shift operator is the same as performing integer division by 2**n.
+
+Here’s a minimal example:
+
+```
+print(8 >> 1)
+# 4
+print(8 >> 2)
+# 2
+print(-3 >> 1)
+# -2
+```

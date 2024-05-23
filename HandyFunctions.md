@@ -67,6 +67,31 @@ def reverseList(arr:List):
 ```
 or
 reverseList = lambda arr: arr[::-1]
+OR
+def reverseList(arr:List):
+    n = len(arr)
+    for i in range(n//2):
+      arr[i],arr[n-1-i] = arr[n-1-i],arr[i]
+    return arr
+
+
+# Transpose of Matrix/Grid
+
+- Given an m x n 2D matrix, return its transpose
+
+def transpose(grid:List[List[int]]):
+    m , n = len(grid),len(grid[0])
+    T = [[0]*m for _ in range(n)]
+    for i in range(m):
+        for j in range(r):
+            T[j][i] = matrix[i][j]
+
+    return T
+    
+OR
+
+def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
+    return list(zip(*matrix))
 
 
 

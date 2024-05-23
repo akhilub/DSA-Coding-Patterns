@@ -16,9 +16,10 @@ class Solution:
         #Get Length and Tail Node
         length , tail = 1, head
         while tail.next:
-            tail.next = tail
+            tail = tail.next
             length+=1
 
+        #Calculate the effective rotations needed
         k = k % length
         if k == 0:  #meaning no rotation or a multiple of k
             return head
