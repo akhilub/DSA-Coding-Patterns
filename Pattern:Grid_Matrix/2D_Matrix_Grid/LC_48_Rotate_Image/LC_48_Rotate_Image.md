@@ -1,4 +1,4 @@
-**(Problem Statement)[https://leetcode.com/problems/rotate-image/]**
+**[Problem Statment](https://leetcode.com/problems/number-of-islands/)**
 
 You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 
