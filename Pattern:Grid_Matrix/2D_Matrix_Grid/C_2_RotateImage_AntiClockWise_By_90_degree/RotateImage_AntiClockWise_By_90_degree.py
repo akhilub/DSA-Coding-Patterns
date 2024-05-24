@@ -55,7 +55,7 @@ class Solution:
 
         R = len(matrix)
         for i in range(R//2):
-            matrix[i], matrix[R - i - 1] = matrix[R - i - 1], matrix[i]
+            matrix[i], matrix[R -1-i] = matrix[R-1-i], matrix[i]
 
         return matrix
 

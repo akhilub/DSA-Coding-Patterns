@@ -70,29 +70,56 @@ reverseList = lambda arr: arr[::-1]
 OR
 def reverseList(arr:List):
     n = len(arr)
-    for i in range(n//2):
-      arr[i],arr[n-1-i] = arr[n-1-i],arr[i]
+    for i in range(n//2):       #<------- Note we need to traverse till the middle (n//2) because we can swap elements around it , 
+      arr[i],arr[n-1-i] = arr[n-1-i],arr[i]        #do not got till n otherwise we will swap them back 
     return arr
 
 
 # Transpose of Matrix/Grid
 
-- Given an m x n 2D matrix, return its transpose
+- Given an m x n 2D matrix where m ≠ n , return its transpose 
 
+```
 def transpose(grid:List[List[int]]):
     m , n = len(grid),len(grid[0])
     T = [[0]*m for _ in range(n)]
     for i in range(m):
-        for j in range(r):
+        for j in range(n):
             T[j][i] = matrix[i][j]
 
     return T
-    
+```
 OR
-
+```
 def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
     return list(zip(*matrix))
+```
 
+
+- Given an m x m 2D matrix , modify the input 2D matrix directly in-place to find its transpose
+
+```
+def transposeInPlace(grid:List[List[int]]):
+      m = len(grid)
+      for r in range(m):
+          for c in range(r):  #<------- Note we need to traverse till the diagonal of each row (r) because we can swap elements around the diagonal in one pass ,    
+              grid[r][c] , grid[c][r] = grid[c][r], grid[r][c]
+```
+      
+# Rotate an image 
+
+```
+def rotated(array_2d):
+    list_of_tuples = zip(*array_2d[::-1])
+    return [list(row) for row in list_of_tuples]
+    # return map(list, list_of_tuples)
+```
+OR
+```
+def rotateImage(matrix):
+    rotated = [list(tupleRow) for tupleRow in zip(*matrix[::-1])]
+    return rotated
+```
 
 
 
