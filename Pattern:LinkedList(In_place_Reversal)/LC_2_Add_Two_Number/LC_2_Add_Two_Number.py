@@ -1,4 +1,4 @@
-#Approach: 
+#Approach: Simulation 
 
 
 #We traverse two linked lists and at the same time, and use the variable `carry` to indicate whether there is a carry.

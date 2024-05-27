@@ -94,6 +94,8 @@ OR
 def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
     return list(zip(*matrix))
 ```
+OR 
+transpose = lambda matrix:list(zip(*matrix))
 
 
 - Given an m x m 2D matrix , modify the input 2D matrix directly in-place to find its transpose
@@ -173,4 +175,55 @@ def isEvenOdd(n):
     return True
 
 ```
+
+# Sort an Array
+- Using Sorting Algorithm
+
+
+
+
+
+# Merge Two Sorted Array Using Two Pointer 
+
+Given two sorted arrays/lists, if we want to merge it, we can do this optimally using two pointers in O(N+M) where N and M are the sizes of the two sorted array/list respectively.
+
+Algorithm: We can use two pointers to point to the current smallest element, then compare both, move forward the smaller one. Continue until both points reach the their end.
+
+```
+I : a = [1,3,4,5,7,9] , b = [2,4,6,8]
+O: [1,2,3,4,4,5,6,7,8,9]
+
+
+def mergeTwoSortedArray(a,b):
+    i , j , la , lb = 0 , 0 ,len(a), len(b)
+    res = []
+    while i<la and j<lb:
+      if a[i]<b[j]:
+        res+=[a[i]]
+        i+=1
+      else:
+        res+=[b[j]]
+        j+=1
+    while i<la:
+        res+=[a[i]]
+        i+=1
+    while j<lb:
+        res+=[b[j]]
+        j+=1
+    return res
+
+```
+
+# MergeSort 
+
+- Based on this we can recursive apply merging sorting algorithm to a list. We continuously divide the list into equal two parts. When the partition size is small enough (one element or none), we know it is by natural sorted. Then we start merge these small partitions into bigger partitions until we get the entire list sorted.
+
+def sortArray(nums: List[int]) -> List[int]:
+    if len(nums) <= 1:
+        return nums
+    n = len(nums)
+    mid  = n//2
+    first = sortArray(nums[:mid])
+    second = sortArray(nums[mid:])
+    return mergeTwoSortedArray(first,second)
 
