@@ -99,3 +99,27 @@ function binary_search_rightmost(A, n, T):
     return R - 1
 ```
 
+
+**Procedure for Merge Sort**
+
+```
+function merge_sort(A : array of values ) is
+    // Base case. A list of zero or one elements is sorted, by definition.
+    if length of A ≤ 1 then
+        return A
+
+    // Recursive case. First, divide the list into equal-sized sublists
+    // consisting of the first half and second half of the list.
+    // This assumes lists start at index 0.
+    n := length of A
+
+    mid : = floor(A / 2)
+   
+
+    // Recursively sort both sublists.
+    left := merge_sort(A[ : mid ])
+    right := merge_sort(A[ mid : ])
+
+    // Then merge the now-sorted sublists.
+    return merge(left, right)
+```

@@ -360,3 +360,55 @@ print(8 >> 2)
 print(-3 >> 1)
 # -2
 ```
+
+
+## Python list Shallow Copy vs Deep Copy
+
+Shallow Copy: Copies the list, but not the objects inside the list. If the list contains mutable objects, changes to those objects will be reflected in both the original and the copied list.
+
+
+
+1) arr[:]
+- This creates a shallow copy of the entire list.
+- It's a slicing operation where the start and end indices are not specified, which defaults to copying the entire list.
+
+```
+>>>arr = [1, 2, 3, 4, 5]
+>>>copy_arr = arr[:]
+>>>copy_arr
+[1, 2, 3, 4, 5]
+```
+2) arr[::]
+
+- This also creates a shallow copy of the entire list.
+- This slicing operation includes the step parameter, which is not specified here, thus defaults to 1, effectively copying the entire list.
+
+```
+>>>arr = [1, 2, 3, 4, 5]
+>>>copy_arr = arr[::]
+>>>copy_arr
+[1, 2, 3, 4, 5]
+```
+
+3) arr.copy()
+
+- This creates a shallow copy of the entire list using the list's built-in copy method.
+- This method is explicit and directly conveys the intention of copying the list.
+
+```
+>>>arr = [1, 2, 3, 4, 5]
+>>>copy_arr = arr.copy()
+>>>copy_arr
+[1, 2, 3, 4, 5]
+```
+
+All three methods (arr[:], arr[::], arr.copy()) achieve the same result of creating a shallow copy of the list.
+
+Deep Copy: Copies the list and the objects inside it. Changes made to original list will not be reflected upon the copied list
+
+```
+>>>import copy
+>>>arr = [[1, 2], [3, 4]]
+>>>deep_copy_arr = copy.deepcopy(arr)
+[[1, 2], [3, 4]]
+```

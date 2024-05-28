@@ -24,7 +24,7 @@ class Solution:
 
             #All subsets that include nums[i]                                   --- This whole operations could be condensed to like below
             curSubset.append(nums[i]) #add the element to subset                   |
-            backtrack(curSubset,i+1)                                   #           |    backtrack(curSubset+[nums[i],i+1])
+            backtrack(curSubset,i+1)  #                                            |    backtrack(curSubset+[nums[i],i+1])
             curSubset.pop()  # pop the element that we just add                    |
             #All subsets that dont include nums[i]                              ----
             while i+1 < n and nums[i]==nums[i+1]:
