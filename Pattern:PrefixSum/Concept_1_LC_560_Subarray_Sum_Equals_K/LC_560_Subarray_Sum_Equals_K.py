@@ -39,8 +39,8 @@ class Solution:
 
 
 #Competative Programming Approach
-#Loop over nums and calculate the total sum `sum`.For each num in nums,add num to
-#sum and obtain the count of subarrays with sum `sum - k`.Add the sum to the result.
+#Loop over nums and calculate the total sum `sum`.For each num in nums,add num to sum
+#and obtain the count of subarrays with sum `sum - k`.Add the sum to the result.
 #Then update the map with the count of subarrays with sum `sum`.Finally return the result.
 class Solution:
     def subarraySum(self,nums,k):

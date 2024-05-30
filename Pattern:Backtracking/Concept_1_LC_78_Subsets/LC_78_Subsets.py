@@ -33,7 +33,7 @@ class Solution:
         n = len(nums)
         def backtrack(cur,i):
             if i == n:
-                ans.append(cur[:])     #ans.append(copy.deepcopy(cur))  # cur[:] also means deepcopy of cur
+                ans.append(cur[:])     #ans.append(copy.deepcopy(cur))  # cur[:] means shallow copy of cur
                 return 
             #pick
             backtrack(cur+[nums[i]],i+1)
