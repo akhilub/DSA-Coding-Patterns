@@ -123,3 +123,23 @@ function merge_sort(A : array of values ) is
     // Then merge the now-sorted sublists.
     return merge(left, right)
 ```
+
+
+
+
+**Procedure for Floyd's Cycle Detection**
+- To detect the cycle in a linear Data Structure
+
+floyd(headNode: linear DS):
+    tortoise := headNode
+    hare := headNode
+    foreach:
+        if hare == end
+            return 'There is No Loop Found.'
+        hare := hare.next
+        if hare == end
+            return 'No Loop Found'
+        hare = hare.next
+        tortoise = tortoise.next
+        if hare == tortoise
+            return 'Cycle Detected'

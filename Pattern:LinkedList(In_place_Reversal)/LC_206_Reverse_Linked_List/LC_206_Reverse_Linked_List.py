@@ -1,3 +1,17 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Approach
 #
 #      cur          nextTemp(assigning curr.next to nextTemp)
@@ -28,13 +42,6 @@
 #    |      |       
 #    --------  
 
-
-
-#Defination of a Singly Linked List
-class ListNode:
-    def __init__(self,val=0,next=None):
-        self.val = val
-        self.next = next
 
 #Iterative Algorithm to reverse the Linked List
 #We keep updating the previous node and the current node along the linked list and reverse the link directions

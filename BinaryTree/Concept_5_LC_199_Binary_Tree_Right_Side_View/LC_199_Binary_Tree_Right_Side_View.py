@@ -1,5 +1,6 @@
 #Approach 1:BFS
-#We use the queue (aka deque in Python) to implement the BFS (Breadth First Search Algorithm). We deque (pop) all elements in current queue at once and push their kids back to the queue, thus we know at any time, the nodes in the queue belong to the same level.
+#We use the queue (aka deque in Python) to implement the BFS (Breadth First Search Algorithm). 
+#We deque (pop) all elements in current queue at once and push their kids back to the queue, thus we know at any time, the nodes in the queue belong to the same level.
 
 
 #RIGHT SIDE VIEW OF A BINARY TREE USING BREADTH FIRST SEARCH ALGORITHMS

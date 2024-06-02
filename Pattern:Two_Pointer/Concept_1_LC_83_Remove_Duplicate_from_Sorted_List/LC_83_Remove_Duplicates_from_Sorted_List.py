@@ -1,7 +1,43 @@
-# class ListNode:
-#     def __init__(self,val=0,next=None):
-#         self.val = val
-#         self.next = next
+class ListNode:
+    #Defination of a Singly Linked List
+    def __init__(self,val=0,next=None):
+        self.val = val
+        self.next = next
+
+    def addNode(self,val):
+        node = ListNode(val)
+        self.next = node
+        return node
+
+    def printLList(self,head):
+        curr = head
+        while curr:
+            print(curr.val,end = "->")
+            curr = curr.next
+        print() #
+
+
+#Define head for the LList
+head = ListNode(1)
+p = head
+
+#Create the LList
+for i in range(2,7):
+    p = p.addNode(i)
+
+#Add a duplicate node
+p = p.addNode(6)
+
+for i in range(7,13):
+    p = p.addNode(i)
+
+
+#Add another duplicate node
+p.addNode(12)
+
+ListNode().printLList(head)
+
+
 
 
 #Approach :Using Two Pointer
@@ -24,11 +60,19 @@ class Solution:
                 curr = curr.next
         return head
 
+result = Solution().deleteDuplicates(head)
+
+ListNode().printLList(result)
+
+
+
+
+
 
 # We can remove the next node using the del keyword
-node =curr.next #save the next node to delete
-curr.next = curr.next.next
-del node #delete the node
+# node =curr.next #save the next node to delete
+# curr.next = curr.next.next
+# del node #delete the node
 
 
 #Approach 2 :Using HashSet 
@@ -36,6 +80,9 @@ del node #delete the node
 # We can use a hash set to remember the nodes that we have visited and remove the duplicate nodes
 # along the way when we traverse the linked list.This approach can also be applied to the general case
 # when the linked list is not sorted
+
+#TC: O(N) 
+#SC :O(N) since we are using a hash set
 
 class Solution:
     def deleteDuplicates(self,head):
@@ -55,5 +102,4 @@ class Solution:
             cur = cur.next
         return head
 
-#TC: O(N) 
-#SC :O(N) since we are using a hash set
+

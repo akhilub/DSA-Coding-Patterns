@@ -14,20 +14,20 @@ class Solution:
         directions = [(0,1),(0,-1),(1,0),(-1,0)]
 
         def bfs(i,j):
-            q = deque([(i,j)])
-            visited.add((i,j))
+            q = deque([(i,j)]) #add in the queue to process
+            visited.add((i,j)) #mark the cell as visited
             while q:
                 row,col = q.popleft()
-                for di,dj in directions:
+                for di,dj in directions: #explore the directions
                     nr = row + di
                     nc = col + dj
-                    if 0<=nr<rows and 0<=nc<cols:
-                        if grid[nr][nc]=="1" and (nr,nc) not in visited:
+                    if 0<=nr<rows and 0<=nc<cols:# within the boundaries
+                        if grid[nr][nc]=="1" and (nr,nc) not in visited: #check if its a land and is not visited then add it to queue and mark it as visited
                             q.append((nr,nc))
                             visited.add((nr,nc))
         
-        for r in range(rows):
-            for c in range(cols):
+        for r in range(rows):        
+            for c in range(cols):      
                 if grid[r][c]=="1" and (r,c) not in visited:
                     bfs(r,c)
                     totalIslands+=1

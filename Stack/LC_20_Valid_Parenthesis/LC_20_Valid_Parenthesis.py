@@ -14,6 +14,6 @@ class Solution:                                                            #clas
         for ch in s:                                                            #for ch in s:
             if ch in '({[':                                                         #if ch in '({[':
                 stack.append(ch)                                                        #stack.append(ch)
-            elif len(stack)==0 or (stack.pop() + ch in ["()","{}","[]"]):           # elif not stack or (stack.pop() + ch in ["()","{}","[]"]):
+            elif len(stack)==0 or not (stack.pop() + ch in ["()","{}","[]"]):           # elif not stack or not (stack.pop() + ch in ["()","{}","[]"]):
                 return False                                                            #return False
             return len(stack)==0                                                    # return not stack
