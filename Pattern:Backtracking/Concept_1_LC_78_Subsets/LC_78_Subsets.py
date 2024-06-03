@@ -66,3 +66,19 @@ class Solution:
 #   s=2            [1,2] [1,3] [2,3]      
 #                   /      
 #   s=3         [1,2,3] 
+
+
+#Equivalent of above DFS function  in Expanded form
+class Solution:
+    def subsets(self, nums: List[int]) -> List[List[int]]:
+        ans = []
+        def dfs(s,path):
+            ans.append(path[:]) 
+            
+            for i in range(s,len(nums)):
+                path.append(nums[i])
+                dfs(i+1,path)
+                path.pop()
+                
+        dfs(0,[])
+        return ans

@@ -1,5 +1,10 @@
 #Approach:Fast and Slow Pointer
 
+#Given two pointers fast and slow.Fast Pointer traverse two steps at a time and slow pointer traverse one step at a time.
+#If they meet somewhere , it means there is a cycle.
+
+
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
@@ -19,3 +24,10 @@ class Solution:
             if slow ==fast:
                 return True             # Found a cycle in the linked list
         return False                    # No cycle found in the linked list
+
+
+
+
+#Approach : Using Hash Set
+#TC:O(N)
+#SC:O(1)

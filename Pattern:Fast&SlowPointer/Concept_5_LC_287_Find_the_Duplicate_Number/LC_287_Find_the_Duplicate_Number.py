@@ -13,6 +13,7 @@ class Solution:
         #Intialize the pointers
         slow = fast = nums[0]
 
+        #Move the pointers
         slow = nums[nums[0]]
         fast = nums[nums[nums[0]]]
         
@@ -22,13 +23,13 @@ class Solution:
             fast = nums[nums[fast]]
         
         #Finding the entrance to the cycle
-        slow = nums[0]
+        ans = nums[0]
         
-        while slow!=fast:
+        while ans!=slow:
             slow = nums[slow]
-            fast = nums[fast]
+            ans = nums[ans]
             
-        return slow # This is the duplicate number 
+        return ans # This is the duplicate number 
 
 
 

@@ -40,10 +40,14 @@ class Solution:
             
 
             for j in range(n):
+
                 if col[j] or mdiag[i+j] or adiag[n-1-i+j]:
                     continue
+
                 col[j] = mdiag[i+j] = adiag[n-1-i+j] = True
+
                 dfs(i+1, board + ['.' * j + 'Q' + '.'*(n-1-j)])
+                
                 col[j] = mdiag[i+j] = adiag[n-1-i+j] = False
 
         dfs(0,[])

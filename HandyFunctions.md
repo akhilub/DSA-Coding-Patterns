@@ -1,3 +1,54 @@
+# Getdigits of a positive Integer
+
+- Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its digits in order and reverse order simultaneously
+
+```
+def getDigits(n):
+    lst = []  # Define the list inside the function
+    while n > 0:
+        r = n % 10
+        lst.append(r)
+        n = n // 10
+    return lst
+
+print(getDigits(123))  #[3,2,1]
+```
+OR 
+
+```
+getDigits = lambda n: list(map(int, str(n)))
+
+print(getDigits(12345))  #[5, 4, 3, 2, 1]
+
+Explanation
+str(n): Converts the number to its string representation, allowing us to iterate over each digit.
+map(int, ...): Converts each character back to an integer.
+list(...): Converts the map object to a list.
+```
+
+```
+def getDigits(n):
+    lst = []
+    while n > 0:
+        r = n % 10
+        lst.append(r)
+        n = n // 10
+    return lst[::-1]  # Reverse the list before returning
+
+print(getDigits(123))  #[1,2,3]
+```
+OR
+```
+getDigits = lambda n: list(map(int, str(n)))[::-1]
+
+```
+
+print(getDigits(12345))  # Expected: [1, 2, 3, 4, 5]
+
+
+
+
+
 # Reverse a positive integer
 
 - Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its reverse integer
