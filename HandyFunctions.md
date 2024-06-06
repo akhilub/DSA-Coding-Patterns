@@ -202,10 +202,10 @@ def isEvenOdd(n):
  
   # if n&1 == 0, then num is even
   if n & 1:
-    return False
+    return 'odd'
   # if n&1 == 1, then num is odd
   else:
-    return True
+    return 'even'
 
 ```
 
