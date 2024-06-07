@@ -23,8 +23,8 @@ class Solution:
                res.append(b[j])
                 j+=1
         if i<la:
-            res+=arr[i:]
+            res+=a[i:]
         if j<lb:
-            res+=arr[j:]
+            res+=b[j:]
         return res
 

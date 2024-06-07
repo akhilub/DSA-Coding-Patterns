@@ -45,7 +45,7 @@ class Solution:
             return arr
         
         n = len(nums)
-        k = k%n
+        k = k%n 
         reverseList(nums,0,n-1) #Reverse the entire array.
         reverseList(nums,0,k-1) #Reverse the first elements.
         reverseList(nums,k,n-1) #Reverse the last n-k elements

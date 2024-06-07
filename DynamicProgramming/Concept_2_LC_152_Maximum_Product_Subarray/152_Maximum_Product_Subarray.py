@@ -1,5 +1,6 @@
 #No memory DP
-
+#TC:O(n)
+#SC:O(1)
 class Solution:
     def maxProduct(self,nums):
         ans = nums[0] 
@@ -33,7 +34,7 @@ class Solution:
         result = nums[0]
 
         for num in nums[1:]:
-            if num < 0:
+            if num < 0: #swap
                 max_product, min_product = min_product, max_product
 
             max_product = max(num, max_product * num)
