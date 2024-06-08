@@ -10,6 +10,9 @@ class Solution:
             prefixSum+=nums[i]
             rem = prefixSum % k 
 
+            if rem < 0: 
+                prefixSum+=k
+
             if rem in hashMap:
                 ans+=hasMap[rem]
                 hashMap[rem]+=1
@@ -20,10 +23,10 @@ class Solution:
 #Competative Programming Approach
 class Solution:
     def subarraysDivByK(self,nums,k)
-    cnt = Counter({0;1})
+    cnt = Counter({0:1})
     ans = s = 0
     for x in nums:
         s = (s+x) % k
-        ans+=cnt[k]
-        cnt[k]+=1
+        ans+=cnt[s]
+        cnt[s]+=1
     return ans

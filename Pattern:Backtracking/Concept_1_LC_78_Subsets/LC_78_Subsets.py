@@ -43,7 +43,7 @@ class Solution:
         backtrack([],0)
         return ans
         
-#Approach 2) DFS
+#My Approach 2) DFS
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         ans = []
@@ -68,7 +68,7 @@ class Solution:
 #   s=3         [1,2,3] 
 
 
-#Equivalent of above DFS function  in Expanded form
+#Equivalent of above DFS function written in Expanded form
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         ans = []
