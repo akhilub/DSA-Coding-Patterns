@@ -1,3 +1,5 @@
+#Approach:Sliding Window +HashTable
+
 # We maintain a sliding window of length , use a hash table to record the count of each number in the window, and use a variable 
 # to record the sum of all numbers in the window. Each time we slide the window, if all numbers in the window are unique, we update the answer.
 

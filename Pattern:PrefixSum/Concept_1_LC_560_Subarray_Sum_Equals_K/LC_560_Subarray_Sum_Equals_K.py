@@ -1,9 +1,11 @@
-#Fundamental approach
+#Fundamental approach :PrefixSum
+#TC:O(N)
+#SC:O(N)
 class Solution:
     def subarraySum(self,nums,k):
         prefixSum = 0
-        hashMap = {0:1}
-        ans = 0
+        hashMap = {0:1} # will store the frequencies of prefixSum
+        ans = 0 #count of subarray sum equals to k
         for i in range(len(nums)):
             prefixSum+=nums[i]
             remSum = prefixSum - k
@@ -21,6 +23,7 @@ class Solution:
 
 
 #My Approach
+# Write using this in interviews
 class Solution:
     def subarraySum(self,nums,k):
         prefixSum = 0

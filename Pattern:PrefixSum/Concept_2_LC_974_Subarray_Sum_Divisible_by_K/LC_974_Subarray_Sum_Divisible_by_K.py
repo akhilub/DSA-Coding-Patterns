@@ -1,6 +1,8 @@
 #My Approach
 #TC:O(N) where N is the no of elements in the array
 #SC:O(M)
+
+#Write using this in interviews
 class Solution:
     def subarraysDivByK(self,nums,k):
         prefixSum = 0
@@ -10,7 +12,7 @@ class Solution:
             prefixSum+=nums[i]
             rem = prefixSum % k 
 
-            if rem < 0: 
+            if rem < 0:         # If remainder is negative, adjust it by adding k
                 prefixSum+=k
 
             if rem in hashMap:
@@ -18,6 +20,7 @@ class Solution:
                 hashMap[rem]+=1
             else:
                 hashMap[rem]=1
+        return ans 
 
 
 #Competative Programming Approach

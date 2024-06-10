@@ -24,8 +24,10 @@ class Solution:
 
 
 
-#We can first list all possible symbols cs and their corresponding values vs, then enumerate each value vs[i]
-# from large to small. Each time, we use as many symbols cs[i] corresponding to this value as possible, until the number num becomes 0.
+#Approach :Greedy
+
+#We can first list all possible symbols cs and their corresponding values vs, then enumerate each value vs[i] from large to small. 
+#Each time, we use as many symbols cs[i] corresponding to this value as possible, until the number num becomes 0.
 
 
 #Just another way of writing Greedy

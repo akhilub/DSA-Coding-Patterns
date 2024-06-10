@@ -11,7 +11,7 @@
 
 # zip(a, b)  # (1, 2), (2, 3), (3, 4)
 
-#Approach1:
+#Approach1: Hash Table + Simulation
 #TC:O(N)
 #SC:O(128) = O(1)
 class Solution:
@@ -29,6 +29,13 @@ class Solution:
 
 #Another way of writing
 #If current roman value is less than the next roman character, we need to deduct the value, otherwise, we add it. For example, “IV” is -I+V=4 and “VI” is V+I=6
+
+#Algorithm
+
+# First, we use a hash table to record the numerical value corresponding to each character. Then, we traverse the string from left to right. 
+# If the numerical value corresponding to the current character is less than the numerical value corresponding to the character on the right, we subtract the numerical value corresponding to the current character. Otherwise, we add the numerical value corresponding to the current character.
+
+#The time complexity is O(n), and the space complexity is O(m). Here, n and m are the length of the string and the size of the character set, respectively.
 
 class Solution:
     def romanToInt(self,s):
