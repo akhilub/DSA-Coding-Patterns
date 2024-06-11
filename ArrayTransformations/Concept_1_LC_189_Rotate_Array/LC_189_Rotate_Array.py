@@ -31,7 +31,7 @@ class Solution:
 
 #Approach 3:REVERSE SUB ARRAYS TO ROTATE
 #We can reverse the array once, then reverse the first K elements, and then reverse the last N-K elements. The time complexity is O(N).
-
+#Use this for interviews 
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         """

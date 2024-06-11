@@ -1,3 +1,5 @@
+
+
 class Solution:
     def dayOfYear(self,date:str)->int:
         year,month,day = (int(s) for s in date.split("-")) #Notice the spiliting of the string
@@ -5,6 +7,35 @@ class Solution:
         days = [31,f,31,30,31,30,31,31,30,31,30,31]
 
         return sum(days[:month -1]) + day
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #Just Another way of writing the code
 class Solution:
