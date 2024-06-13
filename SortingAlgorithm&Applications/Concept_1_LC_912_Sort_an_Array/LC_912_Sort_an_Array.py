@@ -1,4 +1,6 @@
 #Approach: Merge Sort using Divide & Conquer
+#TC:O(nlogn)
+#SC:O(1)
 
 class Solution:
     def sortArray(self,nums):
