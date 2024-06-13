@@ -16,7 +16,7 @@ class Solution:
                 left+=1
                 curr+=1
             elif nums[curr]==2:
-                 # We may swap a 0 to index i, but we're still not sure whether this 0
+                # We may swap a 0 to index i, but we're still not sure whether this 0
                 # is placed in the correct index, so we can't move pointer i.
                 nums[curr],nums[right]=nums[right],nums[curr]
                 right-=1

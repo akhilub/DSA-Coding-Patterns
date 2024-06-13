@@ -13,7 +13,7 @@
 #5)Store the max length of window by comparing the curr window length and max window length.
 class Solution:
     def longestOnes(self,nums,k):
-        max_w = 0
+        max_w = 0      #answer
         num_zeros=0
         left =0
         n = len(nums)

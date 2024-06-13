@@ -29,6 +29,7 @@ Constraints:
  
 
 Follow up: Could you come up with a one-pass algorithm using only constant extra space?
+
 <p align="center"> 
     <img src="/submissionImages/LC_75_SortColor.png" align="center" height=""></img>
 </p>

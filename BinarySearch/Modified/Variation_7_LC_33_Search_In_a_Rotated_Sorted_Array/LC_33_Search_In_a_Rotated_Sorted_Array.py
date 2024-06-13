@@ -30,16 +30,16 @@ class Solution:
 
             mid = floor((l+r)/2)
 
-            if nums[mid]==target:
+            if nums[mid]==target:   #pitfall see nums[mid]==target not mid ==target , mid is the index value
                 return mid
 
-            elif nums[0]<=nums[mid]: #left array is sorted
+            elif nums[0]<=nums[mid]: #left half array is sorted
                 if nums[0]<=target<=nums[mid]:
                     r = mid-1
                 else:
                     l = mid+1
         
-            else: #right array is sorted
+            else: #right half array is sorted
                 if nums[mid]<target<=nums[n-1]:
                     l = mid+1
                 else:
@@ -48,6 +48,7 @@ class Solution:
         return -1
 
 
+#
 
 
 

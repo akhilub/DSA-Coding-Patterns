@@ -1,5 +1,6 @@
 #Approach 1: Sliding window flexible longest
-#We can keep tracking a current window, and use two pointer to apply the sliding window algorithms. We can expand the window to the right greedily as long as the character is not existent in the current window. Otherwise, we need to move the left pointer and erase the corresponding characters at left pointer out of the window until the current character at the right pointer is no longer in the window.
+#We can keep tracking a current window, and use two pointer to apply the sliding window algorithms. We can expand the window to the right greedily as long as the character is not existent in the current window.
+#Otherwise, we need to move the left pointer and erase the corresponding characters at left pointer out of the window until the current character at the right pointer is no longer in the window.
 
 #If we don’t move the left pointer (shrink the window), the substring is not valid no matter how we move the right pointer.
 
@@ -22,6 +23,8 @@ class Solution:
             ans = max(ans,w_len)
 
         return ans
+
+
 
 #) Using Dictionary
 import collections

@@ -24,7 +24,7 @@ class Solution:
         def reverseList(arr:List[int]):
             #Two Pointer approach to reverse a list
             n = len(arr)
-            for i in range(n//2):
+            for i in range(n//2): # when reversing the list we are going till the middle because we are swaping around the middle
                 arr[i],arr[n-1-i]=arr[n-1-i],arr[i]
 
         def transpose(grid: List[List[int]]):

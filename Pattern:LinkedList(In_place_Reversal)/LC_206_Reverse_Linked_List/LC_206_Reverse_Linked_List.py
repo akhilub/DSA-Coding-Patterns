@@ -114,6 +114,7 @@ if __name__ == "__main__":
 #         head.next =None
 #         return n
 
+
 #Reverse the Linked List by changing the node value
 #If we are allowed to change the node values,we dont need to modify the link
 #directions.We can then go through the linked list twice.The first time we copy the node values to an array , the second time we assign the node values ( in reversed order ) to each node
