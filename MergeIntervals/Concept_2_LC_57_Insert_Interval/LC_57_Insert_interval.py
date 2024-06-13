@@ -1,5 +1,6 @@
 #Approach
 #Nonoverlapping Conditions
+
 #Condition 1
 #                      start       end
 #                       |           |                       |               |
@@ -13,6 +14,7 @@
 #-----------------------------------------------------------------------------------
 #                                                                        |         |
 #                                                                   new_start     new_end
+
 #Overlapping Condition
 #Condition 3
 #                      start       end
@@ -31,7 +33,7 @@ class Solution:
             start,end = interval[i][0],interval[i][1]
 
             if new_end<start:
-                mergedInterval.append(newInterval)\
+                mergedInterval.append(newInterval)
                 return mergedInterval + intervals[i:]
 
             elif end < new_start:
