@@ -83,7 +83,7 @@ class Solution:
         n = len(s)
         F = [[True]*n for _ in range(n)]
         for l in range(n-2,-1,-1):                          #filling the grid from bottom up
-            for r in range(l+1,n):
+            for r in range(l+1,n):                          #moving index r from l+1 to n i.e traversing cols from left to right.Make grid 2d diagram and you will see.
                 F[l][r] = s[l]==s[r] and F[l+1][r-1]
         
         L = 0
