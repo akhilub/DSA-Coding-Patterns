@@ -278,3 +278,24 @@ def sortArray(nums: List[int]) -> List[int]:
     second = sortArray(nums[mid:])
     return mergeTwoSortedArray(first,second)
 
+
+# Check if a string is Palindrome
+```
+def isPalindrome(s:str):
+    l , r = 0 ,len(s)
+    while l<r:
+        if s[l]!=s[r]:return False
+        l+=1
+        r-=1
+    return True
+
+print(isPalindrome('racecar'))  #True
+print(isPalindrome('Akhil')) #False
+```
+OR
+```
+def isPalindrome(s:str):
+    return s==s[::-1]
+```
+OR
+isPalindrome = lambda s:s==s[::-1]
