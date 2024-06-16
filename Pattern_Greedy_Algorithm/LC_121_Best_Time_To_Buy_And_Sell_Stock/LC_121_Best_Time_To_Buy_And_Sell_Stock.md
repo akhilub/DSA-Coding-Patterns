@@ -1,4 +1,4 @@
-**[Problem Statment](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)**
+**[PlayGround](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/)**
 
 You are given an array prices where prices[i] is the price of a given stock on the ith day.
 
