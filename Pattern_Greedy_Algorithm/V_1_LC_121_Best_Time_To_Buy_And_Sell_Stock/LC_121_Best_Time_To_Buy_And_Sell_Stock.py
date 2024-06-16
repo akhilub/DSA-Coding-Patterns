@@ -60,6 +60,16 @@ class Solution:
         return ans
 
 
+
+
+
+
+
+
+
+
+
+
 #Approach 3:TRANSFORMED TO MAXIMUM SUBARRAY SUM AND THEN APPLY KADANE’S ALGORITHM
 
 # Given the prices array A = [a0,a1,a2,a3,a4,a5] and 
