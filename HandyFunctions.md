@@ -332,3 +332,20 @@ def convertGraphInput(edges: List[List[int]]):
 
 
 
+grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
+
+def adj_list(grid):
+    G={}
+    for i in range(len(grid)):
+        neighbors = []
+        for j in range(len(grid[i])):
+            if grid[i][j]==1 and i!=j: #Exclude self loop           
+                neighbors.append(j)
+        G[i] = neighbors
+    return G
+
+
+
+
+
+

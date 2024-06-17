@@ -20,7 +20,7 @@ class Solution:
         seen = {source}
         while q:
             node = q.popleft()
-            if node == destination:
+            if node == destination:       
                 return True
             for neighbour in G[node]:
                 if neighbour not in seen:
@@ -39,9 +39,11 @@ seen = {source}
             seen.add(neighbour)
             q.append(neighbour)
 
+'''
 
-equivalent 
+#equivalent 
 
+'''
 seen =set()
 ...
 ...

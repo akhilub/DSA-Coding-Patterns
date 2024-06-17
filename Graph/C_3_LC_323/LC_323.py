@@ -1,3 +1,15 @@
+#Approach: BFS
+
+
+# One solution is to use BFS. The idea is to give each node a flag to mark whether it has been visited. 
+#For an unvisited node, we will increment the result `ans` by 1, because this must be a new connected region., And then we traverse the neighboring nodes through the adjacency list and mark them as visited.
+
+# After traversing all connected nodes, we continue to look for the next unvisited node, and so on until all nodes have been visited, then the number of connected regions is also calculated at this time
+
+
+
+
+
 from collections import defaultdict, deque
 
 class Solution:

@@ -260,7 +260,7 @@ For the graph templates, assume the nodes are numbered from 0 to n - 1 and the g
 
     def fn(graph: dict):
         queue = deque([START_NODE])
-        seen = {START_NODE}
+        seen = {START_NODE}  # or seen = set([START_NODE])
         ans = 0
 
         while queue:
