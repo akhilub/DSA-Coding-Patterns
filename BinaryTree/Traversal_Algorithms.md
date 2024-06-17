@@ -84,27 +84,28 @@ def bfs(root):
     q = deque([root])
     while q:
         p = q.popleft()
-    print(node.val) #visit node
-    if p.left:
-        q.append(p.left)
-    if p.right:
-        q.append(p.right)
+        print(node.val) #visit node
+        if p.left:
+            q.append(p.left)
+        if p.right:
+            q.append(p.right)
 ```
 - The BFS or Level-By-Level of above tree is: 1,2,3,4,5,6
 
 - Just Another way of implementation Using a stack/basically a list
+
 ```
 def bfs(root):
     if root is None:
         return
     q = [root]
     while q:
-    p = pop(0)
-    print(node.val) #visit node
-    if p.left:
-        q.append(p.left)
-    if p.right:
-        q.append(p.right)
+        p = pop(0)
+        print(node.val) #visit node
+        if p.left:
+            q.append(p.left)
+        if p.right:
+            q.append(p.right)
 
 ```
 

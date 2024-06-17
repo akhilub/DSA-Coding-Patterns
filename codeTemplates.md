@@ -163,7 +163,7 @@
 
 # Binary search: for greedy problems
 
-- If looking for a minimum
+If looking for a minimum
 
     def fn(arr):
         def check(x):
@@ -182,7 +182,8 @@
         return left
 
 
-- Just do opposite if looking for maximum
+Just do opposite if looking for maximum
+
 
     def fn(arr):
         def check(x):
@@ -202,11 +203,93 @@
 
 
 
-# Build a prefix sum
-    def fn(arr):
-        prefix = [arr[0]]
-        for i in range(1, len(arr)):
-            prefix.append(prefix[-1] + arr[i])
-        
-        return prefix
+## Binary search: duplicate elements, left-most insertion point
 
+    def fn(arr, target):
+        left = 0
+        right = len(arr)
+        while left < right:
+            mid = (left + right) // 2
+            if arr[mid] < target:
+                left = mid + 1
+            else:
+                right = mid
+        return left
+
+## Binary search: duplicate elements, right-most insertion point
+
+    def fn(arr, target):
+        left = 0
+        right = len(arr)
+        while left < right:
+            mid = (left + right) // 2
+            if arr[mid] > target:
+                right = mid
+            else:
+                left = mid + 1
+
+        return left
+
+
+
+**Note**
+```
+For the graph templates, assume the nodes are numbered from 0 to n - 1 and the graph is given as an adjacency list. Depending on the problem, you may need to convert the input into an equivalent adjacency list before using the templates.
+```
+
+## Graph: BFS
+
+    from collections import deque
+
+    def fn(graph: dict):
+        queue = deque([START_NODE])
+        seen = {START_NODE}
+        ans = 0
+
+        while queue:
+            node = queue.popleft()
+            # do some logic
+            for neighbor in graph[node]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    queue.append(neighbor)
+        
+        return ans
+
+
+
+
+## Graph: DFS (iterative)
+
+    def fn(graph: dict):
+        stack = [START_NODE]
+        seen = {START_NODE}
+        ans = 0
+
+        while stack:
+            node = stack.pop()
+            # do some logic
+            for neighbor in graph[node]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    stack.append(neighbor)
+        
+        return ans
+
+
+
+## Graph: DFS (recursive)
+
+    def fn(graph: dict):
+        def dfs(node):
+            ans = 0
+            # do some logic
+            for neighbor in graph[node]:
+                if neighbor not in seen:
+                    seen.add(neighbor)
+                    ans += dfs(neighbor)
+            
+            return ans
+
+        seen = {START_NODE}
+        return dfs(START_NODE)

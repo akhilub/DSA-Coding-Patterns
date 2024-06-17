@@ -299,3 +299,36 @@ def isPalindrome(s:str):
 ```
 OR
 isPalindrome = lambda s:s==s[::-1]
+
+
+# Reverse a Graph (Adjacency List)
+
+def reverseGraph(graph:List[List[int]]):
+    n = len(graph)                      #no of vertices
+    rev = [[] for _ in range(n)]        #create the graph with just vertices
+
+    for u , v in enumerate(graph):      
+        for k in v:                     # iterate over each edge
+            res[k].append(u)            # add reversed edge
+
+    return rev
+
+# To Convert the graph input into an equivalent adjacency list before using the templates.
+
+There is a bi-directional graph with n vertices, where each vertex is labeled from 0 to n - 1 (inclusive). The edges in the graph are represented as a 2D integer array edges, where each edges[i] = [ui, vi] denotes a bi-directional edge between vertex ui and vertex vi. Every vertex pair is connected by at most one edge, and no vertex has an edge to itself.
+
+
+edges = [[0,1],[1,2],[2,0]]
+
+def convertGraphInput(edges: List[List[int]]):
+    #Convert input to equivalent adjacency list
+    G = defaultdict(list(int))
+    for s,e in edges:
+        G[s].append(e)
+        G[e].append(s)
+    return G
+
+//G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) 
+
+
+
