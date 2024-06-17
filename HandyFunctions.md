@@ -400,10 +400,9 @@ print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
 ## Convert Graph Adjacency Matrix input to Adjacency List output
 
 | Way 1 | Way 2 |
-|:----:|:----:|
+|:----: |:----: |
 
 |edges = [[0,1],[1,2],[2,0]]
-
 def convertGraphInput(edges: List[List[int]]):
     #Convert input to equivalent adjacency list
     G = defaultdict(list(int))
@@ -411,8 +410,8 @@ def convertGraphInput(edges: List[List[int]]):
         G[s].append(e)
         G[e].append(s)
     return G
-
 //G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) | 
+
 def adj_list(grid):
     G=defaultdict(list)
     for i in range(len(grid)):
@@ -424,7 +423,7 @@ def adj_list(grid):
 grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
 G = adj_list(grid)
 
-print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]}) |
+print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})|
 
 
 ## Data Format 数据格式
