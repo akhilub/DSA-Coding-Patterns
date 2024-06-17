@@ -343,7 +343,7 @@ def convertGraphInput(edges: List[List[int]]):
 
 <tr>
 <td>
-```
+<pre>
 def adj_list(grid):
     G={}
     for i in range(len(grid)):
@@ -358,11 +358,12 @@ grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
 G = adj_list(grid)
 
 print(G) //G is now {0: [1], 1: [0], 2: []}
+</pre>
 </td>
 
 
 <td>
-```
+<pre>
 def adj_list(grid):
     G=defaultdict(list)
     for i in range(len(grid)):
@@ -375,8 +376,7 @@ grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
 G = adj_list(grid)
 
 print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
-
-
+</pre>
 </td>
 
 
