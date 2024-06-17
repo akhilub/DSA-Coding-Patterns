@@ -33,6 +33,21 @@
         
         return ans
 
+## Find number of subarrays that fit an exact criteria
+    from collections import defaultdict
+
+    def fn(arr, k):
+        counts = defaultdict(int)
+        counts[0] = 1
+        ans = curr = 0
+
+        for num in arr:
+            # do logic to change curr
+            ans += counts[curr - k]
+            counts[curr] += 1
+        
+        return ans
+
 
 ## Sliding window
     def fn(arr):
@@ -46,6 +61,22 @@
                 left+=1
 
             # update ans
+        return ans
+
+## Sliding_window_fixed
+
+    def sliding_window_fixed(input, window_size):
+
+        ans = window = input[0:window_size]
+
+        for right in range(window_size, len(input)):
+            left = right - window_size
+
+            remove input[left] from window
+            append input[right] to window
+
+            ans = optimal(ans, window)
+
         return ans
 
 
@@ -83,21 +114,7 @@
 
 
 
-## Sliding_window_fixed
 
-    def sliding_window_fixed(input, window_size):
-
-        ans = window = input[0:window_size]
-
-        for right in range(window_size, len(input)):
-            left = right - window_size
-
-            remove input[left] from window
-            append input[right] to window
-
-            ans = optimal(ans, window)
-
-        return ans
 
 
 ## Backtrack 
@@ -228,7 +245,7 @@ Just do opposite if looking for maximum
             else:
                 left = mid + 1
 
-        return left
+        return right
 
 
 

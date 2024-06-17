@@ -1,6 +1,16 @@
 # Binary Tree
 
 
+To check whether a binary tree is a full binary tree we need to test the following cases:-
+
+
+- If a binary tree node is NULL then it is a full binary tree. 
+- If a binary tree node does have empty left and right sub-trees, then it is a full binary tree by definition. 
+- If a binary tree node has left and right sub-trees, then it is a part of a full binary tree by definition. In this case recursively check if the left and right sub-trees are also binary trees themselves. 
+- In all other combinations of right and left sub-trees, the binary tree is not a full binary tree.
+
+
+
 ## Defination
 
 I: [1,2,3,4,5,6,null]
