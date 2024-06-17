@@ -331,7 +331,7 @@ def convertGraphInput(edges: List[List[int]]):
 //G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) 
 ```
 
-# Convert Graph Adjacency Matrix input to Adjacency List output
+## Convert Graph Adjacency Matrix input to Adjacency List output
 
 - I prefer way 2
 <table>
@@ -383,6 +383,58 @@ print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
 </tr>
 </table>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Convert Graph Adjacency Matrix input to Adjacency List output
+
+| Way 1 | Way 2 |
+|:----:|:----:|
+
+|edges = [[0,1],[1,2],[2,0]]
+
+def convertGraphInput(edges: List[List[int]]):
+    #Convert input to equivalent adjacency list
+    G = defaultdict(list(int))
+    for s,e in edges:
+        G[s].append(e)
+        G[e].append(s)
+    return G
+
+//G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) | 
+def adj_list(grid):
+    G=defaultdict(list)
+    for i in range(len(grid)):
+        for j in range(len(grid[i])):
+            if grid[i][j]==1 and i!=j: #Exclude self loop           
+                G[i].append(j)
+    return G
+
+grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
+G = adj_list(grid)
+
+print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]}) |
+
+
+## Data Format 数据格式
+
+| Title | Title Chinese | Video | Blog | Date |
+|:----:|:----:|:-------:|:----:|:----:|
+| Introduction to XML Data Format | XML数据格式简介 | [Youtube](https://youtu.be/sZNGQeO6TOc) - [B站](https://www.bilibili.com/video/BV1hT411K7xT/) - [西瓜](https://www.ixigua.com/7150671318306783755) | [Introduction to XML Data Format](https://helloacm.com/teaching-kids-programming-introduction-to-xml-data-format/) | 2022-10-01 |
+
+
+| What is JSON? Simply Explained | JSON简介 | [Youtube](https://youtu.be/-JU96_A1-v4) - [B站](https://www.bilibili.com/video/BV1SB4y1J7x5/) - [西瓜](https://www.ixigua.com/7147255376436527649) | [What is JSON? Simply Explained](https://helloacm.com/teaching-kids-programming-what-is-json-simply-explained/) | 2022-09-23 |
 
 
 
