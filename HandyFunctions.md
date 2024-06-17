@@ -331,7 +331,17 @@ def convertGraphInput(edges: List[List[int]]):
 //G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) 
 ```
 
-```
+# Convert Graph Adjacency Matrix input to Adjacency List output
+
+- I prefer way 2
+<table>
+<tr>
+<th>Way 1</th>
+<th>Way 2</th>
+</tr>
+<tr>
+<td>
+<pre>
 grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
 
 def adj_list(grid):
@@ -343,7 +353,40 @@ def adj_list(grid):
                 neighbors.append(j)
         G[i] = neighbors
     return G
+
+</pre>
+</td>
+
+<td>
+
 ```
+grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
+
+def adj_list(grid):
+        G=defaultdict(list)
+        for i in range(len(grid)):
+            for j in range(len(grid[i])):
+                if grid[i][j]==1 and i!=j: #Exclude self loop           
+                    G[i].append(j)
+        return G
+    
+    G = adj_list(isConnected)
+    print(G)
+```
+
+</td>
+</tr>
+</table>
+
+
+
+
+
+
+
+
+
+
 
 
 
