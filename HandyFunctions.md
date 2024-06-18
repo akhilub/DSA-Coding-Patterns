@@ -117,14 +117,17 @@ def reverseList(arr:List):
     return arr[::-1]
 ```
 or
+```
 reverseList = lambda arr: arr[::-1]
+```
 OR
+```
 def reverseList(arr:List):
     n = len(arr)
     for i in range(n//2):       #<------- Note we need to traverse till the middle (n//2) because we can swap elements around it , 
       arr[i],arr[n-1-i] = arr[n-1-i],arr[i]        #do not got till n otherwise we will swap them back 
     return arr
-
+```
 
 # Transpose of Matrix/Grid
 
@@ -146,10 +149,11 @@ def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
     return list(zip(*matrix))
 ```
 OR 
+```
 transpose = lambda matrix:list(zip(*matrix))
+```
 
-
-- Given an m x m 2D matrix , modify the input 2D matrix directly in-place to find its transpose
+### Given an m x m 2D matrix , modify the input 2D matrix directly in-place to find its transpose
 
 ```
 def transposeInPlace(grid:List[List[int]]):
