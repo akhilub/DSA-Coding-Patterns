@@ -26,8 +26,8 @@ class Solution:
         
         ans = 0
         seen = set()
-        
-        for i in range(len(isConnected)):
+        N = len(isConnected)
+        for i in range(N):
             if i not in seen:
                 graph_bfs(i)
                 ans+=1
@@ -35,6 +35,39 @@ class Solution:
         return ans
 
 
+#Another way of writing the above without converting the input,
+#This works when input graph is represented in adjacency matrix form with 0 and 1 to indicate connectivity.
+
+class Solution:
+    def findCircleNum(self, isConnected: List[List[int]]) -> int:
+            def bfs(source):
+                q = deque([source])
+                seen.add(source)
+                while q:
+                    node = q.popleft()
+                    for nei, adj in enumerate(isConnected[node]):
+                        if adj and nei not in seen:
+                            seen.add(nei)
+                            q.append(nei)
+
+            ans = 0
+            seen = set()
+            N = len(isConnected)
+            for i in range(N):
+                if i not in seen:
+                    bfs(i)
+                    ans += 1
+            return ans
+
+
+# Q) explain why you need adj and nei? and not just the nei?
+
+# so 'adj' for connection and 'nei not in seen' for not visited/seen
+
+# neigh is the index 0, 1, 2, 3, ...n
+# adj is the value which is 0 or 1
+
+# you only want to bfs when there is a connection (1), and keep track of "visited/seen" by the unique index
 
 
 
@@ -72,3 +105,5 @@ class Solution:
                 dfs(i)
                 ans += 1
         return ans
+
+
