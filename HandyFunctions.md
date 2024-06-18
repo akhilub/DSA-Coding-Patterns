@@ -1,4 +1,4 @@
-# Getdigits of a positive Integer
+# Get digits of a positive Integer
 
 - Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its digits in order and reverse order simultaneously
 
@@ -26,6 +26,7 @@ map(int, ...): Converts each character back to an integer.
 list(...): Converts the map object to a list.
 ```
 
+- To get the digits of a positive integer
 ```
 def getDigits(n):
     lst = []
@@ -38,9 +39,9 @@ def getDigits(n):
 print(getDigits(123))  #[1,2,3]
 ```
 OR
+
 ```
 getDigits = lambda n: list(map(int, str(n)))[::-1]
-
 ```
 
 print(getDigits(12345))  # Expected: [1, 2, 3, 4, 5]
