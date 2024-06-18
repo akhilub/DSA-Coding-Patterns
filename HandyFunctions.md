@@ -274,6 +274,7 @@ def mergeTwoSortedArray(a,b):
 
 - Based on this we can recursive apply merging sorting algorithm to a list. We continuously divide the list into equal two parts. When the partition size is small enough (one element or none), we know it is by natural sorted. Then we start merge these small partitions into bigger partitions until we get the entire list sorted.
 
+```
 def sortArray(nums: List[int]) -> List[int]:
     if len(nums) <= 1:
         return nums
@@ -282,7 +283,7 @@ def sortArray(nums: List[int]) -> List[int]:
     first = sortArray(nums[:mid])
     second = sortArray(nums[mid:])
     return mergeTwoSortedArray(first,second)
-
+```
 
 # Check if a string is Palindrome
 ```
