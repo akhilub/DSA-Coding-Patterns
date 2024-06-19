@@ -1,3 +1,66 @@
+#Appraoch1) TopDown DP : Recursion +Memoization
+
+class Solution:
+    def fib(self, n: int) -> int:
+        def f(i,nb={}):
+            if i==0:
+                return 0
+            if i==1:
+                return 1
+            if i in nb:
+                return nb[i]
+            nb[i] = f(i-1)+f(i-2)
+            return nb[i]
+        return f(n)
+
+#Appraoch2) Bottom Up DP : Tabulation
+
+class Solution:
+    def fib(self, n: int) -> int:
+        dp = [0,1] +[0]*(n-1)
+        
+        for i in range(2,n+1):
+            dp[i] = dp[i-1]+dp[i-2]
+        
+        return dp[n]
+
+#Approach3) Bottom Up: No Memory DP
+
+#We don't need to store all the Fibonacci numbers up to 'n', as we only need two previous numbers to calculate the next Fibonacci number.
+
+class Solution:
+    def fib(self, n: int) -> int:
+        if n==0:
+            return 0
+        if n==1:
+            return 1
+        
+        f0,f1 = 0,1   #initial states to compute the next states
+        for i in range(2,n+1):
+            fi = f1+f0
+            f0,f1 = f1,fi
+        return fi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Solution:
     def fib(self,n):
         prev , curr = 0, 1
