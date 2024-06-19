@@ -13,6 +13,13 @@
 
 
 
+
+
+
+
+
+# Solution Thinking
+
 A state 'x' is any character
 ```
    L   R
@@ -24,6 +31,6 @@ i          j
 
 <p> 
 
-<img src="submissionImages/LC_5.png"></img>
+<img src="/submissionImages/LC_5.png"></img>
 
 </p>
