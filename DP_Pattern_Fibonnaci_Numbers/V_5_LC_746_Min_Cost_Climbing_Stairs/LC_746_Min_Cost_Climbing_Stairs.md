@@ -1,4 +1,4 @@
-**(PlayGround)[https://leetcode.com/problems/min-cost-climbing-stairs/]**
+**[PlayGround](https://leetcode.com/problems/min-cost-climbing-stairs/)**
 
 
 
