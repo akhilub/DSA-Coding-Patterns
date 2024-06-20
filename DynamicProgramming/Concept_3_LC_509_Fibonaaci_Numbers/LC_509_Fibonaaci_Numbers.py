@@ -44,6 +44,13 @@ class Solution:
 
 
 
+#Greedy 
+class Solution:
+    def fib(self, n: int) -> int:
+        a, b = 0, 1
+        for _ in range(n):
+            a, b = b, a + b
+        return a
 
 
 
@@ -58,8 +65,7 @@ class Solution:
 
 
 
-
-
+#Analysis of Greedy
 
 class Solution:
     def fib(self,n):
@@ -70,7 +76,7 @@ class Solution:
 
 
 #               1           1           2                  3                   5               8     
-#              prev        curr
+#  i = 0       prev        curr
 #  i = 1                   prev = 1    curr = 1 + 1
 #  i = 2                               prev = 2       curr = 1 + 2
 #  i = 3                                                 prev = 3         curr = 2 + 3
