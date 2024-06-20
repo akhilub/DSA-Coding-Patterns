@@ -5,13 +5,13 @@
 # Now if we have seen the ele it means we have found a pair so increment `pairCount` with the frequency of the seen element and increment the frequency of seen element
 
 #TC : O(N)
-#SC:
+#SC: O(M)
 
 class Solution:
     def numIdenticalPairs(self,nums):
         pairCount = 0
         seen = {}
-        for ele in nums:
+        for num in nums:
             if num in seen:
                 pairCount+=seen[num]
                 seen[num]+=1
