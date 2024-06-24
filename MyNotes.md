@@ -360,6 +360,13 @@ print(8 >> 2)
 print(-3 >> 1)
 # -2
 ```
+## Mutable and Immutable objects in Python
+
+
+Mutable Objects	    Immutable Objects
+Lists	                Numbers
+Dictionaries	        Strings
+Sets	                Tuples
 
 
 ## Python list Shallow Copy vs Deep Copy
@@ -372,12 +379,16 @@ Shallow Copy: Copies the list, but not the objects inside the list. If the list 
 - This creates a shallow copy of the entire list.
 - It's a slicing operation where the start and end indices are not specified, which defaults to copying the entire list.
 
+
 ```
 >>>arr = [1, 2, 3, 4, 5]
 >>>copy_arr = arr[:]
 >>>copy_arr
 [1, 2, 3, 4, 5]
 ```
+Note:Integers are immutable in python
+
+
 2) arr[::]
 
 - This also creates a shallow copy of the entire list.
