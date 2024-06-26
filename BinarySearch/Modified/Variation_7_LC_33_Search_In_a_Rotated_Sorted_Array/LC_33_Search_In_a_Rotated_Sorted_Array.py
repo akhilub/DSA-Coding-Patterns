@@ -23,7 +23,7 @@ class Solution:
                     r=mid-1
                 else:
                     l=mid+1
-            else: # #right half array nums[m..n - 1] are sorted
+            else: #nums[l]>nums[mid] #right half array nums[m..n - 1] are sorted
                 if nums[mid]<target<=nums[r]:
                     l=mid+1
                 else:

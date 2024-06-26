@@ -6,7 +6,7 @@
 # During each binary search process, we get the current midpoint mid = (l+ r)/2.
 # • If nums[mid] >= nums[l], it means that [l, mid] is ordered. At this time, if nums[l] ≤ target < nums[mid], it means that target is in [l, mid], otherwise target is in [mid + 1, r].
 
-# • If nums[mid] < nums[r], it means that [mid + 1, r] is ordered. At this time, if nums[mid] < target ≤ nums[r], it means that target is in [mid + 1, r], otherwise target is in [l, mid].
+# • If nums[mid] < nums[l], it means that [mid + 1, r] is ordered. At this time, if nums[mid] < target ≤ nums[r], it means that target is in [mid + 1, r], otherwise target is in [l, mid].
 
 # • If nums[mid] = nums[r], it means that the elements nums[mid] and nums[r] are equal. At this time, we cannot determine which interval target is in, so we can only decrease r by 1.
 # • If nums[mid] = nums[l], it means that the elements nums[mid] and nums[l] are equal. At this time, we cannot determine which interval target is in, so we can only increase l by 1.
@@ -43,7 +43,7 @@ class Solution:
                     r=mid-1
                 else:
                     l=mid+1
-            else: # nums[m...n-1] are sorted , right half ordered, left half not ordered
+            else: #nums[l]>nums[mid] # nums[m...n-1] are sorted , right half ordered, left half not ordered
                 if nums[mid]<target<=nums[r]:
                     l=mid+1
                 else:

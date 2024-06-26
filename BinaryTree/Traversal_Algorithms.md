@@ -128,6 +128,13 @@ def bfs(root):
 
 # Binary Search Tree
 
+- A binary search tree is a tree that satisfies these constraints:
+
+- The left subtree of a node contains only nodes with keys less than the node's key.
+- The right subtree of a node contains only nodes with keys greater than the node's key.
+- Both the left and right subtrees must also be binary search trees.
+
+
 ## Defination 
 
 L<N<R
