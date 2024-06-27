@@ -23,3 +23,6 @@ Constraints:
 - `1 <= nums.length <= 105`
 - `nums[i] is either 0 or 1.`
 - `0 <= k <= nums.length`
+
+**Note:**
+Same as in **[487 - Max Consecutive Ones II](https://leetcode.ca/2017-03-31-487-Max-Consecutive-Ones-II/)**, change from 1 to k for queue size check.
