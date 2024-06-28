@@ -39,7 +39,7 @@ hq.heapify(data) # data is now [1, 2, 3]
 ```
 Building a heap with N elements takes O(N) time.
 
-HEAPPUSH TO PUSH AN ELEMENT TO THE HEAP/PRIORITY QUEUE
+## HEAPPUSH TO PUSH AN ELEMENT TO THE HEAP/PRIORITY QUEUE
 we can use the heappush to insert an element into the priority queue/heap. The time complexity is O(LogN) to rebuild the heap.
 
 ```

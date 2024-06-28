@@ -459,3 +459,9 @@ obj.__bool__() returns False
 obj.__len__() returns 0, given that obj.__bool__ is undefined
 
 ```
+
+
+
+# To Get maximum/minimum values and keys in Python dictionaries
+
+- https://note.nkmk.me/en/python-dict-value-max-min/

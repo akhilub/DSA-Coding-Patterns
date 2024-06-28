@@ -1,8 +1,9 @@
 #Approach 1: Two Pointer
 
-#We use two pointers i and j pointing to the end of two arrays, and a pointer k pointing to the end of the merged array.
+# We use two pointers i and j pointing to the end of two arrays, and a pointer k pointing to the end of the merged array.
 
-#Every time we compare the two elements at the end of the two arrays, and move the larger one to the end of the merged array. Then we move the pointer one step forward, and repeat this process until the two pointers reach the start of the arrays.
+# Every time we compare the two elements at the end of the two arrays, and move the larger one to the end of the merged array. 
+# Then we move the pointer one step backward, and repeat this process until the two pointers reach the start of the arrays.
 
 #The time complexity is O(m+n), where m and n are the lengths of two arrays. The space complexity is O(1)
 
@@ -14,13 +15,13 @@ class Solution:
         i = m-1  # nums1's index (the actual nums)
         j = n-1  # nums2's index
         k = m+n-1 # nums1's index (the next filled position)
-        while j >0:
+        while j>=0:
             if i>=0 and nums1[i] > nums2[j]:
                 nums1[k] = nums1[i]
                 k-=1
                 i-=1
             else:
-                 nums1[k] = nums2[j]
+                nums1[k] = nums2[j]
                 k-=1
                 j-=1
         
