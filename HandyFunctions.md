@@ -391,3 +391,38 @@ print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
 
 </tr>
 </table>
+
+
+
+
+# Merge K Sorted Arrays/Lists
+```
+def mergeKSortedArrays(self, lists: List[List[int]]) -> List[int]:
+    pq= [] 
+    # Initialize the priority queue with the first element of each sorted list
+    for i, arr in enumerate(lists):
+        if arr: # Check if the list is not empty
+            pq.append((arr[0], i , 0))
+    heapify(pq)
+    
+    merged_list = []
+    
+    while pq:
+        # Extract the smallest element from the heap
+        s_val, li, ei = heappop(pq)
+        merged_list.append(s_val)
+        
+        # If there is a next element in the same list, add it to the heap
+        n_ei = ei + 1
+        if n_ei < len(lists[li]):
+            next_val = lists[li][n_ei]
+            heappush(pq, (next_val, li, n_ei))
+    
+    return merged_list
+```
+OR
+**Note**:The heapq.merge function expects the input to be iterables, such as lists or generators. However, ListNode objects are not directly iterable,
+```
+def mergeKSortedArrays(self, lists: List[List[int]]) -> List[int]:
+    return list(heapq.merge(*lists))
+```
