@@ -1,6 +1,6 @@
-dictionary   d --> {}
+dictionary  d --> {}
 
-set         s ---> ()
+set         s ---> {}
 
 
 nums = [.....list of items/elements.....]

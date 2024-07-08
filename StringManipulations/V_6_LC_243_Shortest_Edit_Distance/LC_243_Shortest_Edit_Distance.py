@@ -1,7 +1,6 @@
 #Approach
 
-#It is enough to traverse the array once ,intialize the two variables p1 and p2 to -1 and then
-# traverse the array 
+#It is enough to traverse the array once ,intialize the two variables p1 and p2 to -1 and then traverse the array 
 
 #When word1 is encountered its position is stored in p1 and if word2 is encountered its position is
 #stored in p2.If p1,p2 are not -1 anymore then update the result

@@ -15,3 +15,15 @@
 - If the problem has input in the form of a Tree or Graph, then most of the time can be solved by applying Tree Traversals or Graph Traversals algorithms called Breadth First Search (BFS) and Depth First Search (DFS)
 
 - If the problem has unsorted array containing n numbers taken from the range 1 to n and we need to find missing number,disappeared number or duplicate number we can use **cyclic sort**
+
+
+
+
+
+
+
+
+
+## Data Structures Use Case
+
+The best data structure that comes to mind to find the smallest number among a set of ‘K’ numbers is a Heap.

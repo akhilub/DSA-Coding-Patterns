@@ -1,6 +1,6 @@
 #Approach:MinHeap or Priority Queue
 #TC: O(nlog(k)) where n is the number of elements in a list and k are the number of lists
-
+from heapq import *
 class Solution:
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
         ans = self.mergeKSortedArrays(matrix)
@@ -25,12 +25,6 @@ class Solution:
 
         return res
         
-
-
-
-
-
-
 
 
 
