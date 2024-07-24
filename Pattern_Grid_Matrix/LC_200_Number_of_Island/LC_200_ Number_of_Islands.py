@@ -48,13 +48,13 @@ class Solution:
         totalIslands = 0
 
         def dfs(r,c):
-            if r<0 or r>=rows or c<0 or c>=cols:  #out of bounds 
+            if r<0 or r>=rows or c<0 or c>=cols:  #check if current cell is out of bounds 
                 return
             
             if grid[r][c] !="1":  #not land ,could be water(0) or visted land(v)
                 return
             
-            grid[r][c]="v"  #mark land as visited
+            grid[r][c]="v"  #mark current land as visited
             
             #explore the neighbour
             dfs(r+1,c)
@@ -62,6 +62,7 @@ class Solution:
             dfs(r,c-1)
             dfs(r,c+1)
 
+        #Iterate through all cells in the grid
         for r in range(rows):
             for c in range(cols):
                 if grid[r][c]=="1":    #found land

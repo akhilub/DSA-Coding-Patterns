@@ -36,6 +36,19 @@ class Solution:
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Go with this in interview
 #Approch 2:
 
@@ -58,6 +71,19 @@ class Solution:
             ans = max(ans, prices[i]-pre)
 
         return ans
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
