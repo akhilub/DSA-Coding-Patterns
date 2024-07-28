@@ -31,6 +31,7 @@ import heapq as hq
 ```
 
 ## HEAPIFY TO TURN INTO A HEAP
+
 The “hq” is the alias for the heapq module, then we can use the heapify to turn a list/array into a heap:
 
 ```
@@ -38,6 +39,8 @@ data = [3, 2, 1]
 hq.heapify(data) # data is now [1, 2, 3]
 ```
 Building a heap with N elements takes O(N) time.
+
+**Note:** heapq.heapify(x) : Transform list x into a heap, in-place, in linear time.
 
 ## HEAPPUSH TO PUSH AN ELEMENT TO THE HEAP/PRIORITY QUEUE
 we can use the heappush to insert an element into the priority queue/heap. The time complexity is O(LogN) to rebuild the heap.
@@ -105,4 +108,50 @@ x = hq.heappushpop(data, 6)
 print(x, data) # 1 [2, 3, 5, 6, 4]
 y = hq.heapreplace(data, 7)
 print(y, data) # 2 [3, 4, 5, 6, 7]
+```
+
+
+
+
+
+
+
+
+## HEAPMERGE
+heapq.merge(*iterables): Merge multiple sorted inputs into a single sorted output
+
+
+The merge method merges multiple sorted iterables into a single sorted iterable. The method returns an iterator over the sorted result. This method assumes each of the iterables are sorted in ascending order.
+
+
+Syntax
+```
+heapq.merge(*iterables, key=None, reverse=False)
+```
+
+- iterables refers to the iterables to merge.
+– key refers to the key function that is used to extract a comparison key from each input element.
+- reverse is a boolean value. The input elements will be merged with a reverse comparison if this parameter is set to True.
+
+Example 1
+
+```
+import heapq
+
+lst1 = ['a', 'b', 'd', 'e']
+lst2 = ['c', 'p', 'q', 'r']
+
+list(heapq.merge(*[lst1,lst2]))
+>>>['a', 'b', 'c', 'd', 'e', 'p', 'q', 'r']
+
+```
+
+Example 2
+
+```
+lst1 = [('a', 1), ('b', 2), ('c', 3)]
+lst2 = [('p', 15), ('q', 20), ('r', 30)]
+
+list(heapq.merge(*[lst1, lst2], key=lambda x:x[1]))
+>>>[('a', 1), ('b', 2), ('c', 3), ('p', 15), ('q', 20), ('r', 30)]
 ```

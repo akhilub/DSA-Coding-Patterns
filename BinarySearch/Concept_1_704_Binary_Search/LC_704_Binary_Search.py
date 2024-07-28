@@ -17,9 +17,15 @@ class Solution:
 
 
 #Competative Programming
-import bisect
+from bisect import bisect_left
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         l = bisect_left(nums,target)
 
         return -1 if l==len(nums) or nums[l] !=target else l
+
+
+
+'''
+The bisect_left() method is provided by the bisect module, which returns the left-most index to insert the given element, while maintaining the sorted order.
+'''

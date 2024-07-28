@@ -11,7 +11,7 @@ class Solution:
         for i ,arr in enumerate(lists):
             pq.append((arr[0],i,0))         #`0`: the index of the current element in the list arr.
         heapify(pq)
-        
+
         res = []
 
         while pq:
@@ -27,8 +27,30 @@ class Solution:
         
 
 
+'''
+pq = [(arr[0],i,0) for i,arr in enumerate(lists) if arr]
+
+better than
+
+pq = []
+for i ,arr in enumerate(lists):
+    pq.append((arr[0],i,0)) 
+'''
 
 
+
+
+
+#Competative Programming 
+#Approach:MinHeap or Priority Queue
+class Solution:
+    
+    def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
+        ans = self.mergeKSortedArrays(matrix)
+        return ans[k-1]
+        
+    def mergeKSortedArrays(self,lists:List[List[int]]):
+        return list(heapq.merge(*lists))
 
 
 
