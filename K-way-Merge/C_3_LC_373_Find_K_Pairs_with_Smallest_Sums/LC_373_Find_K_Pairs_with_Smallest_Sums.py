@@ -1,25 +1,29 @@
-from heap import *
+from heap import * # Importing heap functions for priority queue operations
 class Solution:
     def kSmallestPairs(self, nums1: List[int], nums2: List[int], k: int) -> List[List[int]]:
-        pq = []
-        
+        # Priority Queue Initialization:
+        pq = []                                                         # Initialize an empty priority queue (min-heap)
         for i in range(min(k,len(nums1))):
-            pq.append((nums1[i]+nums2[0],i ,0))
-        heapify(pq)
+            pq.append((nums1[i]+nums2[0],i ,0))                         # Initialize the heap with the first k pairs (sum, index in nums1, index in nums2)
+        heapify(pq)                                                     # Transform the list into a heap
         #print(pq) #pq is heapified
             
         ans =[]
         
-        while pq and len(ans) <k: # added conditon `len(ans) < k` because we have to return only k pairs
-            pos_sum , i , j = heappop(pq)
+
+        #Finding k Smallest Pairs:
+        # Extract the k smallest pairs from the heap
+        while pq and len(ans) <k: # Continue until we have k pairs or the heap is empty  # added conditon `len(ans) < k` because we have to return only k pairs
+            pos_sum , i , j = heappop(pq)  # Pop the smallest element from the heap
             
-            ans.append([nums1[i],nums2[j]])
+            ans.append([nums1[i],nums2[j]]) # Add the corresponding pair to the result
             
+            # If there is another element in nums2 for the current nums1[i], push the new pair into the heap
             if j+1<len(nums2):
                 
                 heappush(pq,(nums1[i] + nums2[j + 1],i , j + 1))
                 
-        return ans
+        return ans # Return the list of k smallest pairs
 
 
 

@@ -5,19 +5,18 @@
 
 class Solution:
     def reverse(self,x):
-        
-        def pos_reverse(n):
-            ans = 0
-            while n!=0:
-                r = n % 10
-                ans = ans*10+r
-                n = n//10
-            return ans
-
         sign = -1 if x<0 else 1
 
         x*=sign
 
-        res = pos_reverse(x)
+        res = self.pos_reverse(x)
 
         return sign*res if -2**31 <=res<= 2**31-1 else 0
+    
+    def pos_reverse(self,n):
+        ans = 0
+        while n!=0:
+            r = n % 10
+            ans = ans*10+r
+            n = n//10
+        return ans

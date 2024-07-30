@@ -111,12 +111,6 @@ print(y, data) # 2 [3, 4, 5, 6, 7]
 ```
 
 
-
-
-
-
-
-
 ## HEAPMERGE
 heapq.merge(*iterables): Merge multiple sorted inputs into a single sorted output
 
@@ -155,3 +149,9 @@ lst2 = [('p', 15), ('q', 20), ('r', 30)]
 list(heapq.merge(*[lst1, lst2], key=lambda x:x[1]))
 >>>[('a', 1), ('b', 2), ('c', 3), ('p', 15), ('q', 20), ('r', 30)]
 ```
+
+## Min-Heap Property
+In a min-heap, for any given element at index i:
+
+The element at index i is less than or equal to the elements at indices 2*i + 1 and 2*i + 2 (if they exist).
+This ensures that the smallest element is always at the root (i.e., the first element of the list).

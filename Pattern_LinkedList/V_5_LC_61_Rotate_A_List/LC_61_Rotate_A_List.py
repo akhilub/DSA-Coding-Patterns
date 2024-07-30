@@ -1,3 +1,77 @@
+#Write this in interviews
+
+#Approach
+#TC:O(N)
+#SC:O(1)
+
+# Definition for singly-linked list
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def rotateRight(self, head: Optional[ListNode], k: int) -> Optional[ListNode]:
+        if head is None or head.next is None or k==0:
+            return head
+        
+        #Get Length & tail Node
+        tail,length = head,1
+        while tail.next:
+            tail = tail.next
+            length+=1
+        
+        tail.next = head  #Circle the list 
+        
+        pivot = length - k % length  #Find Pivot
+        
+        for _ in range(pivot): #Traverse till Pivot
+            tail = tail.next
+        
+        #Rotation
+        newHead = tail.next     
+        tail.next = None
+        
+        return newHead       
+          
+      
+
+
+    
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Approach
 #1) Find the length of the LList and the tail position
 #2) Keep the rotation within the length
@@ -37,3 +111,8 @@ class Solution:
         tail.next = head    #Stich the tail to the front    # so now tail = 5 --> 1 ---> 2 ---> 3 --->None
         
         return newHead #Now what is pointing to node 5 , node 4 which is in newHead and that is what we have to return , newHead = 4 -->5 -->1 --> 2--->3--->None
+
+
+
+
+

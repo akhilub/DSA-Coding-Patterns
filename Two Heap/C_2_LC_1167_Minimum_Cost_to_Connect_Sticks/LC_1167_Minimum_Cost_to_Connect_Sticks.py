@@ -10,17 +10,18 @@
 # By using the min heap in Python (the heapify module), we can simulate the process by popping out two smallest from the Priority Queue, accumulate the cost, and add the new stick (merged length) back to the priority queue.
 
 
-import heapq as hq 
+from heap import *
 
 class Solution:
     def connectSticks(self,sticks:List[int])-> int:
-        hq.heapify(sticks)
+        heapify(sticks)
         ans = 0
         while len(sticks)>1:
-            p , q = hq.heappop(sticks),hq.heappop(sticks)
+            p , q = heappop(sticks),heappop(sticks)
 
             ans = ans + p + q
-            hq.heappush(sticks, p+q )
+            
+            heappush(sticks, p+q)
 
         return ans
 
