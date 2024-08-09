@@ -247,6 +247,24 @@ Just do opposite if looking for maximum
 
         return right
 
+## Binary Search Genric Template
+
+    def fn(arr, target):
+        l , r = 0 , len(arr)-1
+        while l<=r:
+            mid = (l+r)//2
+
+            if EQUAL_CONDITON:
+                return EQUALITY_OBJECTIVE
+
+            if LESS_THAN_CONDITION:
+                l = mid+1
+            else:
+                r = mid-1
+        
+        return OBJECTIVE
+
+
 
 
 **Note**

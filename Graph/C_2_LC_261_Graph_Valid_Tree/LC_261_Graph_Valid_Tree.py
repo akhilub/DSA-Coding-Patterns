@@ -52,7 +52,7 @@ class Solution:
                     seen.add(neighbour)
                     q.append(neighbour)
 
-        print(seen)
+        # print(seen)
         return len(seen)==n and len(edges) == n - 1 #Checking for both conditions
 
 

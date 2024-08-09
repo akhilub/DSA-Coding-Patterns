@@ -9,7 +9,7 @@ class Solution:
         def dfs(s: int, path: List[int]) -> None:
             # no need to check len(t)>k, when '==k' returned already
             if len(path)==k:
-                ans.append(deepcopy(path))     #we need deepcopy of path i.e deepcopy(path) instead of path.copy() or path[:] or path[::] even though they all works fine
+                ans.append(deepcopy(path))     #we need deepcopy of path i.e deepcopy(path) instead of path.copy() or path[:] or path[::] ,these are the shallow copy of path even though they all works fine
                 return
             
             #here we are only traversing down the path where we want to pick    

@@ -12,15 +12,19 @@
 
 class Solution:
     def validPalindrome(self,s):
-        i , j = 0 , len(s) -1
+        i , j = 0 , len(s)-1
         while i < j:
+            #skip left if not alphanumeric
             if not s[i].isalnum():
                 i+=1
+            #skip right if not alphanumeric
             elif not s[j].isalnum():
                 j-=1
+            #convert lowercase to uppercase and compare
             elif s[i].lower() != s[j].lower():
                 return False
             else:
+            #move both pointers
                 i , j = i + 1 ,j -1
         return True
 

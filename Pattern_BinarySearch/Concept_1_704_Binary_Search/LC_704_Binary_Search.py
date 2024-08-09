@@ -1,5 +1,5 @@
 class Solution:
-    def search(self,nums):
+    def search(self,nums,target):
         l = 0 
         r = len(nums) - 1
         while l <=r: #left < = right

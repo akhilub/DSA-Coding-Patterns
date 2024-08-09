@@ -47,7 +47,7 @@ getDigits = lambda n: list(map(int, str(n)))[::-1]
 print(getDigits(12345))  # Expected: [1, 2, 3, 4, 5]
 
 
-
+# Factorial
 
 
 # Reverse a positive integer

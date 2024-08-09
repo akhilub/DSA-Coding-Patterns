@@ -2,7 +2,15 @@
 
 class Solution:
     def findRotation(self, mat: List[List[int]], target: List[List[int]]) -> bool:
-        def rotateImage(mat):
+        for _ in range(4):
+            if mat==target:
+                return True
+
+            self.rotateImage(mat)
+
+        return False
+    
+    def rotateImage(self,mat):
             'In place modification of matrix'
             
             #swap along the middle
@@ -24,31 +32,22 @@ class Solution:
             transpose(mat)
 
 
-        for _ in range(4):
-            if mat ==target:
-                return True
-
-            rotateImage(mat)
-
-        return False
 
 
 #Competative Programming/Pythonic Way
-
-
-
 class Solution:
     def findRotation(self, mat: List[List[int]], target: List[List[int]]) -> bool:
-        def rotateImage(grid):
-            #Copied the transformed 2D grid(first reverses ,then transposed) back into original mat
-            #This updates mat in place with the newly rotated matrix. The slice assignment mat[:] ensures that the original list object mat is modified directly, which is necessary for the changes to persist outside the function scope.
-            mat[:] = [list(row) for row in zip(*grid[::-1])]
-
+        
         for _ in range(4):
             if mat ==target:
                 return True
 
-            rotateImage(mat)
+            self.rotateImage(mat)
+        
+        def rotateImage(self,grid):
+            #Copied the transformed 2D grid(first reverses ,then transposed) back into original mat
+            #This updates mat in place with the newly rotated matrix. The slice assignment mat[:] ensures that the original list object mat is modified directly, which is necessary for the changes to persist outside the function scope.
+            mat[:] = [list(row) for row in zip(*grid[::-1])]
 
         return False
 
