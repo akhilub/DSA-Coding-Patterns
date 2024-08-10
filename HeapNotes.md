@@ -153,5 +153,6 @@ list(heapq.merge(*[lst1, lst2], key=lambda x:x[1]))
 ## Min-Heap Property
 In a min-heap, for any given element at index i:
 
-The element at index i is less than or equal to the elements at indices 2*i + 1 and 2*i + 2 (if they exist).
-This ensures that the smallest element is always at the root (i.e., the first element of the list).
+- The element at index i is less than or equal to the elements at indices 2*i+1 and 2*i+2 (if they exist).
+
+- This ensures that the smallest element is always at the root (i.e., the first element of the list).
