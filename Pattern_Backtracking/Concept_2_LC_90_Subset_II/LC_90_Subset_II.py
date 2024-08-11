@@ -41,8 +41,8 @@ class Solution:
 #SC : O(N*2^N)
 class Solution:
   def subsetsWithDup(self, nums: List[int]) -> List[List[int]]:
-     ans = []
-     nums.sort()
+    ans = []
+    nums.sort()
     def dfs(s: int, path: List[int]) -> None:
       ans.append(path)
       

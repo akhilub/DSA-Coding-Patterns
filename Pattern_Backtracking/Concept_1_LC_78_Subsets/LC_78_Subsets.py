@@ -35,13 +35,14 @@ class Solution:
             if i == n:
                 ans.append(cur[:])     #ans.append(copy.deepcopy(cur))  # cur[:] means shallow copy of cur
                 return 
-            #pick
-            backtrack(cur+[nums[i]],i+1)
-            #skip
-            backtrack(cur,i+1)
+            
+            backtrack(cur+[nums[i]],i+1) #pick
+            
+            backtrack(cur,i+1) #skip
 
         backtrack([],0)
         return ans
+
         
 #My Approach 2) DFS
 class Solution:

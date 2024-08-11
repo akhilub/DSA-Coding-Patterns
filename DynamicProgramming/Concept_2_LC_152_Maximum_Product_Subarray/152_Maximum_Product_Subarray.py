@@ -31,7 +31,7 @@ class Solution:
 
         max_product = nums[0]
         min_product = nums[0]
-        result = nums[0]
+        ans = nums[0]
 
         for num in nums[1:]:
             if num < 0: #swap
@@ -40,6 +40,6 @@ class Solution:
             max_product = max(num, max_product * num)
             min_product = min(num, min_product * num)
 
-            result = max(result, max_product)
+            ans = max(ans, max_product)
 
-        return result
+        return ans

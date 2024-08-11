@@ -5,7 +5,7 @@
 class Solution:
     def exist(exist,board,word):
         R , C =len(board),len(borard[0])
-        visited = set () # To keep track of the visited cell so that do not visited it again
+        visited = set () # To keep track of the visited cell so that I do not visit it again
 
         def dfs(i,j,idx):
             #Base Cases
@@ -21,15 +21,18 @@ class Solution:
             if (i,j) in visited: #visiting the same cell twice
                 return False 
 
-
+            #add
             visited.add((i,j))
-            #Recursive Cases
+            
+            #Explore Recursive Cases
             res = dfs(i+1,j,idx+1) or 
                   dfs(i,j+1,idx+1) or
                   dfs(i-1,j,idx+1) or
                   dfs(i,j-1,idx+1) or
-
+            
+            #remove
             visited.remove((i,j))
+            
             return res
 
         for row in range(R):

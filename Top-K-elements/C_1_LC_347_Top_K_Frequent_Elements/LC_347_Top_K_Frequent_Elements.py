@@ -28,8 +28,9 @@ class Solution:
     
 
 # TOP K FREQUENT ELEMENTS VIA HEAP
-# The heapq in Python is a Min Heap (the heap.pop returns the smallest element). We can negate the numbers to make it a max heap. The algorithm pushes all the items in the form of -frequency, num tuple, then extracts k times to retrieve the Top K Frequent elements.
-#Time Complexity : O(nlog(m))
+# The heapq in Python is a Min Heap (the heap.pop returns the smallest element). 
+# We can negate the numbers to make it a max heap. The algorithm pushes all the items in the form of (-frequency, num) tuple, then extracts k times to retrieve the Top K Frequent elements.
+# Time Complexity : O(nlog(m))
 
 #Write this in interviews
 from heapq import *
@@ -43,7 +44,7 @@ class Solution:
         ans = []
         for _ in range(k):
             _ , num = heappop(a)
-            ans.append(num)
+            ans.append(num) # ans+=[num]
         return ans
     
 
@@ -56,7 +57,7 @@ class Solution:
         a = []
         for num,freq in c.items():
             heappush(a,(freq,num))
-        return [ j for i,j in heapq.nlargest(k,a,key = itemgetter(0))]
+        return [j for i,j in heapq.nlargest(k,a,key = itemgetter(0))]
     
 # or nsmallest
 from heapq import *
