@@ -20,14 +20,14 @@ class Solution:
 from heapq import *
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
-        pq = []
+        pq = []                                             #1.Use a min-heap of size k to keep track of the k largest elements.
         for num in nums:
-            heappush(pq,num)
+            heappush(pq,num)                                #2.Iterate through the array, adding elements to the heap.
             
-            if len(pq)>k:
+            if len(pq)>k:                                   #3.If the heap size exceeds k, remove the smallest element from the heap.
                 heappop(pq)
                 
-        return pq[0]
+        return pq[0]                                        #4.The root of the heap will be the k-th largest element.
 
 
 #Approach 3:Counting Sort

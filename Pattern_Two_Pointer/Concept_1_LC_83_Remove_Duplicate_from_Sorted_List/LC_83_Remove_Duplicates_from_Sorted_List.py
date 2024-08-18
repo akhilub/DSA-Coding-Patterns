@@ -41,9 +41,11 @@ ListNode().printLList(head)
 
 
 #Approach :Using Two Pointer
+
 #As the linked list contains the sorted numbers, we can traverse through the linked list 
-#and compare the current value and its next one if there is any,delete the next node if the next node is 
-#same as current(duplicate value) by pointing the current.next to current.next.next
+#and compare the current value and its next one if there is any, 
+#delete the next node if the next node is same as current(duplicate value) by pointing the current.next to current.next.next
+
 #TC:O(N) 
 #SC:O(1)
 class Solution:

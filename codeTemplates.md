@@ -257,12 +257,17 @@ Just do opposite if looking for maximum
             if EQUAL_CONDITON:
                 return EQUALITY_OBJECTIVE
 
-            if LESS_THAN_CONDITION:
+            if LESS_THAN_CONDITION:     
                 l = mid+1
             else:
                 r = mid-1
         
         return OBJECTIVE
+
+**Note for Binary Search Genric Template:**
+- LESS_THAN_CONDITION => F() < target ;  
+- On left `F()` could be `arr;f();LLinkedList` ; On Right `target` would be `some value` to compare
+
 
 
 

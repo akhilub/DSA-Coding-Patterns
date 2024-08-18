@@ -250,7 +250,7 @@ I : a = [1,3,4,5,7,9] , b = [2,4,6,8]
 O: [1,2,3,4,4,5,6,7,8,9]
 
 
-def mergeTwoSortedArray(a,b):
+def mergeTwoSortedArray(a:List[int],b:List[int]):
     i , j , la , lb = 0 , 0 ,len(a), len(b)
     res = []
     while i<la and j<lb:

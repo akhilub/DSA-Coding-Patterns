@@ -3,7 +3,7 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         
-        def binary_search_leftmost(A,T):
+        def binary_search_leftmost(A: List[int],T: int):
             L = 0
             R = len(A)
             while L < R:
@@ -14,7 +14,7 @@ class Solution:
                     R = m
             return L
         
-        def binary_search_rightmost(A,T):
+        def binary_search_rightmost(A: List[int],T: int):
             L = 0
             R = len(A)
             while L < R:

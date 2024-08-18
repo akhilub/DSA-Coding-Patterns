@@ -1,6 +1,6 @@
 #Approach 1: Two Pointer
 
-# We use two pointers i and j pointing to the end of two arrays, and a pointer k pointing to the end of the merged array.
+# We use two pointers `i` and `j` pointing to the end of two arrays, and a pointer `k` pointing to the end of the merged array.
 
 # Every time we compare the two elements at the end of the two arrays, and move the larger one to the end of the merged array. 
 # Then we move the pointer one step backward, and repeat this process until the two pointers reach the start of the arrays.

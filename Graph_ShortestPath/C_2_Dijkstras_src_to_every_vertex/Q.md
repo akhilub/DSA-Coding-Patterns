@@ -1,4 +1,6 @@
-Dijkstra's Algorithm
+
+
+## Dijkstra's Algorithm
 
 Implement Dijkstra's shortest path algorithm.
 

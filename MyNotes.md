@@ -256,7 +256,7 @@ Parameters
 
 
 Return value
-- The bisect_left() method is provided by the bisect module, which returns the left-most index to insert the given element, while maintaining the sorted order.
+- The bisect_left() method is provided by the bisect module, which returns the **left-most index to insert the given element**, while maintaining the sorted order.
 
 Example
 

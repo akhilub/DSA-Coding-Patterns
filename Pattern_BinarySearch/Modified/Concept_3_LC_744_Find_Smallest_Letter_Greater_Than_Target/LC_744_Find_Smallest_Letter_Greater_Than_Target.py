@@ -1,12 +1,15 @@
 #Approach:Modified Binary Search
 
-#Python ord()
-#The ord() function returns an integer representing the Unicode character.
+'''
+Python ord()
+The ord() function returns an integer representing the Unicode character.
 
-#print(ord('5'))    # 53
-#print(ord('A'))    # 65
-#print(ord('$'))    # 36
+print(ord('a'))    # 97
+print(ord('5'))    # 53
+print(ord('A'))    # 65
+print(ord('$'))    # 36
 
+'''
 class Solution:
     def searchNextLetters(self,letters,target):
         l = 0 

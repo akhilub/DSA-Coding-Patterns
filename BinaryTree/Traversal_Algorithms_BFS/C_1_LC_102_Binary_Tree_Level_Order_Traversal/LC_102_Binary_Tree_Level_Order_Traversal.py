@@ -2,10 +2,10 @@
 
 # We can use the BFS method to solve this problem. First, enqueue the root node, then continuously perform the following operations until the queue is empty:
 # Traverse all nodes in the current queue, store their values in a temporary array `t`, and then enqueue their child nodes.
-# Store the temporary array `t` in the answer array.
-# Finally, return the answer array.
+# Store the temporary array `t` in the answer `ans` array.
+# Finally, return the answer `ans` array.
 
-# The time complexity is O(n)and the space complexity is O(n).Here, n is the number of nodes in the binary tree.
+# The time complexity is O(n) and the space complexity is O(n).Here, n is the number of nodes in the binary tree.
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -20,7 +20,7 @@ class Solution:
             return ans
         q = deque([root])
         while q:
-            t = []
+            t = []                      #t-traversal order
             for _ in range(len(q)):
                 node = q.popleft()
                 t.append(node.val)

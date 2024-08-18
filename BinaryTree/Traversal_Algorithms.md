@@ -16,6 +16,7 @@ To check whether a binary tree is a full binary tree we need to test the followi
 I: [1,2,3,4,5,6,null]
 
 - Complete Binary Tree
+
 ```
            1                                        class TreeNode:
          /    \                                         def __init__(self,val=0,left=None,right=None):
@@ -120,7 +121,21 @@ def bfs(root):
 ```
 
 
-## All Binary Tree Traversal Algorithms run at O(N) time and O(N) space (due to recursion/stack or queue).
+### All Binary Tree Traversal Algorithms run at O(N) time and O(N) space (due to recursion/stack or queue).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -150,6 +165,8 @@ Input : [2,1,3,0,1.5,2.5,4]
 ```
 
 In a BST 
+
+
 ### preorder traversal    i.e NLR   
 
 ### inorder traversal     i.e LNR  0,1,1.5,2,2.5,3,4

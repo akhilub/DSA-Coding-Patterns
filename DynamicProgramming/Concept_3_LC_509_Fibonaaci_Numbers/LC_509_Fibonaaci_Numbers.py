@@ -17,12 +17,15 @@ class Solution:
 
 class Solution:
     def fib(self, n: int) -> int:
-        dp = [0,1] +[0]*(n-1)
+        dp = [0,1] +[0]*(n-1)                               
         
         for i in range(2,n+1):
             dp[i] = dp[i-1]+dp[i-2]
         
         return dp[n]
+    
+    
+#Q)#How [0]*(n-1)? because total no of elements in the list are  `n+1`, out of `n+1` we have already defined twp `[0,1]` so the remaining are (n+1-2) = n-1 
 
 #Approach3) Bottom Up: No Memory DP
 

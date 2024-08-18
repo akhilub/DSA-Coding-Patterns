@@ -38,12 +38,12 @@ class Solution:
                 l += 1
                 r -= 1
             
-            elif nums[l]<=nums[mid]:  # nums[l...m] are sorted, left half ordered, right half not ordered
+            elif nums[mid]>=nums[l]:  # nums[l...m] are sorted, left half ordered, right half not ordered
                 if nums[l]<=target<nums[mid]:
                     r=mid-1
                 else:
                     l=mid+1
-            else: #nums[l]>nums[mid] # nums[m...n-1] are sorted , right half ordered, left half not ordered
+            else: #nums[mid]<nums[l] # nums[m...n-1] are sorted , right half ordered, left half not ordered
                 if nums[mid]<target<=nums[r]:
                     l=mid+1
                 else:
