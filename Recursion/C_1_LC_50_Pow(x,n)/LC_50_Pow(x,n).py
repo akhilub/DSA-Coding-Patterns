@@ -35,7 +35,7 @@ class Solution:
             return 1/self.pow(x,-n)
         if n&1:  #or n%2 ==1           # n is odd
             return x*self.pow(x,n-1)
-        return self.pow(x*x,n//2)       #n is even
+        return self.pow(x*x,n//2)      #n is even
 
 
 

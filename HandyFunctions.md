@@ -288,7 +288,7 @@ def sortArray(nums: List[int]) -> List[int]:
 # Check if a string is Palindrome
 ```
 def isPalindrome(s:str):
-    l , r = 0 ,len(s)
+    l , r = 0 ,len(s)-1
     while l<r:
         if s[l]!=s[r]:return False
         l+=1
@@ -296,7 +296,7 @@ def isPalindrome(s:str):
     return True
 
 print(isPalindrome('racecar'))  #True
-print(isPalindrome('Akhil')) #False
+print(isPalindrome('Akhil'))    #False
 ```
 OR
 ```
@@ -306,6 +306,11 @@ def isPalindrome(s:str):
 OR
 ```
 isPalindrome = lambda s:s==s[::-1]
+```
+OR
+```
+def is_palindromic(s:str):
+    return all(s[i] == s[~i] for i in range(len(s) // 2)) 
 ```
 
 # Reverse a Graph (Adjacency List)

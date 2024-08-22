@@ -1,6 +1,6 @@
-dictionary  d --> {}
+dictionary  d --> {} or dict()
 
-set         s ---> {}
+set         s ---> {} or set()
 
 
 nums = [.....list of items/elements.....]
@@ -36,3 +36,8 @@ for v in d.values: # to iterate over the values in dictionary
 for k in d.keys: # to iterate over the keys in dictionary
 #logic
 
+
+
+#For matrices
+use x,col,c,j to represent columns
+use y,row,r,i to represent rows

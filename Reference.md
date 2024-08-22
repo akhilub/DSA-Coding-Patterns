@@ -10,3 +10,7 @@ https://www.piratekingdom.com/leetcode/templates
 
 
 https://leetcode.com/discuss/general-discussion/1512986/templates-where-to-find-them-pls-help
+
+
+https://www.linkedin.com/posts/gabag26_codinginterview-leetcode-activity-7231890157593931776-XB21/
+

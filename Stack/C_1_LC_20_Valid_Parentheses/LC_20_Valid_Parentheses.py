@@ -1,12 +1,18 @@
-#Approach 1: using a stack
+#Approach 1: Using a stack
 
-#Traverse the bracket string `s`. When encountering a left bracket, push the current left bracket into the stack; when encountering a right bracket, pop the top element of the stack (if the stack is empty, directly return false), 
-#and judge whether it matches. If it does not match, directly return false.
+'''
+Traverse the bracket string `s`. 
+•When encountering a left bracket, push the current left bracket into the stack; 
+•When encountering a right bracket, pop the top element of the stack (if the stack is empty, directly return false), 
+and judge whether it matches. If it does not match, directly return false.
 
+At the end of the traversal, 
+•if the stack is empty, it means the bracket string is valid, return true; 
+otherwise, return false.
 
-#At the end of the traversal, if the stack is empty, it means the bracket string is valid, return true; otherwise, return false.
-
-# The time complexity is O(n), and the space complexity is O(n). Here, n is the length of the bracket string .
+The time complexity is O(n), and the space complexity is O(n). 
+Here, n is the length of the bracket string .
+'''
 
 class Solution:                                                            #class Solution:  
     def isValid(self, s: str) -> bool:                                     #def isValid(self, s: str) -> bool:

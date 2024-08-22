@@ -1,3 +1,11 @@
+'''
+#MinHeap Approach doesnot work as expected because in 
+#`heappush(pq,(freq,word))` freq first, default sort by 1st element
+So do not go for it.
+'''
+
+#Appraoch :MaxHeap
+#Write this in interviews
 from heapq import *
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
@@ -23,8 +31,25 @@ class Solution:
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
         cnt = Counter(words)
-        lst = sorted(cnt,key = lambda x:(-cnt[x],x))
+        
+        lst = sorted(cnt,key = lambda x:(-cnt[x],x))    # multiple comparators "lambda x: (-cnt[x], x)"
+        
         return lst[:k]
+
+'''
+why the returned sorted() not a tuple (word, count), but only word?
+it's the property of Counter() class
+
+
+
+sorted(cnt,key = lambda x:(-cnt[x],x))
+
+equivalent
+
+sorted(cnt.keys(), key=lambda x: (-cnt[x], x))
+
+'''
+
     
     
     

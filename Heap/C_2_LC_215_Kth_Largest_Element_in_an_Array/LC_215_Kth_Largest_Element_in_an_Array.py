@@ -1,7 +1,6 @@
+# Approach 1:Priority Queue (Min Heap)
 '''
-Approach1:Priority Queue (Min Heap)
-
-We can maintain a min heap `minQ` of size `k` and then iterate through the array `nums`adding each element to the min heap. 
+We can maintain a min heap `pq` of size `k` and then iterate through the array `nums` adding each element to the min heap. 
 When the size of the min heap exceeds `k`, we pop the top element of the heap. This way, the final `k` elements in the min heap are the 
 `k` largest elements in the array, and the top element of the heap is the kth largest element.
 
@@ -16,7 +15,7 @@ class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:
         return nlargest(k, nums)[-1]
     
-# 1)Using heap operations 
+# 1)Using heap operations (min-Heap)
 from heapq import *
 class Solution:
     def findKthLargest(self, nums: List[int], k: int) -> int:

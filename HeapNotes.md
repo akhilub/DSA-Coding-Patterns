@@ -151,7 +151,15 @@ list(heapq.merge(*[lst1, lst2], key=lambda x:x[1]))
 ```
 
 ## Min-Heap Property
-In a min-heap, for any given element at index i:
+
+- All the children must be greater than or equal to its parent node
+
+- min-heap starts filling from 
+  - top to bottom 
+  - left to right
+
+
+#### In a min-heap, for any given element at index i:
 
 - The element at index i is less than or equal to the elements at indices 2*i+1 and 2*i+2 (if they exist).
 

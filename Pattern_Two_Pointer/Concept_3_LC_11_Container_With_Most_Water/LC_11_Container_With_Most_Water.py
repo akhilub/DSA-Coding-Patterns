@@ -19,6 +19,7 @@ class Solution:
             minHeight = min(height[l],height[r])
             area = (r-l)*minHeight
             ans = max(ans, area)
+            
             if height[l]<height[r]:
                 l+=1
             else:

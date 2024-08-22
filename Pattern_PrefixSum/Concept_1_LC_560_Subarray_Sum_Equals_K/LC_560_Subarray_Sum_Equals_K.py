@@ -1,4 +1,5 @@
 #Fundamental approach :PrefixSum
+
 #TC:O(N)
 #SC:O(N)
 class Solution:
@@ -42,16 +43,30 @@ class Solution:
 
 
 #Competative Programming Approach
-#Loop over nums and calculate the total sum `sum`.For each num in nums,add num to sum
-#and obtain the count of subarrays with sum `sum - k`.Add the sum to the result.
-#Then update the map with the count of subarrays with sum `sum`.Finally return the result.
+#Loop over nums and calculate the total sum `s`.For each num in nums,add num to sum `s`
+#and obtain the count of subarrays with sum `s- k`.Add the sum `s` to the result `ans`.
+#Then update the map `cnt` with the count of subarrays with sum `s`.Finally return the result `ans`.
+
+
+'''
+We define a hash table `cnt` to store the number of times the prefix sum of the array `nums` appears. 
+Initially, we set the value of `cnt[0]` to `1`, indicating that the prefix sum `0` appears once.
+
+We traverse the array `nums`, calculate the prefix sum `s`, then add the value of `cnt[s - k]` to the answer, and increase the value of `cnt[s]` by 1.
+
+After the traversal, we return the answer.
+
+The time complexity is O(n), and the space complexity is O(n). Where n is the length of the array nums.
+
+'''
+
 class Solution:
     def subarraySum(self,nums,k):
-        dp = Counter({0:1})
+        cnt = Counter({0:1})
         ans = s = 0
         for num in nums:
             s+=num
-            ans+=dp[s-k]
-            dp[s]+=1
+            ans+=cnt[s-k]
+            cnt[s]+=1
         return ans
 
