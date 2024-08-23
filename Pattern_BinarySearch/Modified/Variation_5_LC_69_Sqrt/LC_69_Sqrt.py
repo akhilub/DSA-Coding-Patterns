@@ -18,6 +18,7 @@
 
 class Solution:
     def mySqrt(self,x):
+        #Binary Search f(i) = i**2
         l ,r = 0 , x 
         while l<=r:
             m = floor((l+r)/2) #stick to this
@@ -29,4 +30,16 @@ class Solution:
                 l = m + 1
        #at the end of the while loop left has reached right+1 i.e l = r +1
         return r #because in question we are asked to return the greatest integer n such that n**2<=x
-        
+
+
+'''
+floor((l+r)/2)
+or
+(l+r)//2
+or
+l +(r-l)//2
+or
+r+(l-r)//2
+or
+(l+r)>>1
+'''

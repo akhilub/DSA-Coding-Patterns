@@ -178,9 +178,10 @@
         # left is the insertion point
         return left
 
-# Binary search: for greedy problems
 
-If looking for a minimum
+# Binary search: for greedy problems
+## Case: Problem Function  is monotonically decreasing 
+- If looking for a minimum   
 
     def fn(arr):
         def check(x):
@@ -199,9 +200,9 @@ If looking for a minimum
         return left
 
 
-Just do opposite if looking for maximum
-
-
+## Case: Problem Function  is monotonically increasing
+- Just do opposite if looking for maximum
+```
     def fn(arr):
         def check(x):
             # this function is implemented depending on the problem
@@ -217,11 +218,13 @@ Just do opposite if looking for maximum
                 right = mid - 1
         
     return right
-
+```
 
 
 ## Binary search: duplicate elements, left-most insertion point
+- bisect.bisect_left(arr:List[int],target:int) implementation
 
+```
     def fn(arr, target):
         left = 0
         right = len(arr)
@@ -232,6 +235,8 @@ Just do opposite if looking for maximum
             else:
                 right = mid
         return left
+```
+
 
 ## Binary search: duplicate elements, right-most insertion point
 
@@ -247,27 +252,12 @@ Just do opposite if looking for maximum
 
         return right
 
-## Binary Search Genric Template
 
-    def fn(arr, target):
-        l , r = 0 , len(arr)-1
-        while l<=r:
-            mid = (l+r)//2
-
-            if EQUAL_CONDITON:
-                return EQUALITY_OBJECTIVE
-
-            if LESS_THAN_CONDITION:     
-                l = mid+1
-            else:
-                r = mid-1
-        
-        return OBJECTIVE
 
 **Note for Binary Search Genric Template:**
-- LESS_THAN_CONDITION => F() < target ;  
-- On left `F()` could be `arr;f();LLinkedList` ; On Right `target` would be `some value` to compare
-
+- PROBLEM_CONDITION => F() COMPARISON_OPERATOR target   
+- On left `F()` could be `arr;f();LLinkedList`  
+- On Right `target` would be `some value` to compare
 
 
 

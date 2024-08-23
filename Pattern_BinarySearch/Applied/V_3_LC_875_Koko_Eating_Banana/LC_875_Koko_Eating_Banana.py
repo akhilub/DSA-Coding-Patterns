@@ -29,14 +29,18 @@ class Solution:
             
             t = sum(ceil(x/mid) for x in piles)     #total time to eat each pile at speed mid at loose bound
             
-            if h>=t:                #when the total time `t` approaches `h` we are sure we found a minimum speed `mid` and store it. 
+            if t<=h:                #when the total time `t` approaches `h` we are sure we found a minimum speed `mid` and store it. 
                 ans = min(ans,mid)
                 R = mid
             else:
                 L = mid+1
                 
-        return ans
+        return ans # L
+
+
     
+#Speed = Banana/Time
+#F(Speed) is monotonically decresing so update R towards mid when LESS_THAN_CONDITION
 
 
 '''

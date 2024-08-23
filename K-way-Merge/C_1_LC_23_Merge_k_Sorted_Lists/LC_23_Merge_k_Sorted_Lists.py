@@ -1,6 +1,6 @@
 #Approach: K-way-merge or Min-Heap or Prirority Queue
 # TC:O(n(log(k)))
-
+# Write this in interviews
 
 # Definition for singly-linked list.
 # class ListNode:
@@ -171,7 +171,7 @@ class Solution:
         if K==1:
             return lists[0]
         if K==2:
-            return mergeTwoLists(lists[0],lists[1])
+            return self.mergeTwoLists(lists[0],lists[1])
         mid = K//2
         left = self.mergeKLists(lists[:mid])
         right = self.mergeKLists(lists[mid:])
@@ -186,7 +186,7 @@ class Solution:
                 l1=l1.next
             else:
                 curr.next = l2 
-                l1 = l2.next
+                l2 = l2.next
             curr = curr.next
         curr.next = l1 or l2
         return dummy.next  

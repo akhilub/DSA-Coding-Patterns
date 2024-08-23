@@ -191,9 +191,11 @@ class Solution:
         cnt = Counter(nums)   # find the frequency of each number
         pq = []               # min-heap
         
-        # go through all numbers of the numFrequencyMap `cnt` and push them in the minHeap, which 
-        # will have top k frequent numbers. If the heap size is more than k, we remove the 
-        # smallest(top) number
+        '''
+        go through all numbers of the numFrequencyMap `cnt` and push them in the minHeap, 
+        which will have top k frequent numbers. If the heap size is more than k, we remove the 
+        smallest(top) number
+        '''
         for num , freq in cnt.items():
             heappush(pq,(freq,num))         # freq first, default sort by 1st element
             if len(pq)>k:

@@ -28,7 +28,7 @@ class Solution:
     def frequencySort(self, s: str) -> str:
         cnt = Counter(s) #ch-fq map
         #building list of tuple based on ch-fq map sorted on the values in decreasing order 
-        lst = sorted(cnt.items() ,key = lambda x:-x[1]) 
+        lst = sorted(cnt.items() ,key = lambda x:-x[1]) #Note sorted returns a list/array
         #join the ch based on their freq
         ans = ''.join(ch*fq for ch,fq in lst)
         return ans

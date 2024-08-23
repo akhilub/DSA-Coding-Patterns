@@ -1,3 +1,5 @@
+#Logic:# Sort by frequency of words (in descending order) and then lexicographically (in ascending order)
+
 '''
 #MinHeap Approach doesnot work as expected because in 
 #`heappush(pq,(freq,word))` freq first, default sort by 1st element
@@ -27,18 +29,29 @@ class Solution:
     
 
 
+
+
+
+
+
+
+
+        
+
 #Competative Programming
 class Solution:
     def topKFrequent(self, words: List[str], k: int) -> List[str]:
         cnt = Counter(words)
         
-        lst = sorted(cnt,key = lambda x:(-cnt[x],x))    # multiple comparators "lambda x: (-cnt[x], x)"
+        lst = sorted(cnt ,key = lambda x:(-cnt[x],x))    # multiple comparators "lambda x: (-cnt[x], x)"
         
         return lst[:k]
 
+
 '''
-why the returned sorted() not a tuple (word, count), but only word?
+Why the returned sorted() not a tuple (word, count), but only word?
 it's the property of Counter() class
+note we are passing `cnt` not `cnt.items()`
 
 
 
@@ -50,7 +63,21 @@ sorted(cnt.keys(), key=lambda x: (-cnt[x], x))
 
 '''
 
+
+
+#Learn from below working concepts for how to use sorted the way you want it works
+
+class Solution:
+    def topKFrequent(self, words: List[str], k: int) -> List[str]:
+        cnt = Counter(words)
+        # Sort by frequency (in descending order) and then lexicographically (in ascending order)
+        s_cnt = {w:f for w,f in sorted(cnt.items(),key = lambda x:(-x[1],x[0]))}
+        
+        return [w for w in s_cnt.keys()][:k]
     
-    
+
+'''
+lst_of_tuple = sorted(cnt.items(), key=lambda x: (-x[1], x[0]))
+'''
     
     
