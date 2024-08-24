@@ -1,5 +1,5 @@
 '''
-Problem is indirectly asking to use property of BST i.e so use the below properties to 
+Problem is indirectly asking to use property of BST , use the below properties to 
 optimise your solution by searching only in feasible region
 
 Properties of BST

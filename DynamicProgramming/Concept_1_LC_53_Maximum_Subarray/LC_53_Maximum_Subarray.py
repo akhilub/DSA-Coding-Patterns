@@ -9,6 +9,7 @@
 
 class Solution:
     def maxSubarray(self,nums):
+        #In closed form
         ans = curSum = nums[0]
         for i in range(1,len(nums)):
             curSum = max(curSum,0) + nums[i]

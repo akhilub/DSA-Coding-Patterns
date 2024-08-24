@@ -1,17 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Approach
 #
 #      cur          nextTemp(assigning curr.next to nextTemp)
@@ -103,16 +89,16 @@ if __name__ == "__main__":
 #We can reverse every other nodes except the current node,then reverse the link direction
 #The Recursion is tail optimised to O(N)
 #SC: O(N) where N is the number of nodes in the linked list
-# class Solution:
-#     def reverseList(self,head):
-#         #Base Case
-#         if head is None or head.next is None:
-#             return head
-#         #Recursive Case
-#         n = self.reverseList(head.next)
-#         head.next.next = head
-#         head.next =None
-#         return n
+class Solution:
+    def reverseList(self,head):
+        #Base Case
+        if head is None or head.next is None:
+            return head
+        #Recursive Case
+        n = self.reverseList(head.next)
+        head.next.next = head
+        head.next =None
+        return n
 
 
 #Reverse the Linked List by changing the node value
