@@ -1,5 +1,7 @@
 # NAIVE BRUTEFORCE ALGORITHM TO GET THE LONGEST PALINDROME SUBSTRING
-# The first solution would be to bruteforce the substrings in O(N^2) time. And for each substring, we check if it is a palindrome which takes O(N) time. The overall time complexity is O(N^3).
+# The first solution would be to bruteforce the substrings in O(N^2) time. 
+# And for each substring, we check if it is a palindrome which takes O(N) time. 
+# The overall time complexity is O(N^3).
 
 # Please note that the array/string slicing in Python also takes O(N) time. Here, we store the left and right index of the longest palindrome substring.
 
@@ -19,7 +21,8 @@ class Solution:
 
 
 # OPTIMISED BRUTEFORCE ALGORITHM TO GET THE LONGEST PALINDROME SUBSTRING
-# We can slightly improve the bruteforce, by reverse the inner check, and break once we have found a palindrome. No need to continue as the rest of the inner loop gives a shorter substring.
+# We can slightly improve the bruteforce, by reverse the inner check, and break once we have found a palindrome. 
+# No need to continue as the rest of the inner loop gives a shorter substring.
 # Time complexity is still O(N^3).
 
 class Solution:
@@ -41,7 +44,7 @@ class Solution:
 # Checking palindrome substring is expensive but we can pre-compute this in O(N^2) using Dynamic Programming – which we can do it Top Down or Bottom Up.
 
 # The Top Down is via Recursion and Memoization. It is based on the following observations. 
-#Given f(i,j) represent substring `s[i:j+1]` from index i to index j inclusive is a palindrome
+# Given f(i,j) represent substring `s[i:j+1]` from index i to index j inclusive is a palindrome
 
 #             { 1 , if i==j i.e a single character is a palindrome
 # f(i,j) =    {s[i]==s[j], if i+1==j   i.e two characters are palindrome 
@@ -75,9 +78,18 @@ class Solution:
         return s[L:R+1]
 
 
-# The f function (Top Down DP) can replace the O(N) palindrome check direclty however it is still not fast enough as there is Recursion function call overhead. And we can improve this by Bottom Up Dynamic Programming which stores the F values in a two dimensional array.
+# The f function (Top Down DP) can replace the O(N) palindrome check direclty however it is still not fast enough as there is Recursion function call overhead. 
+# And we can improve this by Bottom Up Dynamic Programming which stores the F values in a two dimensional array.
 
-#Write this in interviews
+
+
+
+
+
+
+#Bottom-Up
+'''Write this in interviews after telling intial brute force approach'''
+
 class Solution:
     def longestPalindrome(self, s: str) -> str:
         n = len(s)

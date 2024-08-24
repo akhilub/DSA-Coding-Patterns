@@ -1,14 +1,12 @@
 # Binary Tree
 
-
+## Validity
 To check whether a binary tree is a full binary tree we need to test the following cases:-
-
 
 - If a binary tree node is NULL then it is a full binary tree. 
 - If a binary tree node does have empty left and right sub-trees, then it is a full binary tree by definition. 
 - If a binary tree node has left and right sub-trees, then it is a part of a full binary tree by definition. In this case recursively check if the left and right sub-trees are also binary trees themselves. 
 - In all other combinations of right and left sub-trees, the binary tree is not a full binary tree.
-
 
 
 ## Defination
@@ -18,11 +16,19 @@ I: [1,2,3,4,5,6,null]
 - Complete Binary Tree
 
 ```
-           1                                        class TreeNode:
-         /    \                                         def __init__(self,val=0,left=None,right=None):
-        2      3                                            self.val = val
-       /  \   /                                             self.left = left
-      4    5  6                                             self.right = right
+class TreeNode:
+    def __init__(self,val=0,left=None,right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+```
+
+```
+           1                                       
+         /    \                                         
+        2      3                                            
+       /  \   /                                             
+      4    5  6                                             
 ```
 
 
@@ -127,6 +133,17 @@ def bfs(root):
 
 
 
+### Some Useful Definations related to Binary Trees
+
+- A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.
+
+
+
+- The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.
+
+
+
+- The length of a path between two nodes is represented by the number of edges between them.
 
 
 
@@ -140,39 +157,3 @@ def bfs(root):
 
 
 
-
-# Binary Search Tree
-
-- A binary search tree is a tree that satisfies these constraints:
-
-- The left subtree of a node contains only nodes with keys less than the node's key.
-- The right subtree of a node contains only nodes with keys greater than the node's key.
-- Both the left and right subtrees must also be binary search trees.
-
-
-## Defination 
-
-L<N<R
-
-Input : [2,1,3,0,1.5,2.5,4]
-
-```
-               2
-            /     \
-          1        3
-        /  \      /  \
-       0   1.5   2.5  4
-```
-
-In a BST 
-
-
-### preorder traversal    i.e NLR   
-
-### inorder traversal     i.e LNR  0,1,1.5,2,2.5,3,4
-- gives elements in sorted order from smallest to largest
-
-### postorder traversal   i.e RLN
-
-### reverseInorder traversal i.e RNL 4,3,2.5,2,1.5,1
-- gives elements in reverse sorted order from largest to smallest 

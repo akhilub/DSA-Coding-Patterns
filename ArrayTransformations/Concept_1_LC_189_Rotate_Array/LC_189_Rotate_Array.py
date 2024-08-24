@@ -51,6 +51,8 @@ class Solution:
         reverseList(nums,k,n-1) #Reverse the last n-k elements
 
 
+
+
 #Pythonic way /Competative Programming way
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
