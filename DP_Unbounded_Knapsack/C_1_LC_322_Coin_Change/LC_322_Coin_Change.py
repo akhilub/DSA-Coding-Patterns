@@ -1,3 +1,15 @@
+# The Greedy Algorithm may not work here. 
+# For example, given coins [1, 20, 25], and the target is 60, if we greedily pick the most largest coin , 
+# we will end up with (25, 25, and 10 times of 1) i.e. 12 coins while the optimal solution will be 3 times 20 i.e. 3 coins.
+
+
+# This problem is like a unbounded knapsack problem, where we can use as many coins of the one type as we want. 
+# We can solve this via Depth First Search (Backtracking), and also we can solve this more efficiently using Dynamic Programming Algorithms.
+# In particular, the DP can be classified into Top-Down or Bottom-up.
+
+
+
+
 #DYNAMIC PROGRAMMING ALGORITHMS TO MAKE CHANGE
 
 #Let f(n) be the no of minimum coins to come up with the target n amount
@@ -65,8 +77,3 @@ class Solution:
 # Both DP algorithms have O(N) time and O(N) space.
 
 
-# The Greedy Algorithm may not work here. For example, given coins [1, 20, 25], and the target is 60, if we greedily pick the most largest coin , we will end up with (25, 25, and 10 times of 1) i.e. 12 coins while the optimal solution will be 3 times 20 i.e. 3 coins.
-
-
-# This problem is like a unbounded knapsack problem, where we can use as many coins of the one type as we want. We can solve this via Depth First Search (Backtracking), and also we can solve this more efficiently using Dynamic Programming Algorithms.
-# In particular, the DP can be classified into Top-Down or Bottom-up.

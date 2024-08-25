@@ -1,10 +1,10 @@
 #Approach: Merge Sort using Divide & Conquer
 #TC:O(nlogn)
-#SC:O(1)
+#SC:O(n)
 
 class Solution:
     def sortArray(self,nums):
-        if len(nums)<=1:
+        if len(nums)<=1:    #terminal case
             return nums
 
         n = len(nums)
@@ -14,7 +14,7 @@ class Solution:
         return self.mergeTwoSortedArray(first,second)
 
 
-    def mergeTwoSortedArray(self,a,b):
+    def mergeTwoSortedArray(self,a:List[int],b:List[int])-> List[int]:
         i , j, la, lb = 0 , 0 ,len(a),len(b)
         res = []
         while i < la and j < lb:
@@ -30,3 +30,23 @@ class Solution:
             res+=b[j:]
         return res
 
+
+
+
+
+#Approach: QuickSort Using Recursion
+#TC:O(nlogn)[Best]--->O(nlogn)[Average]---->O(n^2)(Worst)
+#SC:O(log(n))
+import random
+class Solution:
+    def sortArray(self, nums: List[int]) -> List[int]:
+        if len(nums)<=1:
+            return nums
+        
+        pivot = random.choice(nums)
+        
+        eq = [num for num in nums if num==pivot]
+        smaller = [num for num in nums if num<pivot]
+        bigger=[num for num in nums if num>pivot]
+        
+        return self.sortArray(smaller)+eq+self.sortArray(bigger)

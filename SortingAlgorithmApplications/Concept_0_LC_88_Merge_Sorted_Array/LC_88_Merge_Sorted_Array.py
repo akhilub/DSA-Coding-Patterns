@@ -1,3 +1,60 @@
+from typing import List
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        a = nums1[:m]
+        b = nums2[:n]
+        nums1[::] = self.mergeTwoSortedArray(a,b)
+    
+    #Use this to merge two sorted arrays
+    def mergeTwoSortedArray(self,a:List[int],b:List[int])->List[int]:
+        i , j , la , lb = 0 , 0 ,len(a), len(b)
+        res = []
+        while i<la and j<lb:
+            if a[i]<b[j]:
+                res+=[a[i]]
+                i+=1
+            else:
+                res+=[b[j]]
+                j+=1
+        while i<la:
+            res+=[a[i]]
+            i+=1
+        while j<lb:
+            res+=[b[j]]
+            j+=1
+        return res
+    
+    
+if __name__=="__main__":
+    nums1 = [1,3,4,5,7,9,0,0,0,0]
+    m = 6
+    nums2 =[2,4,6,8]
+    n=4
+    
+    Solution().merge(nums1,m,nums2,n)
+    print(nums1)
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
 #Approach 1: Two Pointer
 
 # We use two pointers `i` and `j` pointing to the end of two arrays, and a pointer `k` pointing to the end of the merged array.
@@ -27,7 +84,7 @@ class Solution:
         
 
 #Approach 2: Competative Programming
-#TC:O(nlogn)
+# TC:O(nlogn)
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
         """
@@ -46,3 +103,8 @@ class Solution:
         """
         nums1[m:] = nums2
         nums1.sort() #list.sort() sorts the list in-place, mutating the list indices, and returns None (like all in-place operations).
+'''
+
+
+
+

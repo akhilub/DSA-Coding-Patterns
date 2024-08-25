@@ -15,7 +15,6 @@ class Solution:
             ans+=1 # update 
             for _ in range(len(q)):
                 node = q.popleft()
-
                 #apply here what's is said in question i.e check if this is a leaf node
                 #leaf nodes Note: A leaf is a node with no children that is why `and`
                 if node.left is None and node.right is None:

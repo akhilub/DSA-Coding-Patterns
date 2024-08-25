@@ -250,7 +250,7 @@ I : a = [1,3,4,5,7,9] , b = [2,4,6,8]
 O: [1,2,3,4,4,5,6,7,8,9]
 
 
-def mergeTwoSortedArray(a:List[int],b:List[int]):
+def mergeTwoSortedArray(a:List[int],b:List[int])->List[int]:
     i , j , la , lb = 0 , 0 ,len(a), len(b)
     res = []
     while i<la and j<lb:
@@ -274,16 +274,63 @@ def mergeTwoSortedArray(a:List[int],b:List[int]):
 
 - Based on this we can recursive apply merging sorting algorithm to a list. We continuously divide the list into equal two parts. When the partition size is small enough (one element or none), we know it is by natural sorted. Then we start merge these small partitions into bigger partitions until we get the entire list sorted.
 
+- The merge sort algorithms run at O(NLogN) time (best, average and worst cases) and takes O(N) space.The merge sorting algorithm is a stable sorting algorithm – where it maintains the relative equal-key orders.
+
 ```
-def sortArray(nums: List[int]) -> List[int]:
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+
+def mergeSort(nums: List[int]) -> List[int]:
     if len(nums) <= 1:
         return nums
     n = len(nums)
     mid  = n//2
-    first = sortArray(nums[:mid])
-    second = sortArray(nums[mid:])
+    first = mergeSort(nums[:mid])
+    second = mergeSort(nums[mid:])
     return mergeTwoSortedArray(first,second)
 ```
+
+# QuickSort
+
+- Quicksort is a well-known sorting algorithm – as the name suggests, it sorts quickly.
+
+- The idea of QuickSort algorithm is to first pick a pivot number (which can be first, last, middle, or random). Then, we go through the list to partition the list into three parts. The smaller elements, the equal parts, and the bigger parts.
+
+- Then, we call the quicksort function to sort the smaller and bigger parts, and the final sorted list would be the concatenation of smaller, equal, and the bigger parts.
+
+- If the pivot number is not picked wisely, for example, if we always pick the smallest or largest element in the list, and the quick sorting algorithm will sort 1 element at a time O(N) and it needs N iterations, which degenerate the algorithm to O(N^2) quadratic.
+
+- However, if everytime the pivot element roughtly splits the smaller and larger parts into similar sizes, then the complexity of QuickSort will be O(NLogN) average.
+
+- **The quick sorting algorithm is not stable – as the keys of same values after sorting may not keep their original order.**
+
+
+
+```
+Input: nums = [5,2,3,1]
+Output: [1,2,3,5]
+
+def quickSort(self, nums: List[int]) -> List[int]:
+        if len(nums)<=1:
+            return nums
+        
+        pivot = random.choice(nums)
+        eq,smaller,bigger = [],[],[]
+        
+        for num in nums:
+            if num == pivot:
+                eq+=[num]
+            elif num<pivot:
+                smaller+=[num]
+            else:
+                bigger+=[num]
+        
+        return quickSort(smaller)+eq+quickSort(bigger)
+```
+
+
+
+
 
 # Check if a string is Palindrome
 ```
@@ -348,16 +395,12 @@ def convertGraphInput(edges: List[List[int]]):
 ## Convert Graph Adjacency Matrix input to Adjacency List output
 
 - I prefer way 2
-<table>
 
-<tr>
-<th>Way 1</th>
-<th>Way 2</th>
-</tr>
+#### Way1
 
-<tr>
-<td>
-<pre>
+```
+grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
+
 def adj_list(grid):
     G={}
     for i in range(len(grid)):
@@ -368,16 +411,18 @@ def adj_list(grid):
         G[i] = neighbors
     return G
 
-grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
 G = adj_list(grid)
 
 print(G) //G is now {0: [1], 1: [0], 2: []}
-</pre>
-</td>
+```
 
+#### Way2
 
-<td>
-<pre>
+```
+grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
+
+G = adj_list(grid)
+
 def adj_list(grid):
     G=defaultdict(list)
     for i in range(len(grid)):
@@ -386,16 +431,31 @@ def adj_list(grid):
                 G[i].append(j)
     return G
 
-grid = [[1,1,0],[1,1,0],[0,0,1]] //adjacency matrix
-G = adj_list(grid)
-
 print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
-</pre>
-</td>
+```
 
 
-</tr>
-</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
