@@ -52,3 +52,8 @@ equivalent
 t = sum((x + mid - 1) // mid  for x in piles)
 
 '''
+
+
+
+#Another Way
+

@@ -1,10 +1,14 @@
 #Approach 1: Greedy DP
-#We can enumerate each element of the prices array as the SP.Then we need to find a minimum value in front of it as the purchase price to maximize the profit
-#Therefore we use a variable mi to maintain the prefix minimum value of the array prices
-#Then we traverse the array prices for each element v , calculate the difference between it and the minimum value mi in front of it.
-#And Update the answer to the maximum difference.Then update mi = min(mi,v).
-#Continue to traverse the array prices until the traversal ends.Finally return the answer
+'''
+We can enumerate each element of the prices array as the SP.
+Then we need to find a minimum value in front of it as the purchase price to maximize the profit
 
+Therefore we use a variable mi to maintain the prefix minimum value of the array prices
+Then we traverse the array prices for each element v , calculate the difference between it and the minimum value mi in front of it.
+
+And Update the answer to the maximum difference.Then update mi = min(mi,v).
+Continue to traverse the array prices until the traversal ends.Finally return the answer
+'''
 #TC:O(n)
 #SC:O(1)
 
@@ -52,13 +56,14 @@ class Solution:
 #Go with this in interview
 #Approch 2:
 
-#Start from the beginning of the array, go to the end.
-#Keep a global maxprofit `ans`.
-#Have a purchase price (which will be the price at the Oth index when you start the loop), for every price you encounter, calculate the profit and update maxprofit accordingly. 
-#If you find a price smaller than the purchase price, make that your purchase price and start calculating profit from then on w the new purchase price.
-#In the end, we'll have the maximum profit in the maxprofit variable `ans`. Solved in 1 pass.
-#O(n). This is called Kadane's algorithm.
-
+'''
+Start from the beginning of the array, go to the end.
+Keep a global maxprofit `ans`.
+Have a purchase price (which will be the price at the Oth index when you start the loop), for every price you encounter, calculate the profit and update maxprofit accordingly. 
+If you find a price smaller than the purchase price, make that your purchase price and start calculating profit from then on w the new purchase price.
+In the end, we'll have the maximum profit in the maxprofit variable `ans`. Solved in 1 pass.
+O(n). This is called Kadane's algorithm.
+'''
 
 class Solution:
     def maxProfit(self,prices:List[int])-> int:

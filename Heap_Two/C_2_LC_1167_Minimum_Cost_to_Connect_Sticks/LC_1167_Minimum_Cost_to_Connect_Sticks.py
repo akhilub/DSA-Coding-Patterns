@@ -17,11 +17,11 @@ class Solution:
         heapify(sticks)
         ans = 0
         while len(sticks)>1:
-            p , q = heappop(sticks),heappop(sticks)
+            s1 , s2 = heappop(sticks),heappop(sticks)
 
-            ans = ans + p + q
+            ans = ans + s1 + s2
             
-            heappush(sticks, p+q)
+            heappush(sticks, s1+s2)
 
         return ans
 

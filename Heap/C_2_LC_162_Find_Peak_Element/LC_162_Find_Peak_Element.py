@@ -17,10 +17,9 @@ class Solution:
         return peak_i               # Return the index of the peak element
     
 
+
 #Follow Up:You must write an algorithm that runs in O(log n) time.
 #Approach:Binary Search(Monotonically decreasing)
-
-
 '''
 We define the left boundary of binary search as left=0 and the right boundary as right=n−1, 
 where n is the length of the array. In each step of binary search, we find the middle element 

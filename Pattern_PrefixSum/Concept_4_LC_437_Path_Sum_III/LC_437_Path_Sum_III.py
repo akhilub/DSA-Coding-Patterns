@@ -38,13 +38,13 @@ class Solution:
         def dfs(node, s):
             if node is None:
                 return 0
-            s += node.val
-            ans = cnt[s - targetSum]
+            s += node.val                # s->prefixSum
+            ans = cnt[s - targetSum]     # The number of paths that have the required sum.
             cnt[s] += 1
             ans += dfs(node.left, s)
             ans += dfs(node.right, s)
             cnt[s] -= 1
             return ans
 
-        cnt = Counter({0: 1})
+        cnt = Counter({0: 1})           #hashmap to store prefixSum
         return dfs(root, 0)

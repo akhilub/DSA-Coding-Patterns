@@ -2,7 +2,9 @@
 #TC:O(n)
 #SC:O(1)
 
-#We can apply the prefix sum algorithm to this problem. We need to sum all numbers in O(N) linear time using the sum function. Then we accumulate the sum of left part – and then check the rest excluding the value at middle index.
+# We can apply the prefix sum algorithm to this problem. 
+# We need to sum all numbers in O(N) linear time using the sum function. 
+# Then we accumulate the sum of left part – and then check the rest excluding the value at middle index.
 class Solution:
     def findMiddleIndex(self, nums: List[int]) -> int:
         prefix = 0

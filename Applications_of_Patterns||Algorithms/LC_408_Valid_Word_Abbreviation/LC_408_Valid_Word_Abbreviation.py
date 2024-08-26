@@ -1,4 +1,8 @@
 #Approach:Simulation
+#TC:O(m+n) where m is string word.length() and n is string abbr.length
+#SC:O(1)
+
+
 
 class Solution:
   def validWordAbbreviation(self, word: str, abbr: str) -> bool:
