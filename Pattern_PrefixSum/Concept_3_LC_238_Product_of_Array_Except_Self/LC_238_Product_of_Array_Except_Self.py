@@ -34,7 +34,7 @@ class Solution: # 2 extra arrays
 # We define two variables left and right, which represent the product of all elements to the left and right of the current element respectively. 
 # Initially, left = 1, right = 1. Define an answer array ans of length n.
 # We first traverse the array from left to right, for the ith element we update ans[i] with left, then left multiplied by nums[i].
-# Then, we traverse the array from right to left, for the ith element, we update ans[i] to ans|i] x right, then right multiplied by numsli].
+# Then, we traverse the array from right to left, for the ith element, we update ans[i] to ans|i] x right, then right multiplied by nums[i].
 # After the traversal, the array `ans` is the answer.
 # The time complexity is O(n), where n is the length of the array nums. Ignore the space consumption of the answer array, the space complexity is O(1).
 

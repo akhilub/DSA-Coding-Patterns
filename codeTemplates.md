@@ -324,3 +324,21 @@ For the graph templates, assume the nodes are numbered from 0 to n - 1 and the g
 
         seen = {START_NODE}
         return dfs(START_NODE)
+
+
+
+
+
+## Common model of monotonic stack: 
+
+### Find the nearest number to the left/right of each number that is larger/smaller than it. 
+
+#### Template:
+
+```
+stk = []
+for i in range(n):
+    while stk and check(stk[-1], i):
+        stk.pop()
+    stk.append(i)
+```
