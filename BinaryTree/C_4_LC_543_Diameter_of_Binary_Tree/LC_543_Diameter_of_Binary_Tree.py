@@ -43,7 +43,7 @@ ans = max(ans,L+R+1)
 
 
 
-#Write this in interviews
+
 #Approach2:TLE because TC is O(N^2) since we are calculating depth and dia in two separate traversal of tree
 
 class Solution:
@@ -75,7 +75,8 @@ class Solution:
             
         return calculateDiameter(root)
     
-    
+
+#Write this in interviews    
 #Optimized Solution
 #TC:O(N)
 #SC:O(N)

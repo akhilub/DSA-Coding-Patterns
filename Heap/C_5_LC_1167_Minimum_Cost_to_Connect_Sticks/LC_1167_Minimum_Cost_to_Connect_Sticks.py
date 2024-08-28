@@ -26,7 +26,7 @@ n is the length of the array sticks.
 # By using the min heap in Python (the heapify module), we can simulate the process by popping out two smallest from the Priority Queue, accumulate the cost, and add the new stick (merged length) back to the priority queue.
 
 
-
+from heapq import *
 class Solution:
     def connectSticks(self, sticks: List[int]) -> int:
         heapify(sticks)

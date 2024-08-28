@@ -1,5 +1,7 @@
-#Approach 1: Greedy DP
+#Approach 1: Greedy DP (One-Time Maximum Profit Problem)
+
 '''
+
 We can enumerate each element of the prices array as the SP.
 Then we need to find a minimum value in front of it as the purchase price to maximize the profit
 
@@ -60,7 +62,7 @@ class Solution:
 Start from the beginning of the array, go to the end.
 Keep a global maxprofit `ans`.
 Have a purchase price (which will be the price at the Oth index when you start the loop), for every price you encounter, calculate the profit and update maxprofit accordingly. 
-If you find a price smaller than the purchase price, make that your purchase price and start calculating profit from then on w the new purchase price.
+If you find a price smaller than the purchase price, make that your purchase price and start calculating profit from then on with the new purchase price.
 In the end, we'll have the maximum profit in the maxprofit variable `ans`. Solved in 1 pass.
 O(n). This is called Kadane's algorithm.
 '''

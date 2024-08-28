@@ -34,7 +34,7 @@ class Solution:
         if n == 0:        #An empty tree is a valid tree
             return True
 
-        #Convert input to graph adjacency list 
+        #Build Graph/Convert input to graph adjacency list 
         G = defaultdict(list[int])
         for s,e in edges:
             G[s].append(e)
