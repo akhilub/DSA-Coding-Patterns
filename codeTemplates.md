@@ -329,6 +329,8 @@ For the graph templates, assume the nodes are numbered from 0 to n - 1 and the g
 
 
 
+
+
 ## Common model of monotonic stack: 
 
 ### Find the nearest number to the left/right of each number that is larger/smaller than it. 
@@ -342,3 +344,14 @@ for i in range(n):
         stk.pop()
     stk.append(i)
 ```
+
+
+### Template - mono_stack
+
+    def mono_stack(insert_entries):
+        stack = []
+        for entry in insert_entries:
+            while stack and stack[-1] <= entry:
+                stack.pop()
+                # Do something with the popped item here
+            stack.append(entry)

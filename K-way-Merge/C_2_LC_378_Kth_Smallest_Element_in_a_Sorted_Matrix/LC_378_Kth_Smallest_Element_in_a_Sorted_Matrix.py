@@ -9,23 +9,22 @@ class Solution:
     def mergeKSortedArrays(self,lists:List[List[int]]):
         pq = []
         for i ,arr in enumerate(lists):
-            pq.append((arr[0],i,0))         #`0`: the index of the current element in the list arr.
+            pq.append((arr[0],i,0))         #`0`: the index of the current element in the list arr , i - current array index, arr[0]- current array Oth index element
         heapify(pq)
 
         res = []
 
         while pq:
-            s_val ,li, ei = heappop(pq)
+            s_val ,li, ei = heappop(pq)     #s_val - smallest value, li- list index, ei-current element index 
             res.append(s_val)
 
-            n_ei = ei+1
+            n_ei = ei+1                     #n_ei - next/neighbor element index
             if n_ei <len(lists[li]):
                 next_val = lists[li][n_ei]
                 heappush(pq,(next_val,li, n_ei))
 
         return res
         
-
 
 '''
 pq = [(arr[0],i,0) for i,arr in enumerate(lists) if arr]
@@ -37,12 +36,23 @@ for i ,arr in enumerate(lists):
     pq.append((arr[0],i,0)) 
 '''
 
+'''
+pq = []
+for i , arr in enumerate(lists):
+    heappush(pq,(arr[0],i,0))
+    
+equivalent to 
 
+pq = []
+for i ,arr in enumerate(lists):
+    pq.append((arr[0],i,0))
+heapify(pq)
+'''
 
 
 
 #Competative Programming 
-#Approach:MinHeap or Priority Queue
+#Approach:MinHeap or Priority Queue(Compressed Above approach only)
 class Solution:
     
     def kthSmallest(self, matrix: List[List[int]], k: int) -> int:
@@ -90,3 +100,14 @@ class Solution:
             res+=b[j:]
         
         return res
+    
+    
+
+
+#Follow up:Approach ->Binary Search
+
+
+
+
+
+

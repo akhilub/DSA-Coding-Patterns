@@ -1,24 +1,28 @@
-- If the problem requires finding all permutations or combinations , we can use **backtracking** or BFS or DFS.
+1) If the coding problem requires performing an operation that needs faster **search in O(1)**, try to use **Set or a Map**.
 
-- If the problem has input as **sorted** array,list or matrix we can use **Two pointer** or **Binary Search**.
+2) If the coding problem requires finding/manipulating/dealing with the **top, bottom, maximum, minimum, closest, and farthest** *"K"* elements among given *"N"* elements, try to use a **Heap**.
 
-- If the problem requires performing an operation that needs faster search in O(1), we can use **Set** or a **Map**.
+3) If the coding problem has **input** as a **sorted Array, List, or Matrix**, try to use **Two Pointer strategy** or try to use **Binary Search**.
 
-- If the problem revolves around iterating an array, and takes O(N²) time complexity, O(1) space complexity then we can use a HashMap/HashSet. It makes the algorithm faster with O(N) time complexity but takes more space with O(N) space complexity.
+4) If the problem requires finding all **permutations or combinations** , we can use **backtracking(DFS)** or BFS.
 
-- If the problem revolves around iterating an array and takes O(N²) time complexity, and O(1) space complexity then we can **sort** the array. It makes the algorithm faster with O(N log N) time complexity and O(1) space complexity.
+5) If the coding problem has **input** in the form of a *Tree* or *Graph*, then most of the time can be *solved* by applying
+*Tree Traversals* or *Graph Traversals* algorithms called **Breadth First Search (BFS)** and **Depth First Search (DFS)**.
 
-- If the problem requires optimization around the recursive the solution, there could be a possibility that dynamic programming can be used.
+6) If the coding problem is around a **Singly Linked List**, and If you are stuck in traversals logic, then try to use either
+**Two Pointers** or **Slow/Fast Pointers**.
 
-- If the problem has a recursive solution but it's hard to visualize/code, try using a **Stack** data structure with a loop.
+7) If the coding problem has a **recursive solution** but it's **hard to visualize/code**, try using a **Stack** data structure with a **loop**.
 
-- If the problem has input in the form of a Tree or Graph, then most of the time can be solved by applying Tree Traversals or Graph Traversals algorithms called Breadth First Search (BFS) and Depth First Search (DFS)
+8) If the coding problem revolves around iterating an array, and takes O(N²) time complexity, O(1) space complexity
+then try to use a **HashMap/HashSet**. It makes the algorithm faster with O(N) time complexity but takes more space with O(N) space complexity.
 
-- If the problem has unsorted array containing n numbers taken from the range 1 to n and we need to find missing number,disappeared number or duplicate number we can use **cyclic sort**
+9) If the coding problem revolves around iterating an array and takes O(N²) time complexity, and O(1) space complexity 
+then try to **sort** the array. It makes the algorithm faster with O(N log N) time complexity and O(1) space complexity.
 
+10) If the coding problem requires **optimization** around the **recursive the solution**, there could be a possibility that **dynamic programming** can be used.
 
-
-
+11) If the coding problem has a **group of strings** or **some manipulation/find/storing** needs to be done around the **substring**, there is a high possibility that either **Tries or HashMap** can be used.
 
 
 
