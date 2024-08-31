@@ -1,4 +1,4 @@
-#HashTable+Counting
+#Approach: HashTable+Counting
 
 
 # This is problem is similar to the Two Sum problem, but with a slight modular twist.

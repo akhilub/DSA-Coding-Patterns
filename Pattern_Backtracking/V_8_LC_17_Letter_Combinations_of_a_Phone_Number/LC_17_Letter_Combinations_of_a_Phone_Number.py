@@ -10,7 +10,7 @@ class Solution:
         digitsToLetter = ['','','abc','def','ghi','jkl','mno','pqrs','tuv','wxyz']
         
         ans = []
-        def dfs(i:int , path:List[ch]): # i - no of character in each string
+        def dfs(i:int , path:List[str]): # i - no of character in each string
             
             if i ==len(digits):
                 ans.append(''.join(path))

@@ -25,8 +25,8 @@ from random import *
 
 class Solution:
     def __init__(self, w: List[int]):
-        print(w)
-        self.s = [0]    #intialized prefixSum list
+        #print(w)
+        self.s = [0]                    # intialized prefixSum list
         for c in w:
             self.s.append(self.s[-1]+c)  # Fill the list with prefix Sum's
         

@@ -1,5 +1,8 @@
 #Approach: Two Pointers Traversal
 
+# TC: O(∣strs[0]∣⋅∣strs∣)
+# SC: O(∣strs[0]∣)
+
 '''
 Character Comparison
 
@@ -23,5 +26,20 @@ class Solution:
                     return strs[0][:i]
                 
         return strs[0]
+    
+
+#Better way of writing the same below code
+#Easy to write in interviews
+
+class Solution:
+    def longestCommonPrefix(self, strs: List[str]) -> str:
+        s1 = strs[0]
+        for i in range(len(s1)):
+            for s in strs[1:]:
+                if len(s)<=i or s[i]!=s1[i]:     # len(s)<=i condition mean any string 's' is within the bound
+                    return s1[:i]    
+        return s1
                 
+                
+
         

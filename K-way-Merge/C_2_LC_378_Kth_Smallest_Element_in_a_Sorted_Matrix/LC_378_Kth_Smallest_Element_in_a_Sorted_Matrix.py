@@ -104,7 +104,10 @@ class Solution:
     
 
 
-#Follow up:Approach ->Binary Search
+
+
+
+#Follow up:Best Approach ->Binary Search
 
 
 

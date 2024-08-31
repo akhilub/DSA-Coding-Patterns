@@ -50,7 +50,7 @@ class Solution:
 
 
 
-#Approach: Just getting to ans
+#Approach: Getting to ans using Built-in Functions
 
 '''
 >>> bisect.bisect_left([1,1,1,2,2,2,7,7,7], 2)

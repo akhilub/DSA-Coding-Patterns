@@ -10,9 +10,9 @@ class Solution:
     def minSubArray(self,target,nums):
         min_w = math.inf  #intialize the min width to be +ve inf  or float('inf) 
 
-        win_sum = 0 # initialize the sum of current window
+        win_sum = 0       # initialize the sum of current window
 
-        left = 0 # initialize the start of the current window
+        left = 0          # initialize the start of the current window
 
         n =len(arr):
 
@@ -35,5 +35,6 @@ class Solution:
         return 0 if min_w==math.inf else min_w
 
 
-#Follow Up Using Binary Search in O(nlogn)
+#Follow Up: Using Binary Search in O(nlogn)
+#Not Required
 

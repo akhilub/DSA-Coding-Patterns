@@ -35,7 +35,7 @@ class Solution:
 
 #When modification of input array `nums` is allowed
 #Approach:Cylic Sort
-#TC:O(n) ; SCO(n)
+#TC:O(n) ; SC:O(n)
 class Solution:
     def findDuplicate(self,nums):
         i, n = 0 ,len(nums)
@@ -43,5 +43,7 @@ class Solution:
             pos = nums[i]-1
             if nums[i]!=nums[pos]:
                 nums[i],nums[pos] = nums[pos],nums[i]
+            else:
+                i+=1
         return nums[-1]
 

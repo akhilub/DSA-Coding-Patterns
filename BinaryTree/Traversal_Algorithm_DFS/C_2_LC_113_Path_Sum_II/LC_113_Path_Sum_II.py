@@ -1,10 +1,10 @@
 #Approach : DFS Recursion
+'''
+We start from the root node, recursively traverse all paths from the root node to the leaf nodes, and record the path sum. 
+When we traverse to a leaf node, if the current path sum equals targetSum, then we add this path to the answer.
 
-
-#We start from the root node, recursively traverse all paths from the root node to the leaf nodes, and record the path sum. 
-#When we traverse to a leaf node, if the current path sum equals targetSum, then we add this path to the answer.
-
-#The time complexity is O(n^2), where n is the number of nodes in the binary tree. The space complexity is O(n).
+The time complexity is O(n^2), where n is the number of nodes in the binary tree. The space complexity is O(n).
+'''
 
 # Definition for a binary tree node.
 # class TreeNode:
@@ -33,3 +33,32 @@ class Solution:
 
         dfs(root,[])  
         return ans
+    
+    
+
+#Write this in interviews
+#Concised way of writing above code
+
+class Solution:
+    def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
+        ans = []
+        def dfs(root,path:List[int]):
+            #termninate dfs
+            if root is None:
+                return 
+            
+            #leaf node
+            if not root.left and not root.right:
+                path +=[root.val]
+                if sum(path)==targetSum:        #check for path sum i.e apply question condition
+                    ans.append(path[::])
+            
+            dfs(root.left,path+[root.val])
+            dfs(root.right,path+[root.val])
+        
+        dfs(root,[])
+        return ans
+        
+        
+        
+        

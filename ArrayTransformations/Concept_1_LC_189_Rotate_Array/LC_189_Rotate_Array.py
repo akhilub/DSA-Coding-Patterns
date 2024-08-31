@@ -1,5 +1,7 @@
 #Approach 1: USING A LIST TO SIMULATE THE ARRAY ROTATION
-#The most basic method is to simulate as we are told. Each rotation removes one element from the end of the array and insert it to the front. The following time complexity is O(KN) because there are K rotation (where K is modulus by N) and each insert-to-front takes O(N) time.
+#The most basic method is to simulate as we are told. 
+#Each rotation removes one element from the end of the array and insert it to the front.
+#The following time complexity is O(KN) because there are K rotation (where K is modulus by N) and each insert-to-front takes O(N) time.
 
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
@@ -29,9 +31,12 @@ class Solution:
         nums[:] = list(q)
         return nums
 
+
+#Write this in interviews
 #Approach 3:REVERSE SUB ARRAYS TO ROTATE
-#We can reverse the array once, then reverse the first K elements, and then reverse the last N-K elements. The time complexity is O(N).
-#Use this for interviews 
+#We can reverse the array once, then reverse the first K elements, and then reverse the last N-K elements. 
+#The time complexity is O(N).
+
 class Solution:
     def rotate(self, nums: List[int], k: int) -> None:
         """
@@ -74,7 +79,7 @@ class Solution:
 # - nums[k:] (i.e., the portion from index k to the end) is replaced with nums[:-k] (i.e., [1, 2, 3, 4]).
 # - nums[:k] (i.e., the portion from the beginning to index k) is replaced with nums[-k:] (i.e., [5, 6, 7]).
 
-#Resulting list after the operation:
+# Resulting list after the operation:
 
 #- Before the assignment: nums = [1, 2, 3, 4, 5, 6, 7].
 #- After the assignment: nums = [5, 6, 7, 1, 2, 3, 4].
