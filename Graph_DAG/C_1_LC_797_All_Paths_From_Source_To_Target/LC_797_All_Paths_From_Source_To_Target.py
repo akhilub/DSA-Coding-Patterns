@@ -1,14 +1,14 @@
 #Logic
-#Key thing to remember is Given graph is DAG so backtracking template is working
+#Key thing to remember is Given graph is DAG so backtracking template will work
 
 '''
 Since the Graph is DAG (Directed Acyclic Graph), it does not have cycles. We then can simplify the implementation without needing to use a `set` to avoid the nodes that we have visisted. We can perform a Depth First Search Algorithm and keep tracking a current path which will be added to the result once we reach the destination.
 
-The space complexity is also O(N) – if we ignore the space required to store all paths (which is N*2^N) as we are using Recursion and need to have a current path list. The time complexity in worst case is O(N*2^N) if each node can be connected to the nodes that have greater values. For example, 0 to 1..n, 1 to 2..n, 3 to 4..n.
+The space complexity is also O(N) - if we ignore the space required to store all paths (which is N*2^N) as we are using Recursion and need to have a current path list. The time complexity in worst case is O(N*2^N) if each node can be connected to the nodes that have greater values. For example, 0 to 1..n, 1 to 2..n, 3 to 4..n.
 '''
 
 #Write this in interviews 
-#Approach:DFS (I prefer this), this DFS is optimised)
+#Approach:DFS (I prefer this, this DFS is optimised)
 #Time:O(n•2ⁿ)
 #Space:O(n•2ⁿ)
 
@@ -77,9 +77,13 @@ class Solution:
 
 #Finding All Paths from Source to Target in a Directed Acyclic Graph (DAG) using Breadth First Search Algorithm
 '''
-Breadth First Search Algorithm can be used to traverse a Graph. We keep tracking of the current Node and the path followed so far. The graph is DAG – hence there isn’t cycles and we don’t need to manually avoid re-visiting same nodes.
+Breadth First Search Algorithm can be used to traverse a Graph. 
+We keep tracking of the current Node and the path followed so far. 
+The graph is DAG – hence there isn’t cycles and we don’t need to manually avoid re-visiting same nodes.
 
-Each node in the worst case, connects to other greater nodes. The total paths could be 2^(N-1)-1. Considering O(N) time to build a path, total complexity is O(N*2^N). The space complexity is O(N*2^N+N) if we are considering the space to store all the paths. 
+Each node in the worst case, connects to other greater nodes. 
+The total paths could be 2^(N-1)-1. Considering O(N) time to build a path, total complexity is O(N*2^N). 
+The space complexity is O(N*2^N+N) if we are considering the space to store all the paths. 
 Otherwise, the space complexity is O(N) for a de-queue.
 '''
 

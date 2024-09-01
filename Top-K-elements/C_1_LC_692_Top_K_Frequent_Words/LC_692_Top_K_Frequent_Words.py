@@ -17,7 +17,7 @@ class Solution:
         # Step 2: Use a max-heap (simulated with negative frequencies) to store the words
         pq = []
         for word,freq in cnt.items():
-            heappush(pq,(-freq,word))            # Push (-freq, word) to ensure the heap is ordered by frequency descending
+            heappush(pq,(-freq,word))           # Push (-freq, word) to ensure the heap is ordered by frequency descending
                                                 # and lexicographically ascending for words with the same frequency
         
         # Step 3: Extract the top k elements from the heap    

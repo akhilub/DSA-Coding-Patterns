@@ -198,6 +198,8 @@ class Solution:
         '''
         for num , freq in cnt.items():
             heappush(pq,(freq,num))         # freq first, default sort by 1st element
+            
+            
             if len(pq)>k:
                 heappop(pq)
         

@@ -48,3 +48,45 @@ Memonic (>> resembles to R)
 >>> 256 >> 6   # 256 // 2^6 = 256//64 = 4
 4
 ```
+
+
+### Python Operators
+
+- **[Operators](https://www.w3schools.com/python/python_operators.asp)**
+  
+
+- '/' is the division operator
+- '//' is the quotient operator aka floor division
+- '%' is the remainder operator aka modulus 
+
+```
+>>> 5/2
+2.5
+>>> 5/3
+1.6666666666666667
+```
+
+```
+>>> 5//2
+2
+>>> 5//3
+1
+>>> 
+```
+
+```
+>>> 5%3
+2
+```
+
+#### **[divmod()](https://www.toppr.com/guides/python-guide/references/methods-and-functions/methods/built-in/divmod/python-divmod/)**
+- using the in-built python divmod function, you can find the remainder and the quotient of any two numbers given as the input. 
+
+
+```
+>>> divmod(5,2)
+(2, 1)
+ 
+>>> divmod(5,3)
+(1, 2)
+```
