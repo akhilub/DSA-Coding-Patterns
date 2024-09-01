@@ -23,7 +23,7 @@ n is the length of the array.
 class Solution:
     def findMaxLength(self, nums: List[int]) -> int:
         # Dictionary to store the first occurrence of a particular count value
-        d = {0,-1}                  # Initial count of 0 is assumed to occur at index -1
+        d = {0:-1}                  # Initial count of 0 is assumed to occur at index -1
         s = 0                       # Initialize the count of 1's - 0's
         ans = 0                     # Variable to store the maximum length of the subarray found
         

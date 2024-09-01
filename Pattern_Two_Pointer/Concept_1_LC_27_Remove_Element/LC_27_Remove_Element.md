@@ -6,7 +6,8 @@ Consider the number of elements in nums which are not equal to val be k, to get 
 
 Change the array nums such that the first k elements of nums contain the elements which are not equal to val. The remaining elements of nums are not important as well as the size of nums.
 Return k.
-Custom Judge:
+
+**Custom Judge:**
 ```
 The judge will test your solution with the following code:
 
@@ -42,7 +43,7 @@ Note that the five elements can be returned in any order.
 It does not matter what you leave beyond the returned k (hence they are underscores).
 ```
 
-Constraints:
+**Constraints:**
 
 - `0 <= nums.length <= 100`
 - `0 <= nums[i] <= 50`
