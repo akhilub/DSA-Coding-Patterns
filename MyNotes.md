@@ -437,7 +437,7 @@ Deep Copy: Copies the list and the objects inside it. Changes made to original l
 
 # Truthy & Falsy Value in Python
 
-We use "truthy" and "falsy" to differentiate from the bool values True and False. A "truthy" value will satisfy the check performed by if or while statements. As explained in the documentation, all values are considered "truthy" except for the following, which are "falsy":
+We use "truthy" and "falsy" to differentiate from the bool values True and False. A "truthy" value will satisfy the check performed by if or while statements. As explained in the [documentation](https://docs.python.org/3/library/stdtypes.html#truth-value-testing), all values are considered "truthy" except for the following, which are "falsy":
 
 ```
 None

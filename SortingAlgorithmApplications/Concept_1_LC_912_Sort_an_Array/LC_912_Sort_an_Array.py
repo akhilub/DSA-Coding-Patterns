@@ -49,4 +49,4 @@ class Solution:
         smaller = [num for num in nums if num<pivot]
         bigger=[num for num in nums if num>pivot]
         
-        return self.sortArray(smaller)+eq+self.sortArray(bigger)
+        return self.sortArray(smaller)+ eq + self.sortArray(bigger)

@@ -66,12 +66,15 @@ class Solution:
     def sortList(self, head):
         values = []
         node = head #copied the original LList(head) by creating another LList(node)
+        
         while head:
             values.append(head.val)
             head = head.next
+        
         values.sort() #sorted the list values
-        values = collections.deque(values) #turned list into queue for poping ou the ele from left
+        values = collections.deque(values) #turned list into queue for poping out the ele from left
         head = node # copy back the node to head to put sorted array value into the original LList
+        
         while head:
             head.val = values.popleft()
             head = head.next

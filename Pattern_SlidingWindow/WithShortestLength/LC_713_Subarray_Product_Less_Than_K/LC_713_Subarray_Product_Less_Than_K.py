@@ -11,7 +11,7 @@ class Solution:
         for r in range(len(nums)):
             prod = prod*nums[r]          #append input[right] to window
             
-            while prod>=k: 
+            while prod>=k:               #while INVALID WINDOW CONDITION
                 prod = prod//nums[l]     #remove input[left] from window
                 l+=1                     
             

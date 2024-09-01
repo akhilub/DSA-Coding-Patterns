@@ -40,11 +40,13 @@ class Solution:
 #Approach2:Two Pointers
 
 '''
-We can use two pointers a and b to point to nodes p and q respectively, and then traverse towards the root node. 
+We can use two pointers a and b to point to nodes p and q respectively, 
+and then traverse towards the root node. 
+
 When a and b meet, it is the nearest common ancestor of p and q. 
 Otherwise, if pointer a traverses to the root node, then we let it point to node q, and do the same for pointer b. 
-In this way, when the two pointers meet, it is the nearest common ancestor of p and q.
 
+In this way, when the two pointers meet, it is the nearest common ancestor of p and q.
 The time complexity is O(n), where n is the number of nodes in the binary tree. The space complexity is O(1).
 
 '''

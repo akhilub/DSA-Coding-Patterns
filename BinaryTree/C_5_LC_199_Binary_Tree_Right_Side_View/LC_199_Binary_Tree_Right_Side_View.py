@@ -25,6 +25,8 @@ class Solution:
                 if node.right:
                     q.append(node.right)
         return ans
+
+
     
 
 #Left SIDE VIEW OF A BINARY TREE USING BREADTH FIRST SEARCH ALGORITHMS

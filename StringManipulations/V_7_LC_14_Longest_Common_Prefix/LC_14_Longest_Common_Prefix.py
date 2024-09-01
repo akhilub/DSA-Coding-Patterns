@@ -1,7 +1,7 @@
 #Approach: Two Pointers Traversal
 
 # TC: O(∣strs[0]∣⋅∣strs∣)
-# SC: O(∣strs[0]∣)
+# SC: O(1)
 
 '''
 Character Comparison
