@@ -48,7 +48,7 @@ class Solution:
 #Bottom Up No Memory Dp
 
 #we only store the previous 4 states to calculate the current dp[i] state.
-#dp_i which store dp[i]
+# dp_i which store dp[i]
 # dp_i_0 which store dp[i-4] 
 # dp_i_1 which store dp[i-3]
 # dp_i_2 which store dp[i-2]

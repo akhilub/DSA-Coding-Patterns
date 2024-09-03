@@ -20,3 +20,9 @@ class Solution:
             ans = ans*10+r
             n = n//10
         return ans
+    
+    
+    
+'''
+pos_reverse = lambda n:int(str(n)[::-1])
+'''

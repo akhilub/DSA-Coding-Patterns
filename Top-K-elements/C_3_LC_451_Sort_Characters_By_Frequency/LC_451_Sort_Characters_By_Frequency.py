@@ -1,4 +1,5 @@
 #Approach :Heap(max-Heap)
+#O(klogk) where k is the no of keys(distinct character of input string) in hashmap
 
 class Solution:
     def frequencySort(self, s: str) -> str:
@@ -33,6 +34,11 @@ class Solution:
         ans = ''.join(ch*fq for ch,fq in lst)
         return ans
 
+'''
+sorted(cnt.items() ,key = lambda x:-x[1])
+                    ||
+sorted(cnt.items() ,key = lambda x:x[1],reverse=True)
+'''
 
 #Python One-liner
 class Solution:

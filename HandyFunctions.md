@@ -16,7 +16,7 @@ print(getDigits(123))  #[3,2,1]
 OR 
 
 ```
-getDigits = lambda n: list(map(int, str(n)))
+getDigits = lambda n: list(map(int, str(n)))[::-1]
 
 print(getDigits(12345))  #[5, 4, 3, 2, 1]
 
@@ -41,13 +41,41 @@ print(getDigits(123))  #[1,2,3]
 OR
 
 ```
-getDigits = lambda n: list(map(int, str(n)))[::-1]
+getDigits = lambda n: list(map(int, str(n)))
 ```
 
-print(getDigits(12345))  # Expected: [1, 2, 3, 4, 5]
+print(getDigits(12345))  # [1, 2, 3, 4, 5]
 
+
+# Make Number from Digits
+
+```
+def makeNumber(digits:List[int]):
+    num=0
+    for digit in digits:
+        num = num*10+digit
+        return num
+```
+OR
+
+```
+from functools import reduce
+makeNumber = lambda digits: reduce(lambda num, dig: num * 10 + dig, digits, 0)
+```
+
+OR
+
+- Not Recommended it is a work around
+```
+makeNumber = lambda digits: int(''.join(map(str, digits)))
+```
+
+print(makeNumber([1,2,3,4,5])) # 12345
 
 # Factorial
+
+
+
 
 
 # Reverse a positive integer

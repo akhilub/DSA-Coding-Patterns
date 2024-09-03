@@ -1,13 +1,20 @@
+#Approach:Node Assignment
+'''
+We can replace the value of the current node with the value of the next node, and then delete the next node. 
+This can achieve the purpose of deleting the current node.
+
+Time complexity O(1), space complexity O(1).
+'''
+
+# DELETE NODE IN LINKED LIST – BY REMOVING NEXT
+# We can make current node a copy of next node, and then remove next:
+
+
 # Definition for singly-linked list.
 # class ListNode:
 #     def __init__(self, x):
 #         self.val = x
 #         self.next = None
-
-
-# DELETE NODE IN LINKED LIST – BY REMOVING NEXT
-# We can make current node a copy of next node, and then remove next:
-
 
 class Solution:
     def deleteNode(self, node):

@@ -49,9 +49,44 @@ def rotate(self, matrix: List[List[int]]) -> None:
     Do not return anything, modify matrix in-place instead.
     """
     matrix[:] = list(zip(*matrix[::-1]))
+    
 
 
-            
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''
+def reverse(arr:List[int]):
+    l,r = 0,len(arr)-1
+    while l<r:
+        arr[l],arr[r]=arr[r],arr[l]
+        l+=1
+        r-=1
+        
+        ||
+        ||  equivalent
+        ||
+
+def reverse(arr:List[int]):
+    n = len(arr)
+    for i in range(n//2):
+        arr[i],arr[n-1-i]=arr[n-1-i],arr[i]
+
+'''

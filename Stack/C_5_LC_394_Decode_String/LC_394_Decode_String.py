@@ -28,7 +28,8 @@ Walk through the example s = "3[a2[bc]]"
  - ']': Pop 2 from num_stk and 'a' from str_stk. Set res to 'a' + 'bc' * 2, which is 'abcbc'.
  - ']' again: Pop 3 from num_stk and '' (initial value) from str_stk. Set res to '' + 'abcbc' * 3, which is 'abcbcabcbcabcbc'.
 
-3.Completion: No more characters in s. res = 'abcbcabcbcabcbc' is the final result.
+3.Completion: No more characters in s. 
+res = 'abcbcabcbcabcbc' is the final result.
 '''
 
 class Solution:
@@ -40,7 +41,8 @@ class Solution:
                 num = num*10 + int(c)
             elif c == '[':
                 num_stk.append(num)
-                str_stk.append(res)
+                str_stk.append(res)             # initial, res being pushed is empty str ''
+                num , res = 0 , ''
             elif c == ']':
                 res = str_stk.pop() + res*num_stk.pop()
             else:
