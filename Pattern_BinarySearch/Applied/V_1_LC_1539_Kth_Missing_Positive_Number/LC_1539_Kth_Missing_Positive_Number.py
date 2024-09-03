@@ -19,6 +19,7 @@ class Solution:
         return res[k-1]
 
 
+#Follow up
 #How to recognize to apply BS?
 #array is given in stricly increasing order
 #Optimised Binary Search 

@@ -10,7 +10,7 @@ class Solution:
         while l<=r:
             mid = (l+r)//2
             # Perform binary search to find the smallest index such that the number of missing elements until that index is at least k
-            if nums[mid]- nums[0]-mid <k:
+            if nums[mid]-nums[0]-mid <k:
                 l = mid+1
             else:
                 r = mid-1

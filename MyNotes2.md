@@ -90,3 +90,19 @@ Memonic (>> resembles to R)
 >>> divmod(5,3)
 (1, 2)
 ```
+
+
+#### pairwise
+
+```
+>>> from itertools import pairwise
+>>> a = ['a','b','c']
+>>> pairwise(a)
+<itertools.pairwise object at 0x108458730>
+>>> list(pairwise(a))
+[('a', 'b'), ('b', 'c')]
+
+# same as pairwise()
+>>> zip(a, a[1:])
+[('a', 'b'), ('b', 'c')]
+```
