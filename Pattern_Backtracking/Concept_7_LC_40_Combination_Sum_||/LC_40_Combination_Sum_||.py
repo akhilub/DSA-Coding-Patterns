@@ -1,4 +1,4 @@
-#Approach 
+#Approach:DFS
 #1) Sort the candidate list so that we can skip the loop when the adjacent element are identical in the candidates list while picking them in the path 
 
 class Solution:
@@ -6,7 +6,7 @@ class Solution:
         ans = []
         n = len(candidates)
         
-        def dfs(path,s):
+        def dfs(path:List[int],s:int):
             if sum(path)==target:
                 ans.append(path[::])
                 return
@@ -24,9 +24,30 @@ class Solution:
         candidates.sort()
         dfs([],0)
         return ans
+      
 
-#Approach
-#Standard DFS
+'''
+```
+path.append(candidates[i])
+dfs(path,i+1)
+path.pop()
+```
+
+
+equivalent
+
+```
+dfs(path+[candidates[i]],i+1)
+```
+
+
+
+'''      
+
+
+
+
+#Another way of Writing same above approach,if you cannot use the inbuilt sum method
 class Solution:
   def combinationSum2(self, candidates: List[int], target: int) -> List[List[int]]:
     ans = []

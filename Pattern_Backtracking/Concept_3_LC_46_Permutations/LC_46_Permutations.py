@@ -24,6 +24,19 @@ class Solution:
 
 
 
+'''
+
+path.append(num)
+dfs(path)
+path.pop()
+  
+  ||
+  ||
+
+dfs(path+[num])
+
+'''
+
 
 
 
@@ -86,12 +99,12 @@ class Solution:
                 ans.append(deepcopy(curSol))
                 return 
 
-           for ele in nums:
-            if ele not in curSol:
+            for ele in nums:
+              if ele not in curSol:
                 curSol.append(ele)
                 backtrack(curSol,i+1)
                 curSol.pop()
-        
+
         backtrack([],0)
         return ans
 

@@ -74,7 +74,33 @@ print(makeNumber([1,2,3,4,5])) # 12345
 
 # Factorial
 
+- Given n is a non-negative integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its factorial.
 
+
+```
+def factorial(n):
+    def f(i,nb={}):
+        if i==0 or i==1:
+            return 1
+        if i in nb:
+            return nb[i]
+        nb[i] = i*f(i-1)
+        return nb[i]
+    return f(n)
+```
+OR
+
+- No memory DP/iterative approach
+```
+def factorial(n):
+    if n==0 or n==1:
+        return 1
+    f0 = 1
+    for i in range(2,n+1):
+        fi = i*f0
+        f0 = fi
+    return fi
+```
 
 
 
