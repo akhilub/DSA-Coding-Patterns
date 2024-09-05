@@ -1,4 +1,5 @@
 #Approach 3:Binary Search
+#Optimal Solution
 #TC:O(log(n))
 #SC:O(1)
 
@@ -12,8 +13,9 @@ So totally three candidates.
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
         n = len(arr)
-        candidates = [n // 4, 2 * n // 4, 3 * n // 4] #start, mid, end
         quarter = n // 4
+        
+        candidates = [n // 4, 2 * n // 4, 3 * n // 4] # start, mid, end
         
         for i in candidates:
             l = bisect_left(arr, arr[i])
@@ -24,7 +26,7 @@ class Solution:
         return -1
     
     
-#Above Algorithm expanded approach
+#Above Algorithm expanded form
 
 class Solution:
     def findSpecialInteger(self, arr: List[int]) -> int:
@@ -64,7 +66,6 @@ class Solution:
 
 
 
-
 #Approach2:Doing as what said in problem
 #TC:O(m) where m is no of distinct integers
 #SC:O(m)
@@ -82,6 +83,7 @@ class Solution:
 
 
 
+#Approach 1:
 #Given Solution
 #TC:
 #SC:O(1)
