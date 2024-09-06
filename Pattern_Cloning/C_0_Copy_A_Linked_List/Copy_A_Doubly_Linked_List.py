@@ -9,6 +9,13 @@ class Node:
         self.next = next
         self.prev = prev
 
+'''
+copy_list function is used to copy a Linked List
+The input parameter `head` is the head of the Linked List to be copied.
+'''
+
+def copy_list(head):
+    return recursive_copy(head, None)
 
 '''
 This recursive function would
@@ -31,10 +38,3 @@ def recursive_copy(node, prevNode):
 
     return newNode
 
-'''
-copy_list function is used to copy a Linked List
-The input parameter `head` is the head of the Linked List to be copied.
-'''
-
-def copy_list(head):
-    return recursive_copy(head, None)

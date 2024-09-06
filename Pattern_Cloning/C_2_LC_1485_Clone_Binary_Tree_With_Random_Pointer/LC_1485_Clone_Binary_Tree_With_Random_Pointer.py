@@ -36,3 +36,17 @@ class Solution:
         
         nb = {}
         return dfs(root)
+    
+    
+'''
+copy.left = dfs(root.left)
+copy.right = dfs(root.right)
+copy.random = dfs(root.random)
+            
+            ||
+            ||equivalent
+            ||
+
+copy.left,copy.right,copy.random = dfs(root.left),dfs(root.right),dfs(root.random)
+
+'''
