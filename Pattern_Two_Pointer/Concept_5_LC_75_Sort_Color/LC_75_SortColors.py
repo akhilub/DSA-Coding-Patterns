@@ -27,7 +27,7 @@ The space complexity is O(1).
 
 
 
-# You can also use l ,r, i to reperesent left,right,curr pointers
+# We can also use l ,r, i to reperesent left,right,curr pointers
 class Solution:
     def sortColors(self, nums: List[int]) -> None:
         """

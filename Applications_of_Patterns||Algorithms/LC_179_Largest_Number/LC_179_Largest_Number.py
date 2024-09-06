@@ -11,12 +11,12 @@ class Solution:
 
         return str(int("".join(nums)))
 
-        def compareStringNumbers(n1:str,n2:str): #assuming n1>n2
-            """Sorted by value of concatenated string decreasingly."""
-            if n1+n2>n2+n1:
-                return -1
-            elif n1==n2:
-                return 0
-            else:
-                return 1
+    def compareStringNumbers(n1:str,n2:str): #assuming n1>n2
+        """Sorted by value of concatenated string decreasingly."""
+        if n1+n2>n2+n1:
+            return -1
+        elif n1==n2:
+            return 0
+        else:
+            return 1
             

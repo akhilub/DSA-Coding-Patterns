@@ -28,9 +28,10 @@ class Solution:
             # Fix Node Properties
             newNode.next   = deepcopy(node.next)
             newNode.random = deepcopy(node.random)
+            
             return newNode
         
-        nb = {}   # Map to store original nodes to cloned nodes
+        nb = {}   # or defaultdict()            # Map to store original nodes to cloned nodes
         return deepcopy(head)
     
     

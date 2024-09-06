@@ -60,11 +60,11 @@ class Solution:
             return ans
 
 
-# Q) explain why you need adj and nei? and not just the nei?
+# Q) explain why you need `adj` and `nei`? and not just the `nei`?
 
-# so 'adj' for connection and 'nei not in seen' for not visited/seen
+# so `adj` for connection and 'nei not in seen' for not visited/seen
 
-# neigh is the index 0, 1, 2, 3, ...n
+# nei is the index 0, 1, 2, 3, ...n
 # adj is the value which is 0 or 1
 
 # you only want to bfs when there is a connection (1), and keep track of "visited/seen" by the unique index

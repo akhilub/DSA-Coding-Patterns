@@ -1,3 +1,70 @@
+#Approach:DFS (Recursion+Memomization)
+#TC:O(n)
+#SC:O(n)
+#Write this in interviews
+
+"""
+# Definition for a Node.
+class Node:
+    def __init__(self, val = 0, neighbors = None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+"""
+
+from typing import Optional
+class Solution:
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        def dfs(node,nb = {}):
+            if node is None:
+                return None
+            if node in nb:
+                return nb[node]
+            
+            nb[node] = newNode = Node(node.val)
+            
+            newNode.neighbors = [dfs(neibor) for neibor in node.neighbors]
+            
+            return newNode
+        
+        return dfs(node)
+    
+
+#Same Above Approach in expanded form
+class Solution: 
+    def cloneGraph(self, node: Optional['Node']) -> Optional['Node']:
+        
+        def clone(node):
+            if not node: 
+                return None
+            if node in nb: 
+                return nb[node]
+            
+            cloneNode = Node(node.val)
+            nb[node] = cloneNode
+            
+            for neighbor in node.neighbors:
+                cloneNode.neighbors.append(clone(neighbor))
+            
+            return cloneNode
+        
+        nb= defaultdict()
+        return clone(node)
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #Approach : BFS Graph Traversal 
 #Data Structure : HashMap 
 
