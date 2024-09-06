@@ -1,6 +1,6 @@
 #Approach:Hash Table
-#TC:O(n+m)
-#SC:O(n)
+# TC: O(∣nums∣+∣head∣)
+# SC: O(∣nums∣)
 '''
 
 We can use a hash table `s` to store all the elements in the array `nums`. 

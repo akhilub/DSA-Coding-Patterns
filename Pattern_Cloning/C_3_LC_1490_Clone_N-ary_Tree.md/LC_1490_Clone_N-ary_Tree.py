@@ -26,12 +26,14 @@ class Solution:
 
             return newNode                
         
-        nb=defaultdict()
+        nb=defaultdict()        #dict()
         return deepCopy(root)
     
     
-    
-#Given Solution
+
+
+
+#Solution
 
 class Solution:
     def cloneTree(self, root: 'Node') -> 'Node':

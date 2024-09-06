@@ -19,6 +19,7 @@ class Solution:
                 r = mid
         return arr[l:l+k]
 
+
 '''
 (arr[mid]+arr[mid+k])//2 < x
             ||
