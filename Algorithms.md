@@ -2,31 +2,31 @@
 
 
 **Pseudocode**
-The following pseudocode for three-way partitioning which assumes zero-based array indexing was proposed by Dijkstra himself.[2] It uses three indices i, j and k, maintaining the invariant that i ≤ j ≤ k.
+The following pseudocode for three-way partitioning which assumes zero-based array indexing was proposed by Dijkstra himself.[2] It uses three indices l, i and r, maintaining the invariant that l ≤ i ≤ r.
 
-- Entries from 0 up to (but not including) i are values less than mid,
-- entries from i up to (but not including) j are values equal to mid,
-- entries from j up to (and including) k are values not yet sorted, and
-- entries from k + 1 to the end of the array are values greater than mid.
+- Entries from 0 up to (but not including) l are values less than mid,
+- entries from l up to (but not including) i are values equal to mid,
+- entries from i up to (and including) r are values not yet sorted, and
+- entries from r + 1 to the end of the array are values greater than mid.
 
 
 
 **procedure** 
 ```
 three-way-partition(A : array of values, mid : value):
+    l ← 0
     i ← 0
-    j ← 0
-    k ← size of A - 1
-    while j <= k:
-        if A[j] < mid:
-            swap A[i] and A[j]
+    r ← size of A - 1
+    while i <= r:
+        if A[i] < mid:
+            swap A[l] and A[i]
+            l ← l + 1
             i ← i + 1
-            j ← j + 1
-        else if A[j] > mid:
-            swap A[j] and A[k]
-            k ← k - 1
+        else if A[i] > mid:
+            swap A[i] and A[r]
+            r ← r - 1
         else:
-            j ← j + 1
+            i ← i + 1
 ```
 
 
@@ -147,3 +147,11 @@ floyd(headNode: linear DS):
 
 ## Divide & Conquer
 A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
+
+
+
+### Recursion
+
+
+
+### Recursion + Memoization (Top Down Dynamic Programming)

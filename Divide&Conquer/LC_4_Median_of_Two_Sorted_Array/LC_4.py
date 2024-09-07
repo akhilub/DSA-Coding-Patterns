@@ -1,5 +1,45 @@
-#Approach for The overall run time complexity should be O(log (m+n))
+#Write this in interviews, The way it is written
+
+#Algorithm:Divide & Conquer
+#TC:O(log(m+n))
+
+class Solution:
+    def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
+        def findKth(i1:int,i2:int,k:int)->int:
+            if i1>=l1:
+                return nums2[i2+k-1]
+            if i2>=l2:
+                return nums1[i1+k-1]
+            if k==1:
+                return min(nums1[i1],nums2[i2])
+            
+            mid = k//2
+            
+            midVal1 = nums1[i1+mid-1] if i1+mid-1<l1 else math.inf
+            midVal2 = nums2[i2+mid-1] if i2+mid-1<l2 else math.inf
+            
+            return findKth(i1+mid,i2,k-mid) if midVal1<=midVal2 else findKth(i1,i2+mid,k-mid)
+    
+        
+        l1 , l2 = len(nums1),len(nums2)
+        
+        # Division a // b :  floordiv(a, b)
+        
+        N1 = (l1+l2+1)//2         #N1 - (l1+l2+1)/2 -th number
+        N2 = (l1+l2+2)//2         #N2 - (l1+l2+1)/2 -th number
+        
+        K1 = findKth(0,0,N1)    #K1 - kth smallest number in the interval [0,N1)
+        K2 = findKth(0,0,N2)    #K2 - kth smallest number in the interval [0,N2)
+
+        return (K1+K2)/2        #median
+
+
+
+
+
+#Approach for The overall run time complexity should be O(log(m+n))
 #Algorithm: Divide & Conquer
+
 
 '''
 The problem requires the time complexity of the algorithm to be O(log(m+n)), 
@@ -56,7 +96,7 @@ class Solution:
             return findKth(i+mid,j,k-mid) if midVal1<=midVal2 else findKth(i,j+mid,k-mid)
     
         
-        m , n =len(nums1),len(num2)
+        m , n =len(nums1),len(nums2)
         
         # Division a // b :  floordiv(a, b)
         
@@ -84,7 +124,7 @@ class Solution:
             med = (m_arr[mid]+m_arr[mid+1])/2
         return med
         
-    def mergeTwoSortedArray(self,a,b):
+    def mergeTwoSortedArray(self,a:List[int],b:List[int]):
         i, j , la,lb = 0,0,len(a),len(b)
         res = []
         while i<la and j <lb:
@@ -122,7 +162,7 @@ class Solution:
         
         mid = (l+r)//2
         
-        if n&1:
+        if n&1: #n is odd
             med = m_arr[mid]
         else:
             med = (m_arr[mid]+m_arr[mid+1])/2

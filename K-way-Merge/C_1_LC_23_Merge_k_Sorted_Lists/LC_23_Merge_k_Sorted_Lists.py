@@ -9,20 +9,17 @@
 #         self.next = next
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
-        pq = []
-
-        # Initialize the heap with the head of each linked list
+        pq = []                             # Initialize the heap with the head of each linked list
         for i, node in enumerate(lists):
-            if node:  # Check if the list is not empty
+            if node:                        # Check if the list is not empty
                 pq.append((node.val, i, node))
         heapify(pq)
 
-        dummy = ListNode()  # Dummy node to simplify the merging process
+        dummy = ListNode()                  # Dummy node to simplify the merging process
         curr = dummy
 
         while pq:
-            # Extract the smallest element from the heap
-            s_val, li, node = heappop(pq)
+            s_val, li, node = heappop(pq) # Extract the smallest element from the heap
             curr.next = ListNode(s_val)
             curr = curr.next
 
@@ -33,7 +30,24 @@ class Solution:
         return dummy.next
 
 
+'''
+pq = []                             
+for i, node in enumerate(lists):
+    if node:                        
+        pq.append((node.val, i, node))
+heapify(pq)
 
+        ||
+        ||
+        ||
+
+pq = []                             
+for i, node in enumerate(lists):
+    if node:
+        heappush(pq,((node.val, i, node)))
+
+
+'''
 
 
 
@@ -58,12 +72,14 @@ class Solution:
 
 
 # Approach2: Priority Queue (Min Heap)
-# We can create a min heap pq to maintain the head nodes of all linked lists. 
-# Each time, we take out the node with the smallest value from the min heap, add it to the end of the result linked list, 
-# and then add the next node of this node to the heap. 
-# Repeat the above steps until the heap is empty.
-# The time complexity is O(nlog k), and the space complexity is O(k). Here, n is the total number of all linked list nodes, and k is the number of linked lists given in the problem.
-
+'''
+We can create a min heap pq to maintain the head nodes of all linked lists. 
+Each time, we take out the node with the smallest value from the min heap, add it to the end of the result linked list, 
+and then add the next node of this node to the heap. 
+Repeat the above steps until the heap is empty.
+The time complexity is O(nlog k), and the space complexity is O(k). 
+Here, n is the total number of all linked list nodes, and k is the number of linked lists given in the problem.
+'''
 # Definition for singly-linked list.
 class ListNode:
     def __init__(self, val=0, next=None):
@@ -124,45 +140,45 @@ if __name__ == '__main__':
 
 
 # Analysis:Heap-Based Solution
-# To efficiently merge k sorted linked lists, a heap-based solution leverages the properties of a priority queue, 
-# specifically a min heap. This approach involves the following steps:
+'''
+To efficiently merge k sorted linked lists, a heap-based solution leverages the properties of a priority queue, 
+specifically a min heap. This approach involves the following steps:
 
-# The time complexity of the 'mergeKLists' method can be analyzed as follows:
+The time complexity of the 'mergeKLists' method can be analyzed as follows:
 
-# 1. Initialization of the Priority Queue (Heapify):
-# • We start by filtering out the non-null heads of the linked lists and adding them to the priority queue 'pq'.
-# • This initialization takes O(k) time, where k is the number of linked lists. Building a heap from these k elements using 'heapify' also takes O(k) time.
+1. Initialization of the Priority Queue (Heapify):
+• We start by filtering out the non-null heads of the linked lists and adding them to the priority queue 'pq'.
+• This initialization takes O(k) time, where k is the number of linked lists. Building a heap from these k elements using 'heapify' also takes O(k) time.
 
-# 2. Processing Nodes:
-# • We repeatedly pop the smallest element from the heap, which takes O(log k) time, as the heap contains at most k elements at any time.
-# • For each node that is popped, we might push its next node into the heap, which also takes O(log k) time.
-# • Since we will process each node exactly once and there are a total of N nodes across all lists, this part will take O(N log k) time.
+2. Processing Nodes:
+• We repeatedly pop the smallest element from the heap, which takes O(log k) time, as the heap contains at most k elements at any time.
+• For each node that is popped, we might push its next node into the heap, which also takes O(log k) time.
+• Since we will process each node exactly once and there are a total of N nodes across all lists, this part will take O(N log k) time.
 
-# Combining these parts, the overall time complexity is:
-# 0(k) + 0(N log k) = 0(N logk)
-# Therefore, the time complexity of the 'mergeKLists' method is ON log k), where N is the total number of nodes across all k linked lists.
-
-
-# Space Complexity: The space complexity is O(k) because the heap size does not exceed k, the number of linked lists.
+Combining these parts, the overall time complexity is:
+0(k) + 0(N log k) = 0(N logk)
+Therefore, the time complexity of the 'mergeKLists' method is ON log k), where N is the total number of nodes across all k linked lists.
 
 
-# Example
-# Consider merging three linked lists with a total of n nodes. 
-# The smallest node from each list is initially added to the heap.
-# When a node is polled from the heap, its successor (if any) is added to the heap.
-# This process ensures that at every step, the heap helps us find the next smallest node to be added to the merged list.
-
-# Conclusion
-# The heap-based solution for merging k sorted linked lists is efficient and elegant, leveraging the min heap’s properties to ensure that the merged list is sorted with optimal time and space complexity. 
-# This method stands out for its ability to handle multiple lists simultaneously while maintaining a manageable heap size.
+Space Complexity: The space complexity is O(k) because the heap size does not exceed k, the number of linked lists.
 
 
+Example
+Consider merging three linked lists with a total of n nodes. 
+The smallest node from each list is initially added to the heap.
+When a node is polled from the heap, its successor (if any) is added to the heap.
+This process ensures that at every step, the heap helps us find the next smallest node to be added to the merged list.
+
+Conclusion
+The heap-based solution for merging k sorted linked lists is efficient and elegant, leveraging the min heap’s properties to ensure that the merged list is sorted with optimal time and space complexity. 
+This method stands out for its ability to handle multiple lists simultaneously while maintaining a manageable heap size.
+
+'''
 
 
 
-#Approach1:Divide and Conquer
-
-#Use the below one to write divide & conquer in interviews
+#Approach1:Divide and Conquer(I prefer this)
+#Use this one to write divide & conquer in interviews
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         K = len(lists)
@@ -192,22 +208,23 @@ class Solution:
         return dummy.next  
 
 
-# The initial approach one might consider is to merge the linked lists two at a time. 
-# That is, first merge the first two lists, then merge the result with the third list, and continue this process until the kth list. 
+'''
+The initial approach one might consider is to merge the linked lists two at a time. 
+That is, first merge the first two lists, then merge the result with the third list, and continue this process until the kth list. 
 
-# While this approach is theoretically sound, it proves to be inefficient for passing online judgment (OJ) systems due to its higher time complexity. 
-# Therefore, a shift in strategy is essential, leading us to adopt the Divide and Conquer method.
+While this approach is theoretically sound, it proves to be inefficient for passing online judgment (OJ) systems due to its higher time complexity. 
+Therefore, a shift in strategy is essential, leading us to adopt the Divide and Conquer method.
 
-# In essence, this method involves repeatedly dividing the task into smaller, more manageable chunks. Specifically, the k linked lists are initially divided into tasks of merging k/2 pairs of linked lists. 
-# This process continues recursively, dividing the lists until we are left with tasks that involve merging only one or two linked lists, at which point the actual merging begins.
+In essence, this method involves repeatedly dividing the task into smaller, more manageable chunks. Specifically, the k linked lists are initially divided into tasks of merging k/2 pairs of linked lists. 
+This process continues recursively, dividing the lists until we are left with tasks that involve merging only one or two linked lists, at which point the actual merging begins.
 
-# Big-O analysis
-# TC:O(nlogk)
-# SC:O(n)
+Big-O analysis
+TC:O(nlogk)
+SC:O(n)
 
-# • We can merge two sorted linked list in O(n) time where n is the total number of nodes in two lists.
-# • Sum up the merge process and we can get: sum all nodes logk times (height of tree) => O(Nlogk)
-
+• We can merge two sorted linked list in O(n) time where n is the total number of nodes in two lists.
+• Sum up the merge process and we can get: sum all nodes logk times (height of tree) => O(Nlogk)
+'''
 
 
 # Definition for singly-linked list.
@@ -242,7 +259,41 @@ class Solution:
         return dummy.next
 
 
-#Divide & Conquer
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Divide & Conquer Another way of writing
+#Do not go for it too many variables to control
 class Solution:
     def mergeKLists(self, lists: List[Optional[ListNode]]) -> Optional[ListNode]:
         if lists is None or len(lists) == 0:

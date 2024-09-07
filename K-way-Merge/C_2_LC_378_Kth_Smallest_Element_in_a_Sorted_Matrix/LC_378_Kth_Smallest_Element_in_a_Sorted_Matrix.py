@@ -9,8 +9,7 @@ class Solution:
     def mergeKSortedArrays(self,lists:List[List[int]]):
         pq = []
         for i ,arr in enumerate(lists):
-            pq.append((arr[0],i,0))         #`0`: the index of the current element in the list arr , i - current array index, arr[0]- current array Oth index element
-        heapify(pq)
+            heappush(pq,(arr[0],i,0))         #`0`: the index of the current element in the list arr , i - current array index, arr[0]- current array Oth index element
 
         res = []
 
@@ -28,13 +27,19 @@ class Solution:
 
 '''
 pq = [(arr[0],i,0) for i,arr in enumerate(lists) if arr]
+heapify(pq)
+
 
 better than
+
 
 pq = []
 for i ,arr in enumerate(lists):
     pq.append((arr[0],i,0)) 
+heapify(pq)
 '''
+
+
 
 '''
 pq = []
