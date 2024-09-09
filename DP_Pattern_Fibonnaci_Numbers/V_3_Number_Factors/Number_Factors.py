@@ -1,20 +1,20 @@
 #Approach : Functional Relationship
 
-#Let f(n) represent the number of ways to write a number n as a sum of 1 , 3 and 4.
+'''
+Let f(n) represent the number of ways to write a number n as a sum of 1 , 3 and 4.
 
-#Consider one possible solution with n = x1 + x2 + x3 + … xn. 
-#If the last number is 1, then sum of the remaining numbers is n-1. So the number that ends with 1 is equal to f(n-1). 
-#Taking other cases into account where the last number is 3 and 4
+Consider one possible solution with n = x1 + x2 + x3 + … xn. 
+If the last number is 1, then sum of the remaining numbers is n-1. So the number that ends with 1 is equal to f(n-1). 
+Taking other cases into account where the last number is 3 and 4
 
-#We know its previous state would be n-1,n-3,n-4 thus the functional relationship would be
+We know its previous state would be n-1,n-3,n-4 thus the functional relationship would be
 
-#         {  1 , i==0
-#         {  1 , i==1
-# f(n)=   {  1 , i==2
-#         {  2 , i==3
-#         { f(n-1)+f(n-3)+f(n-4) , 4<=i<=n
-
-
+        {  1 , i==0
+        {  1 , i==1
+f(n)=   {  1 , i==2
+        {  2 , i==3
+        { f(n-1)+f(n-3)+f(n-4) , 4<=i<=n
+'''
 
 #Top-Down DP
 class Solution:

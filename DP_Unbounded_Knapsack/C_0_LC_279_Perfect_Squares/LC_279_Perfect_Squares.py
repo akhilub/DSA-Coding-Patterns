@@ -4,12 +4,15 @@
 
 
 # TOP-DOWN DYNAMIC PROGRAMMING ALGORIHTM TO COMPUTE THE PERFECT SQUARES
-# For example, we can use F(N) to represent the least number of perfect squares to sum up to N, then we can memorize it via Dynamic Programming process:
 
-# F(N) = min(F(N),F(N-j*j)) where j>=1 and j*j<=N
-#The base case is F(0)=0
+'''
+For example, we can use F(N) to represent the least number of perfect squares to sum up to N, then we can memorize it via Dynamic Programming process:
 
-# Using the @cache keyword or @lru_cache(None) or @lru_cache(maxsize=None) as the Memoization Technique together with Recursion which virtually make it Top-Down Dynamic Programming Algorithm:
+F(N) = min(F(N),F(N-j*j)) where j>=1 and j*j<=N
+The base case is F(0)=0
+
+Using the @cache keyword or @lru_cache(None) or @lru_cache(maxsize=None) as the Memoization Technique together with Recursion which virtually make it Top-Down Dynamic Programming Algorithm:
+'''
 class Solution:
     def numSquares(self,n):
         @cache
@@ -25,7 +28,8 @@ class Solution:
         return f(n)
 
 
-# Time complexity is O(N.Sqrt(N)) . Space complexity is O(N). This is Top-Down process as we are computing the F(N) and then recursively computing smaller F(i) values where N-i is a perfect square.
+# Time complexity is O(N.Sqrt(N)).Space complexity is O(N).
+# This is Top-Down process as we are computing the F(N) and then recursively computing smaller F(i) values where N-i is a perfect square.
 
 
 # BOTTOM-UP DYNAMIC PROGRAMMING ALGORIHTM TO COMPUTE THE PERFECT SQUARES

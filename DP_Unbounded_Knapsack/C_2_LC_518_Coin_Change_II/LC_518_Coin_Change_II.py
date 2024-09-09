@@ -1,14 +1,16 @@
 # Dynamic Programming (Complete Knapsack)
 
-# We define f[i]j] as the number of coin combinations to make up the amount j using the first i types of coins. 
+'''
+We define f[i][j] as the number of coin combinations to make up the amount j using the first i types of coins. 
 
-
-
-
-#                                  f(i,j)
-#                               skip      pick
-#                            f(i-1,j)     f(i,j) + f(i,j-coin[i])
-# The time complexity is O(m X n), and the space complexity is O(m X n). Where m and n are the number of types of coins and the total amount, respectively.
+                                 f(i,j)
+                                /     \
+                            skip      pick
+                            /           \
+                        f(i-1,j)     f(i,j) + f(i,j-coin[i])
+'''
+# The time complexity is O(m x n), and the space complexity is O(m x n). 
+# where m and n are the number of types of coins and the total amount, respectively.
 
 
 from typing import List
@@ -37,7 +39,7 @@ class Solution:
 
 
 
-#Bottom UP Optimized
+#Optimized DP-Tabulation
 
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:
