@@ -25,17 +25,18 @@ class Solution:
 
 #Approach: Search from the Bottom Left or Top Right
 
-#Here, we start searching from the bottom left corner and move towards the top right direction. 
-#We compare the current element matrix[row][col] with target:
+'''
+Here, we start searching from the bottom left corner and move towards the top right direction. 
+We compare the current element matrix[row][col] with target:
 
-# • If matrix [row][col] = target, we have found the target value and return true.
-# • If matrix [row][col] > target, all elements to the right of the current position in this row are greater than target, so we should move the pointer row upwards/left, i.e., row = row — 1.
-# • If matrix[row][col] < target, all elements above the current position in this column are less than target, so we should move the pointer col to the right, i.e., col = col+ 1.
-# If we still cant find target after the search, return false.
+• If matrix [row][col] = target, we have found the target value and return true.
+• If matrix [row][col] > target, all elements to the right of the current position in this row are greater than target, so we should move the pointer row upwards/left, i.e., row = row — 1.
+• If matrix[row][col] < target, all elements above the current position in this column are less than target, so we should move the pointer col to the right, i.e., col = col+ 1.
+If we still cant find target after the search, return false.
 
-# The time complexity is O(m + n), where m and n are the number of rows and columns of the matrix, respectively. 
-# The space complexity is O (1).
-
+The time complexity is O(m + n), where m and n are the number of rows and columns of the matrix, respectively. 
+The space complexity is O (1).
+'''
 
 
 class Solution:
@@ -58,10 +59,11 @@ class Solution:
 
 
 #Optimised Solution:
-#Binary Search
-# We can logically unfold the two-dimensional matrix and then perform binary search.
-# The time complexity is O (log(m x n)), where m and n are the number of rows and columns of the matrix, respectively. The space complexity is O (1).
-
+'''
+Binary Search
+We can logically unfold the two-dimensional matrix and then perform binary search.
+The time complexity is O (log(m x n)), where m and n are the number of rows and columns of the matrix, respectively. The space complexity is O (1).
+'''
 #Go with this in interviews
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:

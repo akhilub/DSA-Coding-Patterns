@@ -14,7 +14,7 @@ class Solution:
             if nums[mid] ==target: #pitfall see nums[mid]==target not mid ==target , mid is the index value
                 return mid
             
-            #you can skip this if condition if you want
+            #condition to check for duplicates , you can skip this if condition if you want
             if nums[l] == nums[mid] == nums[r]: #to skip the same elements/or identical values/duplicates 
                 l += 1
                 r -= 1
@@ -24,7 +24,7 @@ class Solution:
                     r=mid-1
                 else:
                     l=mid+1
-            else: #nums[l]>nums[mid] #right half array nums[m..n - 1] are sorted
+            else: #nums[l]>nums[mid]  #right half array nums[m..n - 1] are sorted
                 if nums[mid]<target<=nums[r]:
                     l=mid+1
                 else:
