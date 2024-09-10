@@ -43,19 +43,22 @@ class Solution:
     def pathSum(self, root: Optional[TreeNode], targetSum: int) -> List[List[int]]:
         ans = []
         def dfs(root,path:List[int]):
-            #termninate dfs
-            if root is None:
+                                        '''Step3'''
+            if root is None:                #termninate dfs    
                 return 
             
-            #leaf node
-            if not root.left and not root.right:
+                                        '''Step2'''
+            if not root.left and not root.right: #leaf node 
                 path +=[root.val]
                 if sum(path)==targetSum:        #check for path sum i.e apply question condition
                     ans.append(path[::])
             
+                                        '''Step1'''
             dfs(root.left,path+[root.val])
             dfs(root.right,path+[root.val])
         
+        
+        '''Init'z'''
         dfs(root,[])
         return ans
         

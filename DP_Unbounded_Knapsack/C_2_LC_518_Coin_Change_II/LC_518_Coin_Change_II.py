@@ -39,7 +39,11 @@ class Solution:
 
 
 
-#Optimized DP-Tabulation
+#Bottom Up DP - Tabulation
+
+#Why Bottom Up?
+#Because in the decision tree we are trying to find the topmost value (dp[n-1]) to reach their we start
+#from bottom (dp[0]) and then traverse upward in the tree.
 
 class Solution:
     def change(self, amount: int, coins: List[int]) -> int:

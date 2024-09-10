@@ -2,7 +2,8 @@
 # The terminal case is to invert a None node which is None
 # Now just recursively invert left and right subtrees and assign it to right and left pointers
 
-#TC:O(N) SC:O(N)
+# TC:O(N) 
+# SC:O(N)
 # where N is the no of nodes in the binary Tree
 
 #Defination of binary Tree

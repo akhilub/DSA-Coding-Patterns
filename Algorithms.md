@@ -50,7 +50,7 @@ function binary_search(A: array of values, n:last index value, T:target value) i
 ```
 
 **Hermann Bottenbruch alternative procedure**
-- In the above procedure, the algorithm checks whether the middle element (𝑚 {\displaystyle m}) is equal to the target ( 𝑇 {\displaystyle T}) in every iteration. Some implementations leave out this check during each iteration. The algorithm would perform this check only when one element is left (when 𝐿 =𝑅 {\displaystyle L=R}). This results in a faster comparison loop, as one comparison is eliminated per iteration, while it requires only one more iteration on average
+- In the above procedure, the algorithm checks whether the middle element (𝑚) is equal to the target (𝑇) in every iteration. Some implementations leave out this check during each iteration. The algorithm would perform this check only when one element is left (when 𝐿 =𝑅 ). This results in a faster comparison loop, as one comparison is eliminated per iteration, while it requires only one more iteration on average
 
 ```
 function binary_search_alternative(A, n, T) is

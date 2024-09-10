@@ -4,6 +4,7 @@ We get the given string from the concatenation of an array of integers arr and t
 
 Example 1:
 
+
 Input: root = [0,1,0,0,1,0,null,null,1,0,0], arr = [0,1,0,1]
 Output: true
 Explanation: 

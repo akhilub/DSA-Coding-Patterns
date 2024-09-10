@@ -27,6 +27,8 @@ class Solution:
         preorder(root)
         return ans
 
+
+
 #Approach2: Non-recursive/Iterative Using Stack
 #1)Write BFS traversal using queue DS(deque)
 #2)Replace queue with stack DS(list) ,we get reverse pre-order traversal algorithm i.e. NRL (Node-Right-Left):

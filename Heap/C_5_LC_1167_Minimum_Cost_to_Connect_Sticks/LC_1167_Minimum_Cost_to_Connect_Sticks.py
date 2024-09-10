@@ -1,5 +1,7 @@
 # Approach: Greedy + Priority Queue (Min Heap)
 
+
+# GREEDY STRATEGY BY PICKING TWO SMALLEST
 '''
 We can use a greedy approach, each time choosing the shortest two sticks to connect, 
 which ensures the minimum cost of connection.
@@ -13,6 +15,7 @@ The time complexity is O(n×logn), and the space complexity is O(n). Here,
 
 n is the length of the array sticks.
 '''
+
 
 # Example
 # Assuming we are given four sticks with lengths a, b, c, and d respectively. The total costs would be (merging from left to right):

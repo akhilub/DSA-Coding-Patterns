@@ -1,4 +1,4 @@
-#Approach:Priority Queue(MinHeap & MaxHeap)
+#Approach:Priority Queue ; Two Heaps (MinHeap & MaxHeap)
 
 # Since the data in the data stream is not in order, we should first think of a way to make it in ordered. 
 # If we use a vector to save the data stream, we must sort the array every time a new data comes in, which is not efficient.

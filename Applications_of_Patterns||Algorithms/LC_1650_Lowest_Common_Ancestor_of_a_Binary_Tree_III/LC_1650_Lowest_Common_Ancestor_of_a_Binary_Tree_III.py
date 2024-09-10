@@ -1,7 +1,8 @@
 #Approach1:HashSet
 '''
 We use a hash table vis to record all nodes on the path from node p to the root node. 
-Then we start from node q and traverse towards the root node. If we encounter a node that exists in the hash table 
+Then we start from node q and traverse towards the root node. 
+If we encounter a node that exists in the hash table 
 vis, then this node is the nearest common ancestor of p and q, and we can return it directly.
 
 The time complexity is O(n), and the space complexity is O(n). Here, 

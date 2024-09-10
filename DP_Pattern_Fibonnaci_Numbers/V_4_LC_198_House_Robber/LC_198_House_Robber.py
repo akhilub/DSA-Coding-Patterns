@@ -14,9 +14,6 @@ F(n) = { nums[0] , i==1
 '''
 
 
-
-
-
 #Start with the Bottom Up Tabulation Solution and then optimise it because input is in the form of array
 
 # please note that dp[] has one extra element to handle zero house
@@ -52,8 +49,14 @@ class Solution:
         return dp[n]
 
 
-#Bottom-Up No Memory DP
 
+
+#Bottom-Up (No Memory DP)
+
+# Time: O(n)
+# Space: O(1)
+
+'''Write this in interviews'''
 class Solution:
     def rob(self, nums: List[int]) -> int:
         n = len(nums)
@@ -71,9 +74,11 @@ class Solution:
             f0,f1 = f1,fi
                 
         return fi
+    
 
 
-#Top-Down Dp
+
+#Top-Down DP
 
 '''
 Basically at any house `i` Robber have two options either to pick or skip
@@ -120,7 +125,14 @@ class Solution:
 
 
 
-# Greedy
+
+
+
+
+
+
+
+# Greedy DP
 class Solution:
     def rob(self, nums: List[int]) -> int:
         not_rob, rob = 0, nums[0]

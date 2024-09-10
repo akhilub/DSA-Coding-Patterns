@@ -1,7 +1,8 @@
 # Approach 1:Priority Queue (Min Heap)
 '''
 We can maintain a min heap `pq` of size `k` and then iterate through the array `nums` adding each element to the min heap. 
-When the size of the min heap exceeds `k`, we pop the top element of the heap. This way, the final `k` elements in the min heap are the 
+When the size of the min heap exceeds `k`, we pop the top element of the heap. 
+This way, the final `k` elements in the min heap are the 
 `k` largest elements in the array, and the top element of the heap is the kth largest element.
 
 The time complexity is `O(nlogk)`, and the space complexity is `O(k)`. 
