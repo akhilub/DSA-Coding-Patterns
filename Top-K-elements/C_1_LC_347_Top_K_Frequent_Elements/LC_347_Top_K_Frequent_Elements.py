@@ -8,7 +8,8 @@
 # space complexity of O(m).
 
 
-#Write this in interviews(Stick to this only)
+'''Write this in interviews(Stick to this only)'''
+
 from heapq import *
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
@@ -22,6 +23,32 @@ class Solution:
             _ , num = heappop(pq)
             ans.append(num) # ans+=[num]
         return ans
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

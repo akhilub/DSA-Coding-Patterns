@@ -22,12 +22,11 @@ class Solution:
 solution = Solution()
 nums1 = [10, 9, 8]
 nums2 = [7, 6, 5]
-k = 2
-print(solution.findKLargestPairs(nums1, nums2, k))  # Expected Output: [[10, 7], [9, 7]]
+K = 2
+print(solution.findKLargestPairs(nums1, nums2, K))  # Expected Output: [[10, 7], [9, 7]]
 
 
 nums1=[9, 8, 2]
 nums2=[6, 3, 1]
 K=3
-
-print(solution.findKLargestPairs(nums1, nums2, K))
+print(solution.findKLargestPairs(nums1, nums2, K)) # Expected Output: [[9, 3], [9, 6], [8, 6]]

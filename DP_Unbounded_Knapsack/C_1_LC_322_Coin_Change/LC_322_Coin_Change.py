@@ -21,7 +21,7 @@ Let f(n) be the no of minimum coins to come up with the target n amount
 
 Using Dynamic Programming Algorithm - we know the DP transition function:
 
-f(n) = { min( f(n), f(n - coin) + 1 ) , for coin in [...coins...] if f(n - coin) is reachable
+f(n) = { min( f(n), f(n - coin) + 1 ) , for coin in [...coins...], if f(n - coin) is reachable
 f(0) = 0
 '''
 
@@ -78,7 +78,7 @@ class Solution:
         dp = [float('inf')]* (amount+1)             #instead of [float('inf')] we can also use [amount+1]
         
         dp[0] = 0
-        for i in range(1,amount+1):     #here i is integer amount from 1 till amount
+        for i in range(1,amount+1):                 #here i is integer amount from 1 till amount
             for c in coins:
                 if i>=c and dp[i-c]!=float('inf'):
                     dp[i] = min(dp[i],dp[i-c]+1)
@@ -126,26 +126,34 @@ class Solution:
 
 
 
+'''Write this in interviews'''
+#Approach 3: Traversing using coins first
 
-#Another Way
+#TC:O(mxn)
+#SC:O(n) 
+# where m and n are the number of types of coins and the total amount, respectively.
 
 class Solution:
   def coinChange(self, coins: list[int], amount: int) -> int:
     # dp[i] := the minimum number Of coins to make up i
-    dp = [0] + [amount + 1] * amount
-
+    dp = [amount + 1] * (amount+1)                      #[amount+1]  or [inf]
+    dp[0] = 0 
     for coin in coins:
         for i in range(coin, amount + 1):
             dp[i] = min(dp[i], dp[i - coin] + 1)
 
-    return -1 if dp[amount] == amount + 1 else dp[amount]
+    return -1 if dp[amount] == amount + 1 else dp[amount]  #amount +1   or inf
    
+
 
 '''
 return -1 if dp[amount] == amount + 1 else dp[amount]
                     ||
                     ||
 return -1 if dp[-1] > amount else dp[-1]
+                    ||
+                    ||
+return -1 if dp[-1] >= amount+1 else dp[-1]                   
 
 '''
 

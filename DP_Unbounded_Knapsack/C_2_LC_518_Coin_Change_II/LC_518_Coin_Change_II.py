@@ -39,6 +39,9 @@ class Solution:
 
 
 
+
+
+'''Go with this approach in interviews'''
 #Bottom Up DP - Tabulation
 
 #Why Bottom Up?
@@ -52,5 +55,5 @@ class Solution:
         for coin in coins:
             for j in range(coin, amount + 1):
                 dp[j] += dp[j - coin]
-        return dp[-1]
+        return dp[-1] #dp[amount]
 

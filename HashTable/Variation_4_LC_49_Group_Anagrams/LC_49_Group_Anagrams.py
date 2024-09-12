@@ -47,3 +47,42 @@ class Solution:
             k = ''.join(sorted(s))
             d[k].append(s)
         return list(d.values())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Approach 2 : Counting
+
+'''Write this in interviews'''
+
+#TC:O(nm)
+#SC:O(nm)
+# m -> length of the longest word/string
+# n -> length of the array
+
+
+class Solution:
+    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+        mp = defaultdict(list)
+        for word in strs:
+            key = [0] * 26
+            for ch in word:
+                key[ord(ch) - ord('a')] += 1
+            mp[tuple(key)].append(word)
+        return list(mp.values())

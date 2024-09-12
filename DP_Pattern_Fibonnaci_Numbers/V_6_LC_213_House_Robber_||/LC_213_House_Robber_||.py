@@ -1,4 +1,17 @@
 '''
+Basically at any house `i` Robber have two options either to pick or skip
+
+                                   f(i)
+                                  /    \
+                                 /      \    
+                         H(i)+f(i-2)    f(i-1)
+                           pick          skip
+which boils down to    nums[i-1]+f(i-2)  f(i-1)
+
+'''
+
+
+'''
 The circular arrangement means that at most one of the first and last houses can be chosen for theft, 
 so this circular arrangement problem can be reduced to two single-row house problems.
 
@@ -6,6 +19,8 @@ The time complexity is O(n), where n is the length of the array.
 The space complexity is O(1).
 
 '''
+
+
 
 #No memory DP
 class Solution:
