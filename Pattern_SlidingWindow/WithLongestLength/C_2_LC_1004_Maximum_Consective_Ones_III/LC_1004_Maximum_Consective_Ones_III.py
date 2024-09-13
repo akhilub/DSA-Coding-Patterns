@@ -35,8 +35,8 @@ class Solution:
         
         return max_w
 
+#Explanation:
 '''
-Explanation:
 We can iterate through the array, using a variable `cnt` to record the current number of 0s in the window. 
 When `cnt>k`, we move the left boundary of the window to the right by one position.
 After the iteration ends, the length of the window is the maximum number of consecutive 1s.

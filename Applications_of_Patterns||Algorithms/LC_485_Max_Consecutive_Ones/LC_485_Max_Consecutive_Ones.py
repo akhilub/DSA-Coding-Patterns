@@ -29,22 +29,18 @@ class Solution:
     
 
 '''
-...
-...
 for num in nums:
     if num==1:
-...
-...
     
-equivalent to 
-...
-...
+        ||
+        ||equivalent to 
+        ||   
+        
 for r in range(len(nums)):             
     if nums[r]==1:  
-...
 
 '''
-#Another way 
+#Another way of writing same above approach
 class Solution:
     def findMaxConsecutiveOnes(self, nums: List[int]) -> int:
         ans = 0
