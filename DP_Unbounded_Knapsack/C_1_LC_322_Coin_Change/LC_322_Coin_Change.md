@@ -1,4 +1,4 @@
-**[Problem Statment](https://leetcode.com/problems/coin-change/)**
+**[PlayGround](https://leetcode.com/problems/coin-change/)**
 
 You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money.
 

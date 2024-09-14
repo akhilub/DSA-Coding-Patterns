@@ -72,6 +72,7 @@ makeNumber = lambda digits: int(''.join(map(str, digits)))
 
 print(makeNumber([1,2,3,4,5])) # 12345
 
+
 # Factorial
 
 - Given n is a non-negative integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its factorial.

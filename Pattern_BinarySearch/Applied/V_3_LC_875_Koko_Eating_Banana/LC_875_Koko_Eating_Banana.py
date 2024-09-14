@@ -46,11 +46,10 @@ class Solution:
 '''
 
 t = sum(math.ceil(x/mid) for x in piles)
-
-equivalent
-
+            ||
+         equivalent
+            ||
 t = sum((x + mid - 1) // mid  for x in piles)
-
 '''
 
 

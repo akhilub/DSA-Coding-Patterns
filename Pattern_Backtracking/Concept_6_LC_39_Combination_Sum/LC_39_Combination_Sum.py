@@ -1,4 +1,4 @@
-#Approach 
+#Approach 1
 #Recursive Backtracking
 
 #1) For every position in candidate we will either pick the element or skip the element in cur list
@@ -28,17 +28,22 @@ class Solution:
         return ans
 
 
-#My Approach 
-#1) Make the recursive decision tree, then we will realize it is a backtracking 
-#2) Start the dfs with empty path list and the current level i.e 0
-#3) The tree branches are seen through for loop , the for loop starts from the current level
-#3)We can pick the same element multiple time from the candidate list in the path list when we are backtracking
-#4)Prune the tree meaning return if the sum(path) becomes more than the target
-#5)Store/Save the path if sum(path) reaches target
-#6)Upon returning from a level pop out the last added elemet in the past list
+#Approach 2(I prefer this)
 
 #TC : O(∣candidates∣^target)
 #SC : O(target)
+'''
+1) Make the recursive decision tree, then we will realize it is a backtracking 
+2) Start the dfs with empty path list and the current level i.e 0
+3) The tree branches are seen through for loop , the for loop starts from the current level
+-- We can pick the same element multiple time from the candidate list in the path list when we are backtracking
+  
+4)Prune the tree meaning return if the sum(path) becomes more than the target
+5)Store/Save the path if sum(path) reaches target
+6)Upon returning from a level pop out the last added elemet in the past list
+'''
+
+
 class Solution:
     def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:
         ans = []
@@ -61,12 +66,35 @@ class Solution:
         dfs([],0)
         return ans
 
+'''
 
-#Approach 
+```
+path.append(candidates[i])
+dfs(path,i+1)
+path.pop()
+```
+    ||
+    ||equivalent
+    ||
+```
+dfs(path+[candidates[i]],i+1)
+```
+
+'''      
+
+
+
+
+
+
+
+
+
+
+
+#Approach 3
 #Standard DFS
-
 # Time: 𝑂(∣candidates∣target)
-
 # Space: 𝑂(target)
 class Solution:
   def combinationSum(self, candidates: List[int], target: int) -> List[List[int]]:

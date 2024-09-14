@@ -27,20 +27,18 @@ class Solution:
       
 
 '''
+
 ```
 path.append(candidates[i])
 dfs(path,i+1)
 path.pop()
 ```
-
-
-equivalent
-
+    ||
+    ||equivalent
+    ||
 ```
 dfs(path+[candidates[i]],i+1)
 ```
-
-
 
 '''      
 

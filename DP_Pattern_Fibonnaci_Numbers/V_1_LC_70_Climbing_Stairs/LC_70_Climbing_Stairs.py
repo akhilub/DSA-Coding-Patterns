@@ -2,10 +2,11 @@
 #Functional Relationalship
 #If we use F(N) to represent the number of the ways to reach stair N, we know its previous possible locations could only be N-1 and N-2, and thus the Dynamic Programming Equation is:
 
-#        { 1 ,i==1
-# f(i) = { 2, i==2
-#        {f(i-1)+f(i-2) , 2<i<=n i.e i == (2,n]
-
+'''
+       { 1 ,i==1
+f(i) = { 2, i==2
+       {f(i-1)+f(i-2) , 2<i<=n i.e i == (2,n]
+'''
 #We can implement
 #Top-Down DP (Recursion +Memoization)
 #TC:O(n)
@@ -24,9 +25,21 @@ class Solution:
         return f(n)
 
 
+
+
 #Bottom-Up DP (Tablulation)
 #TC:O(n)
 #SC:O(n)
+
+'''
+To solve this problem, we can use dynamic programming. We'll build our solution from the bottom up.
+
+For any step n, the number of ways to reach it is the sum of ways to reach (n-1) and (n-2). This is because we can reach step n by either taking one step from (n-1) or (n-2).
+
+Note that the case where we take 2 steps from (n-2) to (n) is also included in this because we will have to take one step from (n-1) in this case.
+
+The time complexity of this solution is O(n), where n is the number of steps.
+'''
 
 class Solution:
     def climbStairs(self, n: int) -> int:
@@ -37,9 +50,10 @@ class Solution:
         return dp[n]
 
 
-#Bottom-up :No memory-DP
 
-#we can use two variables to track only the previous two states.
+
+#Bottom-up :No memory-DP (I prefer this)
+'''We can use two variables to track only the previous two states.'''
 #TC:O(n)
 #SC:O(1)
 class Solution:
@@ -58,7 +72,9 @@ class Solution:
 
 
 
-#Greedy 
+
+
+#Greedy DP
 class Solution:
     def climbStairs(self, n: int) -> int:
         a, b = 0, 1
