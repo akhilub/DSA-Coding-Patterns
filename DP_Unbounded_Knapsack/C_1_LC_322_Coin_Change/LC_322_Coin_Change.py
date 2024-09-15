@@ -138,6 +138,7 @@ class Solution:
     # dp[i] := the minimum number Of coins to make up i
     dp = [amount + 1] * (amount+1)                      #[amount+1]  or [inf]
     dp[0] = 0 
+    
     for coin in coins:
         for i in range(coin, amount + 1):
             dp[i] = min(dp[i], dp[i - coin] + 1)
