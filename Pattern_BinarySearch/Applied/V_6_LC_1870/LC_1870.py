@@ -1,6 +1,6 @@
 # Approach:Binary Search
 # Speed = Distance/Time
-# Problem function f(time = distance/speed) is monotonically decreasing and we are looking for minimum speed
+# Problem function f(speed) is monotonically decreasing and we are looking for minimum speed
 # on x-axis we have speed
 # on y-axis we have time  = f(speed) = distance/speed 
 

@@ -76,8 +76,8 @@ class Solution:
     def coinChange(self,coins,amount):
         # dp[i] := the minimum number Of coins to make up i
         dp = [float('inf')]* (amount+1)             #instead of [float('inf')] we can also use [amount+1]
-        
         dp[0] = 0
+        
         for i in range(1,amount+1):                 #here i is integer amount from 1 till amount
             for c in coins:
                 if i>=c and dp[i-c]!=float('inf'):
@@ -158,9 +158,20 @@ return -1 if dp[-1] >= amount+1 else dp[-1]
 '''
 
 
-   
+
 '''
-? - No ternary operator in Python3
-''' 
+dp = [amount + 1] * (amount+1)
+dp[0] = 0
+            ||
+            ||
+dp = [0]+[amount + 1] * (amount)
+
+'''
+
+
+   
+
+#? Note:  `? - No ternary operator in Python3`
+ 
 
 
