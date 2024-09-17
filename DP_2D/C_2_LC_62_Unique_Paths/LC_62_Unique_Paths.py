@@ -1,4 +1,4 @@
-#Approach : Recursion + Memoization
+#Approach : Top Down DP (Recursion + Memoization)
 
 #m - no of rows
 #n - no of cols
@@ -18,7 +18,10 @@ class Solution:
 
         return f(m-1,n-1)
 
-#My-Approach : Bottom-Up Tabulation
+
+
+
+#My-Approach : Bottom-Up DP (Tabulation)
 class Solution:
     def uniquePaths(self,m,n):
         dp= [[0]*n for _ in range(m)] # m lists each list is of `size n`.
@@ -74,6 +77,68 @@ class Solution:
             for j in range(1,n):
                 dp[i][j] = dp[i-1][j] + dp[i][j-1]
         return dp[-1][-1]
+    
+    
+    
+    
+    
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Mathematically Way C(m+n-2,m-1) = C(m+n-2,n-1)
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        # '//' -> is integer/floor division operation which gives quotient(integer number) of division  
+        return self.fact(m+n-2)//(self.fact(m-1) * self.fact(n-1))
+    
+    def fact(self,N):
+        def f(i,nb={}):
+            if i ==0 or i==1:
+                return 1
+            if i in nb:
+                return nb
+            nb[i] = i*f(i-1)
+            return nb[i]
+        return f(N)
+
+
+
+#Same above Pythonic Maths way
+from math import comb
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        return comb(m+n-2,m-1)
+    
+    
+#factorial Exist in python3
+from math import factorial
+class Solution:
+    def uniquePaths(self, m: int, n: int) -> int:
+        return factorial(m+n-2)// (factorial(m-1)*factorial(n-1))
         

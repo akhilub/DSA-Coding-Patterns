@@ -38,7 +38,7 @@ class Solution:
 
 
 
-###############
+###### Another Way of Writing #########
 
 class Solution:
      def detectCycle(self,head):

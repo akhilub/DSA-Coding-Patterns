@@ -22,9 +22,7 @@ def distribute_parcels(parcels, extra_parcels):
         mid = (left + right) // 2
         
         needed = sum(max(0, mid - p) for p in parcels)
-        
-        #needed = sum(ceil(p/mid) for p in parcels)
-        
+    
         if needed <= extra_parcels:
             right = mid
         else:

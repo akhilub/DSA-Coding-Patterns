@@ -23,6 +23,7 @@ Here, n is the length of the array `nums`, and m is the length of the list `head
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
 class Solution:
     def modifiedList(self, nums: List[int], head: Optional[ListNode]) -> Optional[ListNode]:
         dummy=ListNode(-1,head) #or ListNode(next=head)    #in this case the default value of node dummy is 0 and its next is pointing to head.

@@ -103,6 +103,12 @@ def factorial(n):
     return fi
 ```
 
+OR
+```
+from math import factorial
+factorial(n)
+```
+
 
 
 # Reverse a positive integer
