@@ -2,8 +2,10 @@
 
 - Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its digits in order and reverse order simultaneously
 
+## Reverse Order
+
 ```
-def getDigits(n):
+def getDigits(n:int):
     lst = []  # Define the list inside the function
     while n > 0:
         r = n % 10
@@ -26,9 +28,11 @@ map(int, ...): Converts each character back to an integer.
 list(...): Converts the map object to a list.
 ```
 
-- To get the digits of a positive integer
+## In Order
+
+- To get the digits of a positive integer in order
 ```
-def getDigits(n):
+def getDigits(n:int):
     lst = []
     while n > 0:
         r = n % 10
@@ -42,9 +46,10 @@ OR
 
 ```
 getDigits = lambda n: list(map(int, str(n)))
+print(getDigits(12345))  # [1, 2, 3, 4, 5]
 ```
 
-print(getDigits(12345))  # [1, 2, 3, 4, 5]
+
 
 
 # Make Number from Digits
@@ -68,9 +73,11 @@ OR
 - Not Recommended it is a work around
 ```
 makeNumber = lambda digits: int(''.join(map(str, digits)))
-```
 
 print(makeNumber([1,2,3,4,5])) # 12345
+```
+
+
 
 
 # Factorial
@@ -79,7 +86,7 @@ print(makeNumber([1,2,3,4,5])) # 12345
 
 
 ```
-def factorial(n):
+def factorial(n:int):
     def f(i,nb={}):
         if i==0 or i==1:
             return 1
@@ -93,7 +100,7 @@ OR
 
 - No memory DP/iterative approach
 ```
-def factorial(n):
+def factorial(n:int):
     if n==0 or n==1:
         return 1
     f0 = 1
@@ -103,7 +110,8 @@ def factorial(n):
     return fi
 ```
 
-OR
+OR Pythonic
+
 ```
 from math import factorial
 factorial(n)
@@ -116,7 +124,7 @@ factorial(n)
 - Given n is a positive integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its reverse integer
 
 ```
-def reverse(n):
+def reverse(n:int):
     ans = 0
     while n!=0:
         r = n%10
@@ -152,8 +160,9 @@ def reverseString(s:str):
     return s[::-1]
 ```
 OR
+```
 reverseString = lambda s:s[::-1]
-
+```
 
 # Reverse words in a sentence
 
@@ -205,12 +214,16 @@ def transpose(grid:List[List[int]]):
 
     return T
 ```
+
 OR
+
 ```
 def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
     return list(zip(*matrix))
 ```
+
 OR 
+
 ```
 transpose = lambda matrix:list(zip(*matrix))
 ```
@@ -300,7 +313,7 @@ def isEvenOdd(n):
 
 
 
-# Merge Two Sorted Array Using Two Pointer 
+## Merge Two Sorted Array Using Two Pointer 
 
 Given two sorted arrays/lists, if we want to merge it, we can do this optimally using two pointers in O(N+M) where N and M are the sizes of the two sorted array/list respectively.
 
@@ -331,7 +344,7 @@ def mergeTwoSortedArray(a:List[int],b:List[int])->List[int]:
 
 ```
 
-# MergeSort 
+## MergeSort 
 
 - Based on this we can recursive apply merging sorting algorithm to a list. We continuously divide the list into equal two parts. When the partition size is small enough (one element or none), we know it is by natural sorted. Then we start merge these small partitions into bigger partitions until we get the entire list sorted.
 
@@ -351,7 +364,7 @@ def mergeSort(nums: List[int]) -> List[int]:
     return mergeTwoSortedArray(first,second)
 ```
 
-# QuickSort
+## QuickSort
 
 - Quicksort is a well-known sorting algorithm – as the name suggests, it sorts quickly.
 
