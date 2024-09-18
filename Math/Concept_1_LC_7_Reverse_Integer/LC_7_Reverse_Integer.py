@@ -1,7 +1,12 @@
 #Approach:
-#1) We know to the algorithm to reverse a positive integer quickly
-#2) We will keep a variable sign to make -ve integer to +ve ,pass the converted +ve integer to f(n) to retrieve its reverse and assign sign back based on original integer.
-#3) Check for ans range to put in 
+'''
+1) We know to the algorithm to reverse a positive integer quickly
+2) We will keep a variable sign to make -ve integer to +ve ,pass the converted +ve integer to f(n) to retrieve its reverse and assign sign back based on original integer.
+3) Check for ans range to put in 
+'''
+# Time: O(logx)
+# Space: O(1)
+
 
 class Solution:
     def reverse(self,x):
