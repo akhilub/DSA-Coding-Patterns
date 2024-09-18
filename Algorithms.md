@@ -1,33 +1,26 @@
-## Dutch National Flag 
+## Divide & Conquer
+A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
 
-
-**Pseudocode**
-The following pseudocode for three-way partitioning which assumes zero-based array indexing was proposed by Dijkstra himself.[2] It uses three indices l, i and r, maintaining the invariant that l ≤ i ≤ r.
-
-- Entries from 0 up to (but not including) l are values less than mid,
-- entries from l up to (but not including) i are values equal to mid,
-- entries from i up to (and including) r are values not yet sorted, and
-- entries from r + 1 to the end of the array are values greater than mid.
-
-
-
-**procedure**
+**Procedure**
 ```
-three-way-partition(A : array of values, mid : value):
-    l ← 0
-    i ← 0
-    r ← size of A - 1
-    while i <= r:
-        if A[i] < mid:
-            swap A[l] and A[i]
-            l ← l + 1
-            i ← i + 1
-        else if A[i] > mid:
-            swap A[i] and A[r]
-            r ← r - 1
-        else:
-            i ← i + 1
+DAC(P):
+    if small(P):
+        S(P)                        //Directly solve the problem, there must exist a solution for smaller problem
+    else:
+        divide P into P₁,P₂,P₃,....Pₖ
+        Apply DAC(P₁),DAC(P₂).....DAC(Pₖ)
+        Combine (DAC(P₁),DAC(P₂).....DAC(Pₖ))
 ```
+
+
+## Applications of Divide & Conquer
+1. Binary Search
+2. Finding Maximum & Minimum
+3. MergeSort
+4. QuickSort
+5. Strassen's Matrix Multiplication
+
+
 
 
 
@@ -99,6 +92,7 @@ function binary_search_rightmost(A, n, T):
     return R - 1
 ```
 
+# Merge Sort
 
 **Procedure for Merge Sort**
 
@@ -125,11 +119,12 @@ function merge_sort(A : array of values ) is
 ```
 
 
-
+# Detect Cycle 
 
 **Procedure for Floyd's Cycle Detection**
 - To detect the cycle in a linear Data Structure
 
+```
 floyd(headNode: linear DS):
     tortoise := headNode
     hare := headNode
@@ -143,31 +138,45 @@ floyd(headNode: linear DS):
         tortoise = tortoise.next
         if hare == tortoise
             return 'Cycle Detected'
-
-
-## Divide & Conquer
-A divide-and-conquer algorithm recursively breaks down a problem into two or more sub-problems of the same or related type, until these become simple enough to be solved directly. The solutions to the sub-problems are then combined to give a solution to the original problem.
-
-
-
-**Procedure**
-```
-DAC(P):
-    if small(P):
-        S(P)                        //Directly solve the problem, there must exist a solution for smaller problem
-    else:
-        divide P into P₁,P₂,P₃,....Pₖ
-        Apply DAC(P₁),DAC(P₂).....DAC(Pₖ)
-        Combine (DAC(P₁),DAC(P₂).....DAC(Pₖ))
 ```
 
 
-## Applications of Divide & Conquer
-1. Binary Search
-2. Finding Maximum & Minimum
-3. MergeSort
-4. QuickSort
-5. Strassen's Matrix Multiplication
+
+## Dutch National Flag aka Partition Sort
+
+**Pseudocode**
+1. The following pseudocode for three-way partitioning which assumes zero-based array indexing was proposed by Dijkstra himself.
+2. It uses three indices l, i and r, maintaining the invariant that l ≤ i ≤ r.
+
+- Entries from 0 up to (but not including) l are values less than mid,
+- entries from l up to (but not including) i are values equal to mid,
+- entries from i up to (and including) r are values not yet sorted, and
+- entries from r + 1 to the end of the array are values greater than mid.
+
+
+**procedure**
+```
+three-way-partition(A : array of values, mid : value):
+    l ← 0
+    i ← 0
+    r ← size of A - 1
+    while i <= r:
+        if A[i] < mid:
+            swap A[l] and A[i]
+            l ← l + 1
+            i ← i + 1
+        else if A[i] > mid:
+            swap A[i] and A[r]
+            r ← r - 1
+        else:
+            i ← i + 1
+```
+
+
+
+
+
+## Recursion
 
 
 
@@ -175,13 +184,8 @@ DAC(P):
 
 
 
-### Recursion
 
 
 
 
-
-
-
-
-### Recursion + Memoization (Top Down Dynamic Programming)
+## Recursion + Memoization (Top Down Dynamic Programming)
