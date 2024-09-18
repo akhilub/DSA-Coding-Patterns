@@ -11,7 +11,7 @@ The following pseudocode for three-way partitioning which assumes zero-based arr
 
 
 
-**procedure** 
+**procedure**
 ```
 three-way-partition(A : array of values, mid : value):
     l ← 0
@@ -117,7 +117,7 @@ function merge_sort(A : array of values ) is
    
 
     // Recursively sort both sublists.
-    left := merge_sort(A[ : mid ])
+    left  := merge_sort(A[ : mid ])
     right := merge_sort(A[ mid : ])
 
     // Then merge the now-sorted sublists.
@@ -150,7 +150,37 @@ A divide-and-conquer algorithm recursively breaks down a problem into two or mor
 
 
 
+**Procedure**
+```
+DAC(P):
+    if small(P):
+        S(P)                        //Directly solve the problem, there must exist a solution for smaller problem
+    else:
+        divide P into P₁,P₂,P₃,....Pₖ
+        Apply DAC(P₁),DAC(P₂).....DAC(Pₖ)
+        Combine (DAC(P₁),DAC(P₂).....DAC(Pₖ))
+```
+
+
+## Applications of Divide & Conquer
+1. Binary Search
+2. Finding Maximum & Minimum
+3. MergeSort
+4. QuickSort
+5. Strassen's Matrix Multiplication
+
+
+
+
+
+
+
 ### Recursion
+
+
+
+
+
 
 
 
