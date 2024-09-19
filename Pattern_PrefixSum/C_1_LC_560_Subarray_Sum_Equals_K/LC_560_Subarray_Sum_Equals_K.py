@@ -29,7 +29,7 @@ class Solution:
     def subarraySum(self,nums,k):
         prefixSum = 0
         hashMap = {0:1} # will store the frequencies of prefixSum
-
+        ans = 0
         for i in range(len(nums)):
             prefixSum+=nums[i]
             remSum  = prefixSum - k 
@@ -65,8 +65,24 @@ class Solution:
         cnt = Counter({0:1})
         ans = s = 0
         for num in nums:
-            s+=num
-            ans+=cnt[s-k]
-            cnt[s]+=1
+            s+=num                                                            
+            ans+=cnt[s-k]                               
+            cnt[s]+=1                                  
         return ans
 
+
+
+'''
+s+=num                                                            
+ans+=cnt[s-k]                               
+cnt[s]+=1 
+
+    ||
+ equivalent
+    ||
+    
+s+=num
+remS =s-k
+ans+=cnt[remS]
+cnt[s]+=1
+'''

@@ -23,13 +23,31 @@ class Solution:
         return ans 
 
 
+
 #Competative Programming Approach
 class Solution:
     def subarraysDivByK(self,nums,k)
     cnt = Counter({0:1})
     ans = s = 0
     for x in nums:
-        s = (s+x) % k
-        ans+=cnt[s]
-        cnt[s]+=1
+        s = (s+x) % k                                                    
+        ans+=cnt[s]                                
+        cnt[s]+=1                                 
     return ans
+
+
+
+'''
+s = (s+x) % k                                                    
+ans+=cnt[s]                                
+cnt[s]+=1  
+
+    ||
+ equivalent
+    ||
+
+s+=x
+rem = s%k
+ans+=cnt[rem]
+cnt[rem]+=1
+'''

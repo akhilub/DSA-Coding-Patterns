@@ -5,7 +5,7 @@ A divide-and-conquer algorithm recursively breaks down a problem into two or mor
 ```
 DAC(P):
     if small(P):
-        S(P)                        //Directly solve the problem, there must exist a solution for smaller problem
+        S(P)                        [Directly solve the problem, there must exist a solution for smaller problem]: #
     else:
         divide P into P₁,P₂,P₃,....Pₖ
         Apply DAC(P₁),DAC(P₂).....DAC(Pₖ)
@@ -180,12 +180,27 @@ three-way-partition(A : array of values, mid : value):
 
 
 
-
-
-
-
-
-
-
-
 ## Recursion + Memoization (Top Down Dynamic Programming)
+
+
+
+
+# Greedy Methods
+- To solve optimization Problems
+- Aim : To find an optimal solution (max/min/other among the feasible solutions)
+
+1. Greedy Algorithms
+2. Dynamic Programming
+3. Branch & Bound
+4. Heuristics
+
+
+
+
+
+
+
+
+
+
+
