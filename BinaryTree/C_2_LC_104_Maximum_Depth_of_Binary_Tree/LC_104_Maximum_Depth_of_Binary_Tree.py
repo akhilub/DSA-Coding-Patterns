@@ -1,6 +1,10 @@
+#Approach: Recursion(DFS)
+
 #Recursive Algorithm
-#Approach: if the tree is None return 0, otherwise it will be the max of left the right tree respectively which we can recursively to get the value
-#TC: O(N) where N is the number of nodes in BT
+#If the tree is None return 0, 
+#otherwise it will be the max of left the right tree value respectively plus 1  which we can recursively to get the value
+ 
+#TC: O(N) where N is the number of nodes in BT, since each node is traversed only once in the recursion.
 #SC: O(N) due to recursion
 
 # Definition for a binary tree node.
@@ -19,7 +23,9 @@ class Solution:
         return 1+ max(left,right)
 
 
-#Approach :BFS
+#Approach:BFS
+#TC:O(N)
+#SC:O(N)
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         if not root:
