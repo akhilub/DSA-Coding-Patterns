@@ -29,7 +29,7 @@ class Solution:
 
         
 '''
-This is how to write `if elif else` block inside a lambda function
+See how to write `if elif else` block inside a lambda function
 
 
 sorted(nums, key=cmp_to_key(lambda n1, n2: 

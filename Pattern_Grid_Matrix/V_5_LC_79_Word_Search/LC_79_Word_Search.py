@@ -5,7 +5,7 @@
 class Solution:
     def exist(exist,board,word):
         R , C =len(board),len(borard[0])
-        visited = set () # To keep track of the visited cell so that I do not visit it again
+        visited = set() # To keep track of the visited cell so that I do not visit it again
 
         def dfs(i,j,idx):
             #Base Cases

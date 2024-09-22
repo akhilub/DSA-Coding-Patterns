@@ -18,10 +18,13 @@ class Solution:
     
 
 
+
+
+
 #Follow Up:You must write an algorithm that runs in O(log n) time.
 #Approach:Binary Search(Monotonically decreasing)
 '''
-We define the left boundary of binary search as left=0 and the right boundary as right=n−1, 
+We define the left boundary of binary search as left=0 and the right boundary as right=n-1,
 where n is the length of the array. In each step of binary search, we find the middle element 
 
 mid of the current interval, and compare the values of mid and its right neighbor mid+1:
@@ -47,3 +50,4 @@ class Solution:
                 r = mid
             else:
                 l = mid+1
+        return l
