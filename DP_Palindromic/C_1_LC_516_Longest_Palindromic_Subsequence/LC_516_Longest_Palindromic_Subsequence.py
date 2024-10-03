@@ -35,6 +35,8 @@ class Solution:
             
         return dp(0,n-1)
 
+
+
 #Using notebook Dictionary(Memoization)
 class Solution:
     def longestPalindromeSubseq(self, s: str) -> int:
@@ -71,9 +73,9 @@ class Solution:
         for l in range(n-1,-1,-1):
             dp[l][l]=1
             for r in range(l+1,n):
-                if s[l]==s[r]:
+                if s[l]==s[r]:                                   # case 1: elements at the beginning and the end are the same
                     dp[l][r] = 2 + dp[l+1][r-1]
-                else:
+                else:                                            # case 2: skip one element either from the beginning or the end
                     dp[l][r] = max(dp[l+1][r],dp[l][r-1])
 
         return dp[0][-1] # or dp[0][n-1]
