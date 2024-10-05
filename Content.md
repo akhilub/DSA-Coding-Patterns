@@ -35,7 +35,8 @@
 - [LC 35 Search Insert Position](Pattern_BinarySearch/Modified/Concept_2_LC_35_Search_Insert_Position/LC_35_Search_Insert_Position.py)
 
 ## Pattern: Fast & Slow Pointers
-- [LC 876 Middle of the Linked List](Pattern_FastSlowPointer/Concept_2_LC_874_Middle of the Linked List/LC_876_Middle of the Linked List.py)
+- [LC 876 Middle of the Linked List](Pattern_FastAndSlowPointer/Concept_2_LC_874_Middle_of_the_Linked_List/LC_874_Middle_of_the_Linked_List.py)
+- [LC 202 Happy Number](Pattern_FastAndSlowPointer/Concept_6_Happy_Number/LC_202_Happy_Number.py)
 
 ## Pattern: Grid Matrix
 - [LC 48 Rotate Image](Pattern_Grid_Matrix/2D_Matrix_Grid/C_1_LC_48_Rotate_Image/LC_48_Rotate_Image.py)
