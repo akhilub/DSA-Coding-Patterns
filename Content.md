@@ -39,7 +39,11 @@
 
 ## Pattern: Grid Matrix
 - [LC 48 Rotate Image](Pattern_Grid_Matrix/2D_Matrix_Grid/C_1_LC_48_Rotate_Image/LC_48_Rotate_Image.py)
-- [LC 695 Max Area of Island](Pattern_Grid_Matrix/C_2_LC_695_Max Area of Island/LC_695_Max Area of Island.py)
+- [LC 695 Max Area of Island](Pattern_Grid_Matrix/C_2_LC_695_Max_Area_of_Island/LC_695_Max_Area_of_Island.py)
+
+
+## Pattern_PrefixSum
+- [LC 1590 Make Sum Divisible by P](Pattern_PrefixSum/V_3_LC_1590_Make_Sum_Divisible_by_P/LC_1590_Make_Sum_Divisible_by_P.py)
 
 ## Pattern: Sliding Window
 ### With Fixed Length
