@@ -42,13 +42,12 @@
 - [LC 48 Rotate Image](Pattern_Grid_Matrix/2D_Matrix_Grid/C_1_LC_48_Rotate_Image/LC_48_Rotate_Image.py)
 - [LC 695 Max Area of Island](Pattern_Grid_Matrix/C_2_LC_695_Max_Area_of_Island/LC_695_Max_Area_of_Island.py)
 
-
 ## Pattern_PrefixSum
 - [LC 1590 Make Sum Divisible by P](Pattern_PrefixSum/V_3_LC_1590_Make_Sum_Divisible_by_P/LC_1590_Make_Sum_Divisible_by_P.py)
 
 ## Pattern: Sliding Window
 ### With Fixed Length
-- [Maximum Sum Subarray of Size K](Pattern_SlidingWindow/WithFixedLength/Maximum_Sum_Subarray_of_Size_K/Maximum_Sum_Subarray_of_Size_K.py)
+- [Maximum Sum Subarray of Size K](Pattern_SlidingWindow/WithFixedLength/C_3_Maximum_Sum_Subarray_of_Size_K/Maximum_Sum_Subarray_of_Size_K.py)
 
 ### With Longest Length
 - [LC 3 Longest Substring Without Repeating Characters](Pattern_SlidingWindow/WithLongestLength/C_1_LC_3_Longest_Substring_Without_Repeating_Characters/LC_3_Longest_Substring_Without_Repeating_Characters.py)
