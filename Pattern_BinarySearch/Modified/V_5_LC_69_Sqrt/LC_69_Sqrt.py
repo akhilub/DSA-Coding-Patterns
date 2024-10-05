@@ -4,17 +4,19 @@
 
 
 #Binary Search Algorithm
-# We define the left boundary of the binary search as l = 0 and the right boundary as r = x,
-# then we search for the square root within the range [l, r].
+'''
+We define the left boundary of the binary search as l = 0 and the right boundary as r = x,
+then we search for the square root within the range [l, r].
 
-# In each step of the search, we find the middle value mid = (l + r)//2 or (l+r+1)>>1 or (l+(r-l)/2)
+In each step of the search, we find the middle value mid = (l + r)//2 or (l+r+1)>>1 or (l+(r-l)/2)
 
-# If mid*mid > x, it means the square root is within the range [l, mid - 1], 
-# so we set r = mid - 1.
-# Otherwise, it means the square root is within the range [mid, r],
-# so we set l = mid + 1
+If mid*mid > x, it means the square root is within the range [l, mid - 1], 
+so we set r = mid - 1.
+Otherwise, it means the square root is within the range [mid, r],
+so we set l = mid + 1
 
-# After the search ends, we return r.
+After the search ends, we return r.
+'''
 
 class Solution:
     def mySqrt(self,x):

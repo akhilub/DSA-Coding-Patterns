@@ -24,4 +24,75 @@ class Solution:
             
             
             
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Using HashTable
+class Solution:
+    def letterCombinations(self, digits: str) -> List[str]:
+        if not digits:
+            return []
+        
+        digitsToChar = {'2':'abc','3':'def','4':'ghi','5':'jkl','6':'mno','7':'pqrs','8':'tuv','9':'wxyz'}
+        
+        ans = []
+        def dfs(s:int , path:List[str]):            # s - start index
+            
+            if s ==len(digits):
+                ans.append(''.join(path))
+                return
+            
+            for ch in digitsToChar[digits[s]]:
+                dfs(s+1,path+[ch])
+                    
+        dfs(0,[])
+        return ans 
+
+
+
+            
+            
         
