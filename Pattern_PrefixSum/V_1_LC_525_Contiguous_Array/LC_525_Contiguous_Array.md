@@ -18,5 +18,5 @@ Explanation: [0, 1] (or [1, 0]) is a longest contiguous subarray with equal numb
 
 Constraints:
 
-1 <= nums.length <= 105
-nums[i] is either 0 or 1.
+- 1 <= nums.length <= 105
+- nums[i] is either 0 or 1.
