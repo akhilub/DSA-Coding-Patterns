@@ -44,3 +44,11 @@ class Solution:
         return -1 if ans == len(nums) else ans
 
 
+
+'''
+target = (S - rem) % p
+        ||
+    to make the -ve (S-rem) +ve
+        ||
+target = (S - rem +p) % p
+'''

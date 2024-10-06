@@ -38,6 +38,7 @@ class Solution:
 
 
 '''
+
 s = (s+x) % k                                                    
 ans+=cnt[s]                                
 cnt[s]+=1  
@@ -50,4 +51,5 @@ s+=x
 rem = s%k
 ans+=cnt[rem]
 cnt[rem]+=1
+
 '''
