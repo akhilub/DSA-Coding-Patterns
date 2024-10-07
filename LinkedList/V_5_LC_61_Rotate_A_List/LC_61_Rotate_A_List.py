@@ -1,6 +1,6 @@
 #Write this in interviews
 
-#Approach
+#My Approach
 #TC:O(N)
 #SC:O(1)
 
@@ -14,20 +14,22 @@ class Solution:
         if head is None or head.next is None or k==0:
             return head
         
-        #Get Length & tail Node
+        #1. Get Length & find tail Node
         tail,length = head,1
         while tail.next:
             tail = tail.next
             length+=1
         
-        tail.next = head  #Circle the list 
+        #2. Circle the list (connect the tail to the head)
+        tail.next = head  
         
-        pivot = length - k % length  #Find Pivot
+        #3. Find Pivot
+        pivot = length - k % length 
         
-        for _ in range(pivot): #Traverse till Pivot
+        for _ in range(pivot): 
             tail = tail.next
         
-        #Rotation
+        #4. Rotation (Set the new head and break the cycle)
         newHead = tail.next     
         tail.next = None
         
@@ -36,8 +38,70 @@ class Solution:
       
 
 
+
     
        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
