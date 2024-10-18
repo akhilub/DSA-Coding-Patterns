@@ -1,4 +1,5 @@
 # Approach: Iteration
+
 '''
 We can use iteration to implement the merging of two sorted linked lists.
 
@@ -25,12 +26,16 @@ class Solution:
             curr = curr.next
         curr.next = list1 or list2
         return dummy.next
-    
+
+
+
 """
         curr.next = list1 or list2
-
-better than
-
+                    V
+                    V
+                better than
+                    V
+                    V
         if list1:
             curr.next = list1
         if list2:

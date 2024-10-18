@@ -44,7 +44,7 @@ correct_r, correct_c = divmod(grid[r][c] - 1, n)
     
     
     
-    
+#Competative Programming
 #Approach:Counting
 
 '''

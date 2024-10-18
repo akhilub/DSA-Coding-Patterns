@@ -1,3 +1,4 @@
+#Approach:1D-Binary Search
 #TC:O(mlogn)
 #SC:O(1)
 class Solution:
@@ -58,6 +59,8 @@ class Solution:
         return False
 
 
+
+
 #Optimised Solution:
 '''
 Binary Search
@@ -70,9 +73,9 @@ class Solution:
         m , n = len(matrix),len(matrix[0])
         left ,right = 0 , m*n-1
         while left<=right:
-            mid = (left+right)//2  # mid = (left+right)>>1
+            mid = (left+right)//2                   # mid = (left+right)>>1
             # note: divide column count
-            i , j = mid//n, mid%n  # i , j = divmod(mid,n)  #To get the row and column of the midpoint in the matrix, we use the divmod function with mid and n. The divmod function takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder.
+            i , j = mid//n, mid%n                   # i , j = divmod(mid,n)  #To get the row and column of the midpoint in the matrix, we use the divmod function with mid and n. The divmod function takes two numbers and returns a pair of numbers (a tuple) consisting of their quotient and remainder.
             if matrix[i][j]==target:
                 return True
             

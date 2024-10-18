@@ -63,4 +63,34 @@ class Solution:
                     
         return ans
                     
-                
+
+
+
+
+
+
+
+#Approach: Sorting + Two Pointers (using HashSet)
+#TC:O(n²)
+#SC:O(|ans|)
+
+class Solution:
+    def threeSum(self, nums: List[int]) -> List[List[int]]:
+        ans = set()
+        n = len(nums)
+        nums = sorted(nums)
+        for i in range(n):
+            l,r = i+1,n-1
+            while l<r:
+                S = nums[i]+nums[l]+nums[r]
+                if S == 0:
+                    ans.add((nums[i],nums[l],nums[r]))
+                    l+=1
+                    r-=1
+                elif S > 0:
+                    r-=1
+                else:
+                    l+=1
+          
+        return [list(tup) for tup in ans]
+        

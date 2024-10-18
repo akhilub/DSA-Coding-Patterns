@@ -53,9 +53,7 @@ class Solution:
                 
         makeNumber = lambda digits: reduce(lambda num, dig: num * 10 + dig, digits, 0)
         
-        
         getDigits = lambda num:list(map(int,str(num)))
-        
         
         plusOneNum = makeNumber(digits)+1
         
