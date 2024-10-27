@@ -3,7 +3,7 @@
 #SC:O(1)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        def BinarySearch(arr,T):
+        def binarySearch(arr,T):
             l,r=0,len(arr)-1
             while l<=r:
                 mid = (r+l)//2 or # floor((r+l)/2) or (l+r)>>1 or (r-(r-l)//2)
@@ -18,7 +18,7 @@ class Solution:
             return False
 
         for arr in matrix:
-            if BinarySearch(arr,target):
+            if binarySearch(arr,target):
                 return True
         return False
 

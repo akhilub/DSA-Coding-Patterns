@@ -53,7 +53,7 @@ class Solution:
 
 #Bottom-Up (No Memory DP)
 
-# Time: O(n)
+#TC:O(2^n)--->O(n)
 # Space: O(1)
 
 '''Write this in interviews'''
@@ -69,7 +69,7 @@ class Solution:
         f0=0
         f1=nums[0]
         
-        for i in range(2,n+1):
+        for i in range(2,n+1):              
             fi = max(f1,f0+nums[i-1])
             f0,f1 = f1,fi
                 
@@ -77,9 +77,27 @@ class Solution:
     
 
 
+'''
+f0,f1 =0,nums[0]
+for i in range(2,n+1):              
+    fi = max(f1,f0+nums[i-1])
+    f0,f1 = f1,fi
+        
+        ||
+    equivalent
+        ||
+
+f0,f1 =0,0
+for num in nums              
+    fi = max(f1,f0+num)
+    f0,f1 = f1,fi
+'''
+
+
 
 #Top-Down DP
-
+# Time: O(n)
+# Space: O(n)
 '''
 Basically at any house `i` Robber have two options either to pick or skip
 

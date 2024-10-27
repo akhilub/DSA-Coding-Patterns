@@ -13,6 +13,7 @@ and then determine whether there is a way to split the array so that the maximum
 If there is, it means that mid might be the smallest value that meets the condition, so we adjust the right boundary to `mid`. 
 Otherwise, we adjust the left boundary to `mid+1`.
 
+
 How do we determine whether there is a way to split the array so that the maximum sum of the subarrays does not exceed mid? 
 
 We can use a greedy method, traverse the array from left to right, and add the elements of the array to the subarray one by one.
@@ -29,7 +30,7 @@ n and m are the length of the array and the sum of all elements in the array, re
 
 
 class Solution:
-    def splitArray(self, nums: List[int], k: int) -> int:\
+    def splitArray(self, nums: List[int], k: int) -> int:
         def f(ms):                  #ms- provided maximum sum
             s, cnt = inf , 0        #s - current sum
             for num in nums:

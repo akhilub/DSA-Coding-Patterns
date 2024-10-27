@@ -1,4 +1,4 @@
-#Approach 1:
+#Approach 1:HashMap
 
 #1)Create a HashMap 
 #2)Iterate the dictionary and check for the ceiling (majority element count)
