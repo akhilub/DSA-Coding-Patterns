@@ -355,3 +355,55 @@ for i in range(n):
                 stack.pop()
                 # Do something with the popped item here
             stack.append(entry)
+
+
+
+### Monotonic increasing stack
+ 
+- The same logic can be applied to maintain a monotonic queue.
+
+```
+def fn(arr):
+    stack = []
+    ans = 0
+
+    for num in arr:
+        # for monotonic decreasing, just flip the > to <
+        while stack and stack[-1] > num:
+            # do logic
+            stack.pop()
+        stack.append(num)
+    
+    return ans
+```
+
+### Find top k elements with heap
+
+    import heapq
+
+    def fn(arr, k):
+        heap = []
+        for num in arr:
+            # do some logic to push onto heap according to problem's criteria
+            heapq.heappush(heap, (CRITERIA, num))
+            if len(heap) > k:
+                heapq.heappop(heap)
+        
+        return [num for num in heap]
+
+
+### Find number of subarrays that fit an exact criteria
+
+    from collections import defaultdict
+
+    def fn(arr, k):
+        counts = defaultdict(int)
+        counts[0] = 1
+        ans = curr = 0
+
+        for num in arr:
+            # do logic to change curr
+            ans += counts[curr - k]
+            counts[curr] += 1
+        
+        return ans
