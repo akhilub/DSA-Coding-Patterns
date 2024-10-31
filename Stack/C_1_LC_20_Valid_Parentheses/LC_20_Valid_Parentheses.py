@@ -89,8 +89,8 @@ not (stack.pop() + ch in ["()","{}","[]"])
 
 
 
-#Approach 1: Using a stack
-
+#Approach: Using a stack
+#See how to use inbuilt language tools
 '''
 Traverse the bracket string `s`. 
 •When encountering a left bracket, push the current left bracket into the stack; 
@@ -108,7 +108,7 @@ Here, n is the length of the bracket string .
 class Solution:                                                            
     def isValid(self, s: str) -> bool:                                     
         stack = []
-        valid = ["()","{}","[]"]
+        valid = ["()","{}","[]"]         # valid = {'()', '[]', '{}'}
                                                                       
         for ch in s:                                                           
             if ch in '({[':                                                        
