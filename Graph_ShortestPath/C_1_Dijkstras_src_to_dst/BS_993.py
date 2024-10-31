@@ -73,7 +73,9 @@ if __name__=="__main__":
     
     
 '''
-Unlike Dijkstra, BFS (Breadth First Search) Algorithm is based on queue (First In First Out) and can only work in unweighted graphs (or graphs with equal weights). The time complexity for BFS is O(E+V) - Introduction to Dijkstra Single Source Shortest Path Graph Algorithm algorithms Dijkstra Shortest Path Graph Algorithm as in the worst case, the BFS needs to explore all the edges and vertices. BFS traverses the graph in level by level order. And Dijkstra can be categorized as “Best First Search” as it uses a heap or priority queue to extract the current “best” aka minimal cost from the queue.
+Unlike Dijkstra, BFS (Breadth First Search) Algorithm is based on queue (First In First Out) and can only work in unweighted graphs (or graphs with equal weights). 
+The time complexity for BFS is O(E+V) - Introduction to Dijkstra Single Source Shortest Path Graph Algorithm algorithms Dijkstra Shortest Path Graph Algorithm as in the worst case, 
+the BFS needs to explore all the edges and vertices. BFS traverses the graph in level by level order. And Dijkstra can be categorized as “Best First Search” as it uses a heap or priority queue to extract the current “best” aka minimal cost from the queue.
 
 The Floyd Warshal, on the other hand, is a multi source short path algorithm that runs in a much higher complexity O(V^3) time and O(V^2) space
 '''
