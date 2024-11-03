@@ -77,7 +77,7 @@ path.pop()
     ||equivalent
     ||
 ```
-dfs(path+[candidates[i]],i+1)
+dfs(path+[candidates[i]],i)
 ```
 
 '''      

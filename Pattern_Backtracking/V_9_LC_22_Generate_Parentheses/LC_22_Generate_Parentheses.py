@@ -83,7 +83,7 @@ The time complexity is O(2²ⁿ x n), and the space complexity is O(n).
 
 class Solution:
     def generateParenthesis(self, n: int) -> List[str]:
-        def dfs(l, r, t):
+        def dfs(l:int, r:int, t:str)->None:
             if l > n or r > n or l < r:
                 return
             if l == n and r == n:
