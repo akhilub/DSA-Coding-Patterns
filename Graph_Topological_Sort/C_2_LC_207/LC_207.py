@@ -80,3 +80,112 @@ class Solution:
                 if indeg[j] == 0:
                     q.append(j)
         return cnt == numCourses
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+#Approach DFS
+
+'''
+To solve this problem, we'll use a depth-first search (DFS) approach to detect cycles in the course dependency graph. 
+If there's a cycle, it means we can't finish all courses.
+
+We'll represent the graph using an adjacency list. Then, we'll perform DFS for each course. 
+During DFS, we'll keep track of visited courses and courses in the current path. 
+If we encounter a course that's already in the current path, we've found a cycle.
+
+The time complexity of this solution is O(V + E), where V is the number of courses and E is the number of prerequisites. 
+That’s because we visit each course once and each prerequisite once.
+'''
+
+
+
+class Solution:
+    def canFinish(self, numCourses: int, prerequisites: List[List[int]]) -> bool:
+        
+        #Create adjacency List
+        G = [[] for _ in range(numCourses)]
+        for course , prereq in prerequisites:
+            G[course].append(prereq)
+        
+        #Track visited course and current path 
+        vis = set()
+        path = set()
+        
+        
+        def dfs(course):
+        #If course is in path, we found a cycle
+            if course in path:
+                return False
+        
+        #If course is already visited,its safe
+            if course in vis:
+                return True
+        #Add course to current path
+            path.add(course)
+
+        # Check all prerequisite
+            for prereq in G[course]:
+                if not dfs(prereq):
+                    return False 
+        
+        # Remove course from current path
+            path.remove(course)
+        # Mark course as visited
+            vis.add(course)
+        
+            return True
+        
+        
+        
+        #Check all courses
+        for course in range(numCourses):
+            if not dfs(course):
+                return False
+            
+        return True
+        
+    
+        
+
+
+ 
+ 

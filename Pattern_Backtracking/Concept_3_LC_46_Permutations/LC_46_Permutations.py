@@ -1,24 +1,45 @@
 #Approach 2 
 #Standard Backtrack DFS
+
+'''
+To find all permutations, we can use backtracking. 
+We'll start with an empty list as our permutation. As we do backtracking, we’ll keep adding numbers to this list to build the permutation.
+
+But we can not add the numbers that are already used in the permutation. 
+So we need to track numbers that have been already used in the permutation.
+
+For each unused number, we will append it to the current permutation and continue backtracking. 
+When our permutation contains all the numbers, we add it to our answer and return.
+
+The time complexity is O(n!), where n is the length of nums. 
+This is because for n elements, we have n! possible permutations.
+'''
 class Solution:
   def permute(self, nums: List[int]) -> List[List[int]]:
     ans = []
     used = [False] * len(nums)
 
     def dfs(path: List[int]) -> None:
+      #if current permutation is complete
       if len(path) == len(nums):
         ans.append(path.copy())
         return
 
+      #Try each number as next element
       for i, num in enumerate(nums):
+        #Skip if number is used
         if used[i]:
           continue
-        used[i] = True
+        
+        used[i] = True          #Add number to permutation
         path.append(num)
-        dfs(path)
-        path.pop()
-        used[i] = False
 
+        dfs(path)               #Recurse with updated state
+
+        path.pop()
+        used[i] = False         #Remove number for next iteration
+
+    #Call backtrack with initial state
     dfs([])
     return ans
 
