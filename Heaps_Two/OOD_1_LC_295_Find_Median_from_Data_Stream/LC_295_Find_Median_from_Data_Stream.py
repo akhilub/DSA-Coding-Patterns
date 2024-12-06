@@ -9,18 +9,21 @@
 
 #Implementation
 '''
-We can use two heaps to maintain all the elements, a min heap `minQ` and a max heap `maxQ`, where the min heap 
-`minQ` stores the larger half, and the max heap `maxQ` stores the smaller half.
+We can use two heaps to maintain all the elements, a min heap `minQ` and a max heap `maxQ`, 
+where the min heap `minQ` stores the larger half, and the max heap `maxQ` stores the smaller half.
 
-When calling the addNum method, we first add the element to the max heap`maxQ` then pop the top element of `maxQ`and add it to the min heap `minQ`. 
+When calling the `addNum` method, 
+we first add the element to the max heap`maxQ` then pop the top element of `maxQ`and add it to the min heap `minQ`. 
 If at this time the size difference between `minQ` and`maxQ`is greater than 1, 
 we pop the top element of `minQ` and add it to`maxQ` 
 
 The time complexity is O(logn).
 
 When calling the findMedian method, 
-If the size of `minQ` is equal to the size of `maxQ` it means the total number of elements is even, and we can return the average value of the top elements of 
-`minQ` and`maxQ` otherwise, we return the top element of `minQ`. 
+If the size of `minQ` is equal to the size of `maxQ` it means the total number of elements is even, 
+and we can return the average value of the top elements of `minQ` and`maxQ` 
+otherwise, we return the top element of `minQ`. 
+
 The time complexity is O(1).
 
 The space complexity is O(n), where n is the number of elements.

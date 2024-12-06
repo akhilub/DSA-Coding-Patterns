@@ -6,7 +6,7 @@
 '''
 We treat each row as the base of the histogram, and calculate the maximum area of the histogram for each row.
 
-The time complexity is O(m×n), where m represents the number of rows in matrix, and 
+The time complexity is O(m x n), where m represents the number of rows in matrix, and 
 n represents the number of columns in matrix.
 
 '''
