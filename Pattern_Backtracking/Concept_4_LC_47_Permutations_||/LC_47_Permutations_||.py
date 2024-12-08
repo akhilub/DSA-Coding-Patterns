@@ -26,8 +26,10 @@ class Solution:
             for i , num in enumerate(nums):
                 if used[i]: # skipping the loop / branch of the recursive tree
                     continue
+                
                 if i>0 and nums[i]==nums[i-1] and not used[i-1]: #skipping the duplicates from the nums
                     continue
+                
                 used[i] = True
                 path.append(num)
                 dfs(path)
