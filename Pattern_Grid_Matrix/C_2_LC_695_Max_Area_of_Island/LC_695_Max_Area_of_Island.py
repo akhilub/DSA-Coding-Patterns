@@ -1,7 +1,7 @@
 # Approach: 
 # We will traverse the grid linearly
 # Whenever we find the land cell (with value 1) we have found a island.Using that cell as the root node we will perform DFS or BFS to find its all connected land
-# During DFS or BFS we will explore the cell neighours in 4 directions (horizontslly and vertically) to find and mark the connected land cells.
+# During DFS or BFS we will explore the cell neighours in 4 directions (horizontally and vertically) to find and mark the connected land cells.
 # We will keep a variable to remember the area of the islands
 # Finally Out of all the islands we will return the maxArea one
 

@@ -7,7 +7,7 @@ class Solution:
     def combine(self, n: int, k: int) -> List[List[int]]:
         ans = []
         def dfs(s: int, path: List[int]) -> None:
-            # no need to check len(t)>k, when '==k' returned already
+            # no need to check len(path)>k, when '==k' returned already
             if len(path)==k:
                 ans.append(deepcopy(path))     #we need deepcopy of path i.e deepcopy(path) instead of path.copy() or path[:] or path[::] ,these are the shallow copy of path even though they all works fine
                 return

@@ -18,7 +18,7 @@ class Solution:
             visited.add((i,j)) #mark the cell as visited
             while q:
                 row,col = q.popleft()
-                for di,dj in directions: #explore the directions
+                for di,dj in directions: #explore in 4 directions
                     nr = row + di
                     nc = col + dj
                     if 0<=nr<rows and 0<=nc<cols:# within the boundaries

@@ -14,3 +14,12 @@ https://leetcode.com/discuss/general-discussion/1512986/templates-where-to-find-
 
 https://www.linkedin.com/posts/gabag26_codinginterview-leetcode-activity-7231890157593931776-XB21/
 
+
+https://www.linkedin.com/posts/priteshjagani_dear-software-engineers-if-youre-targeting-activity-7278127662785601536-sbmi/
+
+
+
+
+
+https://hackernoon.com/14-patterns-to-ace-any-coding-interview-question-c5bb3357f6ed
+
