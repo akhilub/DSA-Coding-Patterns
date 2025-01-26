@@ -72,3 +72,76 @@ Algorithm-wise, we can perform Depth First Search, or Breadth First Search Algor
 
 
 
+<p>&nbsp;</p>
+
+## [4 Types of Graph Input](https://www.linkedin.com/posts/neetcodeio_4-graph-input-types-in-a-coding-interview-activity-7281335068680228864-1iCk)
+
+<p>&nbsp;</p>
+
+
+
+
+
+## 𝗚𝗿𝗮𝗽𝗵 - 𝗠𝗮𝘁𝗿𝗶𝘅 𝗕𝗙𝗦
+
+Breadth-first search can also be applied when given a matrix as an input.
+To do this, we make use of a queue, which allows us to explore a node's neighbors. This is shown in the animation.
+
+### 𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻
+
+1. Start at source
+2. Add neighbors to queue
+3. Mark positions visited to avoid infinite loop
+4. Continue until target is reached
+
+
+### 𝗨𝘀𝗲 𝗖𝗮𝘀𝗲𝘀
+
+1. Shortest Path in an unweighted graph - LC 127 Word Ladder
+
+2. Kahn's algorithm for topological sort - LC 207 Course Schedule
+   
+3. Connected components - LC 200 Number of Islands
+
+### 𝗧𝗶𝗺𝗲 𝗮𝗻𝗱 𝗦𝗽𝗮𝗰𝗲
+
+**Time**: O(n*m) where n and m are the dimensions of the grid.
+**Space**: O(n*m)
+
+
+
+
+<p>&nbsp;</p>
+
+
+
+
+## 𝗚𝗿𝗮𝗽𝗵 - 𝗠𝗮𝘁𝗿𝗶𝘅 𝗗𝗙𝗦 𝗕𝗮𝗰𝗸𝘁𝗿𝗮𝗰𝗸𝗶𝗻𝗴
+
+DFS is a common graph traversal algorithm. In a matrix, we can use it to move in all four directions (up, down, left, right) and count the number of unique paths from the top-left cell to the bottom-right cell.
+
+
+### 𝗜𝗺𝗽𝗹𝗲𝗺𝗲𝗻𝘁𝗮𝘁𝗶𝗼𝗻
+
+1. Use a hash set to track visited coordinates.
+2. Add the current cell to the hash set and initialize count as 0.
+3. Recursively perform DFS in all four directions.
+4. If we go out of bounds, or a cell has already been visited or is blocked (1), no path exists: return 0.
+5. If we are at the bottom right cell, we have reached the destination: return 1 and increment count.
+6. After exploring all four directions of a cell, remove the cell's coordinates from the hash set to backtrack and explore other unique paths.
+7. Finally, return the total number of unique paths found from all four directions.
+
+### 𝗨𝘀𝗲 𝗖𝗮𝘀𝗲𝘀
+
+1. Number of Islands 
+
+2. Max Area of Island 
+
+3. Pacific Atlantic Water Flow 
+
+4. Surrounded Regions 
+
+### 𝗧𝗶𝗺𝗲 𝗮𝗻𝗱 𝗦𝗽𝗮𝗰𝗲
+
+**Time:** O(4^n.m), in the worst case, each cell can have four recursive calls
+**Space:** O(n.m), where n represents number of rows and m represents the number of columns

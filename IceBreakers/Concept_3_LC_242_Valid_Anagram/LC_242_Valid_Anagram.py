@@ -2,6 +2,7 @@
 # We can sort both the strings ,and the anagrams will be exactly the same after sorted.
 # In Python we can sort the strings directly, however we can converted to list and then join
 #TC: O(NlogN)
+
 class Solution:
     def validAnagram(self,s,t):
         if len(s)!=len(t):
@@ -17,6 +18,8 @@ class Solution:
 #dictionary , the key must be existant ,otherwise an exception will be raised.We can count two 
 #strings and put their letters and frequencies in two maps and then we can compare both
 
+#TC:O(N)
+#SC:O(N)
 
 class Solution:
     def validAnagram(self,s,t):
@@ -99,9 +102,7 @@ class Solution:
     def validAnagram(self,s,t):
         return Counter(s)==Counter(t)
 
-#Using HashTable
-#TC:O(N) 
-#SC:O(N)
+
 
 
 
