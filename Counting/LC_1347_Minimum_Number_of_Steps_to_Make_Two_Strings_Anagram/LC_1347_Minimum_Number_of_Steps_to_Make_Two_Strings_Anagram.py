@@ -56,6 +56,8 @@ If the count is 0 or positive, it evaluates to False (0) and effectively adds no
 
 '''
 
+#Time : O(|s|+|t|)
+#Space : O(26) = O(1)
 
 class Solution:
     def minSteps(self, s: str, t: str) -> int:
