@@ -1,4 +1,4 @@
-#Approach:Monotonic Stack
+#Approach:Monotonic Stack (Increasing)
 # Time: O(n)
 # Space: O(n)
 
@@ -118,7 +118,7 @@ class Solution:
 
 
 
-#Intial Approch:
+#Approach:Monotonic Stack(Decreasing)
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
         maxArea = 0
