@@ -1,4 +1,4 @@
-#Approach:Monotonic Stack 
+#Approach:Monotonic Stack (Increasing)
 #TC:O(n)
 #SC:O(n) where n is the |nums2|
 #Write this in interviews
@@ -6,36 +6,17 @@ class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         m = {}   #numToNextGreater Map              #mapping = defaultdict(lambda: -1)
         stk = []
-        for V in nums2[::-1]:
-            while stk and stk[-1] <= V:
+        for num in nums2[::-1]:
+            while stk and stk[-1] <= num:
                 stk.pop()
             if stk:
-                m[V] = stk[-1]
-            stk.append(V)
+                m[num] = stk[-1]
+            stk.append(num)
         return [m.get(x, -1) for x in nums1]       #[mapping[x] for x in nums1]
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#Full Approach:Good for understanding
+#Approach:Monotonic Stack (Increasing)
+#Full Expanded Code, Good for understanding
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         #1.Intialization
@@ -65,3 +46,44 @@ class Solution:
             ans[i] = dic[nums1[i]]
             
         return ans
+    
+    
+
+
+
+
+
+#Approach: Monotonic Stack (Decreasing)
+
+class Solution:
+  def nextGreaterElement(self, nums1: list[int], nums2: list[int]) -> list[int]:
+    numToNextGreater = {}
+    stack = []  # a decreasing stack
+
+    for num in nums2:
+      while stack and stack[-1] < num:
+        numToNextGreater[stack.pop()] = num
+      stack.append(num)
+
+    return [numToNextGreater.get(num, -1) for num in nums1]
+
+
+"""
+...
+...
+return [numToNextGreater.get(num, -1) for num in nums1]
+            
+            
+            ||
+            ||
+            ||
+
+
+ans = [-1]*len(nums1)
+...
+...
+for i in range(len(nums1)):
+    ans[i] = cnt.get(nums1[i],-1)
+
+return ans 
+"""
