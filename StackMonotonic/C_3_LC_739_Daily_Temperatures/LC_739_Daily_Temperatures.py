@@ -58,7 +58,32 @@ class Solution:
         
         for i,v in enumerate(temperatures):
             while stk and temperatures[stk[-1]]<v:
-                index = stack.pop()
+                index = stk.pop()
                 ans[index]=i-index
             stk.append(i)
         return ans 
+    
+
+
+
+"""
+i = 0 , v = 73
+stk = [0]
+ans = [0,0,0,0,0,0,0,0]
+
+i = 1 , v =74
+idx = 0
+ans[idx] = i -idx 
+ans[0] = 1-0 = 1 
+stk = [1]
+
+i = 2 , v = 75
+idx = 1
+ans[idx] = i - idx
+ans[1] = 2-1 = 1
+stk = [2]
+
+i = 3 , v= 71
+
+"""
+

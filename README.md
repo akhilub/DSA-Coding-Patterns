@@ -135,3 +135,8 @@ Making locally optimal choices at each step with the hope of finding a global op
 Incrementally building solutions, exploring all possible paths, and abandoning invalid ones.
 
 - Solve: Sudoku solver, N-Queens problem, generating permutations.
+
+
+## What to think, which algorithm to use based on the Input?
+
+![DSA FlowChaer](./DSA%20Flowchart.PNG)
