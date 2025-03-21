@@ -48,7 +48,43 @@ class Solution:
 
 
 
+#Another way of writing monotonic stack
 
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        stk = [-1]
+        max_area = 0
+        heights.append(-1) # make for loop running
+
+        for i in range(len(heights)):
+            while stk and heights[stk[-1]]>heights[i]:
+                h = heights[stk.pop()] #height at currentLowestBarIndex
+                w = i - stk[-1] - 1 if stk else i
+                max_area = max(max_area,h*w)
+            stk.append(i) 
+
+        heights.pop() # restore, pop -1
+
+        return max_area
+
+
+
+#Best optimized solution
+#Write this approach in interviews
+
+class Solution:
+    def largestRectangleArea(self, heights: List[int]) -> int:
+        stk = [-1]
+        max_area = 0
+        
+        for i in range(len(heights)+1):
+            while stk and (i == len(heights) or heights[stk[-1]]>heights[i]):
+                h = heights[stk.pop()] #height at currentLowestBarIndex
+                w = i - stk[-1] - 1 if stk else i
+                max_area = max(max_area,h*w)
+            stk.append(i) 
+
+        return max_area
 
 
 

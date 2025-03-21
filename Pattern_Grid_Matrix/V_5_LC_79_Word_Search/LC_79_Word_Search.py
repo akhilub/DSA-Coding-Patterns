@@ -4,12 +4,12 @@
 #SC :O(M*N)
 class Solution:
     def exist(exist,board,word):
-        R , C =len(board),len(borard[0])
+        R , C =len(board),len(board[0])
         visited = set() # To keep track of the visited cell so that I do not visit it again
 
         def dfs(i,j,idx):
             #Base Cases
-            if idx = len(word): #reached to the end of the word
+            if idx == len(word): #reached to the end of the word
                 return True
             
             if i<0 or i>=R or j<0 or j>=C: #out of bounds
@@ -25,7 +25,7 @@ class Solution:
             visited.add((i,j))
             
             #Explore Recursive Cases
-            res = dfs(i+1,j,idx+1) or 
+            res = dfs(i+1,j,idx+1) or
                   dfs(i,j+1,idx+1) or
                   dfs(i-1,j,idx+1) or
                   dfs(i,j-1,idx+1) or
@@ -35,8 +35,8 @@ class Solution:
             
             return res
 
-        for row in range(R):
-            for col in range(C):
+        for r in range(R):
+            for c in range(C):
                 if board[r][c]==word[0]:
                     if dfs(r,c,0):
                         return True
