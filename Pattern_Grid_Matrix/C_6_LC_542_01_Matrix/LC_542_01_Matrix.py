@@ -42,9 +42,8 @@ class Solution:
                 nc = c + dc
                 if 0 <= nr < m and 0 <= nc < n:
                     if ans[nr][nc] == -1:
-                        ans[nr][nc] = (
-                            ans[r][c] + 1
-                        )  # Only This `1` will change to appropriate distance if tommorrow the matrix is of 1&2
+                        ans[nr][nc] = ans[r][c] + 1
+                        # Only this `1` will change to appropriate distance if tommorrow the matrix is of 1 & 2
                         q.append((nr, nc))  # Also, enqueue the position (x, y).
 
         return ans
@@ -74,10 +73,8 @@ class Solution:
             for di, dj in directions:
                 ni = i + di
                 nj = j + dj
-
-                if (
-                    0 <= ni < m and 0 <= nj < n and (ni, nj) not in visited
-                ):  # new cell within bounds and not visited
+                # new cell within bounds and not visited
+                if 0 <= ni < m and 0 <= nj < n and (ni, nj) not in visited:
                     q.append((ni, nj, d + 1))  # add appropriate distance in d
                     visited.add((ni, nj))
 
