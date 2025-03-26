@@ -1,4 +1,3 @@
-
 ## How to sort a hashmap/dictionary in python based on value?
 
 ```
@@ -11,23 +10,20 @@ sort_x = sorted(x.items(), key = lambda item:item[1],reverse=False)
 >>> [(1, 1), (2, 2), (0, 3)]
 ```
 
-- **Reference :**   https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value
-
-
-
+- **Reference :** https://stackoverflow.com/questions/613183/how-do-i-sort-a-dictionary-by-value
 
 - **[Python List extend()](https://www.programiz.com/python-programming/methods/list/extend)**
+
 ```
 The extend() method takes a single argument.
     • iterable - such as list, tuple, string, or dictionary
 The extend() doesn't return anything; it modifies the original list.
 ```
 
-
-
 - **[left shift](https://processing.org/reference/leftshift.html)**
 
 Memonic (<< resembles to L)
+
 ```
 >>> 1 << 3       # 1 << 3 = 1*(2^3)
 8
@@ -36,11 +32,10 @@ Memonic (<< resembles to L)
 16
 ```
 
-
 - **[right shift](https://processing.org/reference/rightshift.html)**
 
-
 Memonic (>> resembles to R)
+
 ```
 >>> 8 >> 3     # 8 >> 3 =8 //(2^3) = 1
 1
@@ -49,15 +44,13 @@ Memonic (>> resembles to R)
 4
 ```
 
-
 ### Python Operators
 
 - **[Operators](https://www.w3schools.com/python/python_operators.asp)**
-  
 
 - '/' is the division operator
 - '//' is the quotient operator aka floor division
-- '%' is the remainder operator aka modulus 
+- '%' is the remainder operator aka modulus
 
 ```
 >>> 5/2
@@ -71,7 +64,7 @@ Memonic (>> resembles to R)
 2
 >>> 5//3
 1
->>> 
+>>>
 ```
 
 ```
@@ -80,17 +73,16 @@ Memonic (>> resembles to R)
 ```
 
 #### **[divmod()](https://www.toppr.com/guides/python-guide/references/methods-and-functions/methods/built-in/divmod/python-divmod/)**
-- using the in-built python divmod function, you can find the remainder and the quotient of any two numbers given as the input. 
 
+- using the in-built python divmod function, you can find the remainder and the quotient of any two numbers given as the input.
 
 ```
 >>> divmod(5,2)
 (2, 1)
- 
+
 >>> divmod(5,3)
 (1, 2)
 ```
-
 
 #### pairwise
 
@@ -106,3 +98,15 @@ Memonic (>> resembles to R)
 >>> zip(a, a[1:])
 [('a', 'b'), ('b', 'c')]
 ```
+
+### Python Set Data Structure
+
+visited = set()
+visited.add((2,3))
+print(visited) # {(2, 3)}
+
+seen = set((2,3))
+print(seen) # {2, 3}
+
+set1 = set([(1,3,4),(2,3,5)])
+print(set1) #{(2, 3, 5), (1, 3, 4)}

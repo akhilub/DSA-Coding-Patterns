@@ -1,9 +1,7 @@
 class Solution:
-  def findMinimumDeletions(self, st):
-      
-      def LPS(st):
-          pass
+    def findMinimumDeletions(self, st):
 
-    return len(st) - LPS(st)            #LPS - Longest Palindromic Subsequence
+        def LPS(st):
+            pass
 
-
+        return len(st) - LPS(st)  # LPS - Longest Palindromic Subsequence

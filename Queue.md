@@ -1,14 +1,7 @@
-- FIFO 
+- FIFO
 
-```
------------------------------------------
-|Operation                 |    TC      |
------------------------------------------
-|Add or Remove Element     |      O(1)  |                               
-|  at the end of queue     |            |
-|                          |            |
-|Add or Remove Element     |      O(1)  |                          
-|  at the start of queue   |            |
-|                          |            |
------------------------------------------
-```
+|                  Operation                  |  TC  |
+| :-----------------------------------------: | :--: |
+|  Add or Remove Element at the end of queue  | O(1) |
+| Add or Remove Element at the start of queue | O(1) |
+|                                             |      |
