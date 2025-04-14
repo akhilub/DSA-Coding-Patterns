@@ -24,7 +24,7 @@ During the binary search, we take the middle value mid = (l+r+1)//2 = ⌊(l+r+1)
 
 If the total is greater than or equal to k, it means each child can receive v candies, so we update the left boundary l = mid. 
 Otherwise, we update the right boundary r = mid - 1. Finally, when l = r, we have found the maximum v.
-The time complexity is O(n X log M), where n is the length of the array candies, and M is the maximum value in the array candies. The space complexity is O (1).
+The time complexity is O(nxlog M), where n is the length of the array candies, and M is the maximum value in the array candies. The space complexity is O (1).
 
 '''
 

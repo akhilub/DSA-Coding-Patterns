@@ -120,3 +120,23 @@ class Solution:
 
 
 
+
+
+
+
+#Different Algorithm Using a dictionary or hashtable
+class Solution:
+    def isValid(self, s: str) -> bool:
+        mp = { 
+            '(':')', 
+            '[':']',
+            '{':'}'
+        }
+        stk = []
+        for ch in s:
+            if ch in mp:
+                stk.append(mp[ch])
+            elif not stk or stk.pop()!=ch:
+                return False
+        
+        return len(stk)==0

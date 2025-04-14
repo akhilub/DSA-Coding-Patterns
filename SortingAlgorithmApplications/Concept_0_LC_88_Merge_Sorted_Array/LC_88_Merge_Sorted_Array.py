@@ -16,12 +16,12 @@ class Solution:
             else:
                 res+=[b[j]]
                 j+=1
-        while i<la:
-            res+=[a[i]]
-            i+=1
-        while j<lb:
-            res+=[b[j]]
-            j+=1
+        while i<la:         #}
+            res+=[a[i]]     #} res.extend(a[i:])
+            i+=1            #}
+        while j<lb:         #}
+            res+=[b[j]]     #} res.extend(b[j:])
+            j+=1            #}
         return res
     
     
@@ -33,8 +33,19 @@ if __name__=="__main__":
     
     Solution().merge(nums1,m,nums2,n)
     print(nums1)
-    
 
+
+'''
+while i<la:
+    res+=[a[i]]
+    i+=1
+    ||
+    ||
+    ||
+res.extend(a[i:])
+
+
+'''
 
 
 
