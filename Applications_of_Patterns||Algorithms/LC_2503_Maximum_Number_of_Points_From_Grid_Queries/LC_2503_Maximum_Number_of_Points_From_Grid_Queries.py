@@ -1,4 +1,4 @@
-#Approach : BFS +PQ (MinHeap)
+#Approach : BFS + PQ (MinHeap)
 #When input modification is allowed
 
 
@@ -40,7 +40,7 @@ class Solution:
 
 
 
-#Approach : BFS +PQ (MinHeap)
+#Approach : BFS + PQ (MinHeap)
 #When input modification is not allowed
 
 '''
