@@ -2,7 +2,7 @@
 
 #Recursive Algorithm
 #If the tree is None return 0, 
-#otherwise it will be the max of left the right tree value respectively plus 1  which we can recursively to get the value
+#otherwise it will be the max of left the right tree value respectively plus 1 - which we can recursively call to get the value
  
 #TC: O(N) where N is the number of nodes in BT, since each node is traversed only once in the recursion.
 #SC: O(N) due to recursion

@@ -21,7 +21,7 @@ class Solution:
 
         R, C = len(board), len(board[0])
         ans = []
-        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # Up, Down, Left, Right
+        directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # Left, Right, Down, Up
 
         def dfs(i, j, parent):
             # Out of bounds check

@@ -36,7 +36,7 @@ class MyHashMap:
         
 
     def remove(self, key: int) -> None:
-        return self.d[key]=-1
+        self.d[key] =-1
 
 
 

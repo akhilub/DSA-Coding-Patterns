@@ -1,12 +1,12 @@
-#Approach1:
+#Approach1: 1D-Binary Seach
 #TC:mlog(n) where m is no of array and n is the no of elements in each array
 #SC:O(1)
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
-        def binarySearch(arr,T):
-            l,r=0,len(arr)-1
-            while l<=r:
-                mid = (r+l)//2 or # floor((r+l)/2) or (l+r)>>1 or (r-(r-l)//2)
+        def binarySearch(arr , target):
+            l, r = 0, len(arr)-1
+            while l <= r:
+                mid = (r+l)//2  #or floor((r+l)/2) or (l+r)>>1 or (r-(r-l)//2)
                 if arr[mid]==target:
                     return True
                 
@@ -41,7 +41,7 @@ class Solution:
 
             if matrix[row][col]>target:
                 row-=1 # all numbers in that row are even larger
-            else:#matrix[row][col]<target
+            else:                       #matrix[row][col]<target
                 col+=1 # all numbers in this row from current position col are smaller
 
         return False

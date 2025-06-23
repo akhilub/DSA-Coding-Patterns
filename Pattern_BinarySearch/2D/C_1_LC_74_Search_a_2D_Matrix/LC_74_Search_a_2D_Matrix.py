@@ -59,8 +59,6 @@ class Solution:
         return False
 
 
-
-
 #Optimised Solution:
 '''
 Binary Search
@@ -88,17 +86,25 @@ class Solution:
 
 
 
-#Just another way of writing Binary Search
+#Another way of writing Binary Search
 class Solution:
     def searchMatrix(self, matrix: List[List[int]], target: int) -> bool:
+        #Get Dimensions
         m , n = len(matrix),len(matrix[0])
+
+        #Initialize BS boundaries
         left ,right = 0 , m*n
+
+        #Start Search
         while left<right:
-            #crucial steps
-            mid = (left+right)//2  # mid = (left+right)>>1
-            i , j = mid//n, mid % n #To get the row and column of the midpoint in the matrix
+            #crucial steps 
+            mid = (left+right)//2       # mid = (left+right)>>1
+            
+            # Convert 1D index to 2D indices
+            i , j = mid//n, mid % n     #To get the row and column of the midpoint in the matrix
 
 
+            # Compare current element with target
             if matrix[i][j]==target:
                 return True
             

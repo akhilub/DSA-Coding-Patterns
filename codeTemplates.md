@@ -256,7 +256,7 @@
 
 **Note for Binary Search Genric Template:**
 - PROBLEM_CONDITION => F() COMPARISON_OPERATOR target   
-- On LHS `F()` could be `arr;f();LLinkedList`  
+- On LHS `F()` could be `arr;f();LinkedList`  
 - On RHS `target` would be `some value` to compare
 
 

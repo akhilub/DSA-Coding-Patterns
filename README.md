@@ -139,4 +139,4 @@ Incrementally building solutions, exploring all possible paths, and abandoning i
 
 ## What to think, which algorithm to use based on the Input?
 
-![DSA FlowChaer](./DSA%20Flowchart.PNG)
+![DSA FlowChart](./DSA%20Flowchart.PNG)

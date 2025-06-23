@@ -116,7 +116,7 @@ class Solution:
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         m_arr =self.mergeTwoSortedArray(nums1,nums2)  # m_arr --> mergedSortedArray
-        l ,r =0,n-1
+        l , r = 0, n-1
         mid = (l+r)//2
         if n&1:
             med = m_arr[mid]
@@ -125,7 +125,7 @@ class Solution:
         return med
         
     def mergeTwoSortedArray(self,a:List[int],b:List[int]):
-        i, j , la,lb = 0,0,len(a),len(b)
+        i, j , la, lb = 0, 0, len(a), len(b)
         res = []
         while i<la and j <lb:
             if a[i]<b[j]:

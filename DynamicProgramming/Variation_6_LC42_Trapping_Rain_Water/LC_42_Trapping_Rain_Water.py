@@ -5,9 +5,9 @@ and `right[i]` as the height of the highest bar to the right of and including th
 Therefore, the amount of rainwater that can be trapped at index `i` is `min(left[i],right[i])-height[i]`. 
 We traverse the array to calculate `left[i]` and `right[i]`, and the final answer is 
 
-n-1
-∑  min( left[i], right[i] ) - height[i]
-i=0
+ n-1
+  ∑  min( left[i], right[i] ) - height[i]
+ i=0
 
 The time complexity is O(n), and the space complexity is O(n). Here, n is the length of the array.
 

@@ -33,15 +33,17 @@ class Solution:
 
 
 #Sliding Window Algorithm
+
 '''
 1.We can keep tracking a current window, and use two pointer to apply the sliding window algorithms. 
+
 2.We can expand the window to the right greedily as long as the character is not existent in the current window.
+
 3.Otherwise, we need to move the left pointer and erase the corresponding characters at left pointer out of the window until the current character at the right pointer is no longer in the window.
 
 4.If we don’t move the left pointer (shrink the window), the substring is not valid no matter how we move the right pointer.
 
-•The time complexity is O(N) as the left and right pointers both move towards the right – 
-and the space complexity is O(N) as we need a hash set to store the elements in the current window.
+•The time complexity is O(N) as the left and right pointers both move towards the right and the space complexity is O(N) as we need a hash set to store the elements in the current window.
 '''
 
 

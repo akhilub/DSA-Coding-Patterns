@@ -1,6 +1,12 @@
 #Approach:PrefixSum
 
 #Using Two arrays
+# To solve this problem efficiently without using division, we’ll use two additional arrays.
+# First, we'll create a left product array “from_left” where each element at index i represents the product of all elements to the left of nums[i].
+# Then, we'll create a right product array “from_right” where each element at index i represents the product of all elements to the right of nums[i].
+# Finally, we'll compute the result array “res” by multiplying corresponding elements from “from_left” and “from_right”.
+# Time complexity of this solution is O(n).
+
 #TC:O(n)
 #SC:O(n)
 
@@ -9,21 +15,36 @@ class Solution: # 2 extra arrays
         n = len(nums)
         res = [1]*n
 
+        #Initialize left product array
         from_left = [1]*n
         # Product from index=0 to index=i-1
         for i  in range(1,n):
             from_left[i] = from_left[i-1]*nums[i-1]
         
-        # Product from index=n-1 to current position
+        #Initialize right product array
         from_right = [1]*n
+        # Product from index=n-1 to current position
         for i  in range(n-2,-1,-1):
             from_right[i] =from_right[i+1]*nums[i+1] 
 
+        #Compute answer
         for i in range(n):
             res[i] = from_left[i]*from_right[i]
 
         return res
 
+"""
+res = [1]*n
+for i in range(n):
+    res[i] = from_left[i]*from_right[i]
+
+    ||
+    ||
+    ||
+
+res = [from_left[i]*from_right[i] for i in range(n)]
+
+"""
 
 
 #Optimized Approach 
