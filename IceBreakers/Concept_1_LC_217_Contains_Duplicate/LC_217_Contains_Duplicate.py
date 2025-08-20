@@ -1,8 +1,9 @@
 #Approach: Use a HashSet
-#We traverse the array and record the elements that have appeared in the hash set `seen`. If an element appears for the second time, it means that there are duplicate elements in the array, and we directly return true.
+#We traverse the array and record the elements that have appeared in the hash set `seen`. 
+# If an element appears for the second time, it means that there are duplicate elements in the array, and we directly return true.
 
-#TC: O(N) ,where N is in the number of elements in the input array
-#SC: O(N)
+#TC: O(n) ,where n is in the number of elements in the input array
+#SC: O(n)
 
 
 class Solution:

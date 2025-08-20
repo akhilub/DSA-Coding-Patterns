@@ -17,7 +17,7 @@ class Solution:
             for _ in range(-freq):
                 ans.append(ch)
                 
-            return ''.join(ans) 
+        return ''.join(ans) 
 
 '''
 The time complexity of the above algorithm is O(DxlogD) where ‘D’ is the number of distinct characters in the input string. 

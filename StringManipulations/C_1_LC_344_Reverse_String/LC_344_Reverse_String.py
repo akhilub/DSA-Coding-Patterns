@@ -8,6 +8,17 @@ class Solution:
             l+=1
             r-=1
 
+#Approach: One Pointer
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        n = len(s)
+        for i in range(n//2):
+            s[i] , s[n-i-1] = s[n-i-1], s[i]
+
+#Approach: Pythonic
 class Solution:
     def reverseString(self,List[str]) -> None:
         s[:] == s[::-1]

@@ -57,7 +57,7 @@ class Solution:
 class Solution:
     def subsets(self, nums: List[int]) -> List[List[int]]:
         ans = []
-        def dfs(s: int, path: List[int]) -> None:
+        def dfs(s: int, path: List[int]) -> None: # s - start index
             ans.append(path)
 
             for i in range(s, len(nums)):

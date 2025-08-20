@@ -22,7 +22,7 @@ class Solution:
             if i>0 and nums[i] == nums[i - 1]:
                 continue
             
-            for j in range(i+1,n-2):
+            for j in range(i+1, n-2):
                 if (j > i + 1 and nums[j] == nums[j - 1]):
                     continue
                 
@@ -69,9 +69,10 @@ class Solution:
     def fourSum(self, nums: List[int], target: int) -> List[List[int]]:
         ans = set()
         nums.sort()
-        for i in range(len(nums)):
-            for j in range(i+1,len(nums)):
-                l,r = j+1,len(nums)-1
+        n = len(nums)
+        for i in range(n):
+            for j in range(i+1,n):
+                l,r = j+1, n-1
                 while l<r:
                     s = nums[i]+nums[j]+nums[l]+nums[r]
                     if s == target:

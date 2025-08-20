@@ -14,7 +14,7 @@
 #                |                 |        |         |          |          |
 
 
-#Approach : Sorting +One pass traversal
+#Approach : Sorting + One pass traversal
 
 
 #Considering the problem statement

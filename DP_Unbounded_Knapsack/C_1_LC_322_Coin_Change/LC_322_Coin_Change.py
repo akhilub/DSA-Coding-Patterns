@@ -14,6 +14,8 @@ In particular, the DP can be classified into Top-Down or Bottom-up.
 
 
 #DYNAMIC PROGRAMMING ALGORITHMS TO MAKE CHANGE
+#Traversing using amount first (Permutations)
+
 #Both DP algorithms have O(N) time and O(N) space.
 
 '''
@@ -74,18 +76,28 @@ Then add 1 and compare the value in the current dp array, and update the dp arra
 
 class Solution:
     def coinChange(self,coins,amount):
-        # dp[i] := the minimum number Of coins to make up i
-        dp = [float('inf')]* (amount+1)             #instead of [float('inf')] we can also use [amount+1]
-        dp[0] = 0
+
+        # Initialize dp array with large value
+        dp = [float('inf')]* (amount+1)             # dp[i] := the minimum number Of coins to make up i
+        dp[0] = 0                                   #base case: 0 coins needed to make amount 0
         
+        # Compute minimum coins for each amount
         for i in range(1,amount+1):                 #here i is integer amount from 1 till amount
             for c in coins:
-                if i>=c and dp[i-c]!=float('inf'):
+                if i>=c and dp[i-c]!=float('inf'):  #if coin can be used for current amount
                     dp[i] = min(dp[i],dp[i-c]+1)
 
         return dp[amount] if dp[amount]!=float('inf') else -1
 
 
+#instead of [float('inf')] we can also use [amount+1]
+'''
+dp = [float('inf')]* (amount+1)
+            ||
+            ||
+            ||
+dp = [amount+1]* (amount+1) 
+'''
 
 
 
@@ -127,7 +139,7 @@ class Solution:
 
 
 '''Write this in interviews'''
-#Approach 3: Traversing using coins first
+#Approach 3: Traversing using coins first (Combinations)
 
 #TC:O(mxn)
 #SC:O(n) 
@@ -166,7 +178,6 @@ dp[0] = 0
             ||
             ||
 dp = [0]+[amount + 1] * (amount)
-
 '''
 
 

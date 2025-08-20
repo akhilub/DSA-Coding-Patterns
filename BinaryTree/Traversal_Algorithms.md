@@ -82,6 +82,7 @@ The reverse in-order visits the nodes in RNL that is recursively traversing righ
 ```
 def reverseInorder(root):
     if root is None:
+        return
     reverseInOrder(root.right)
     print(root.val) #visit node
     reverseInOrder(root.left)

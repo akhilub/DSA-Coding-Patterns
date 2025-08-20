@@ -99,7 +99,7 @@ class Solution:
     def maximalSquare(self, matrix: List[List[str]]) -> int:
         m, n = len(matrix), len(matrix[0])
         dp = [0] * (n + 1)  # Use n+1 to avoid index out-of-bound issues
-        mx = 0
+        mx = 0              #mx - max side
         prev = 0  # This represents dp[j-1] from the previous row
 
         for i in range(m):

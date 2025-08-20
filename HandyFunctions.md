@@ -15,7 +15,8 @@ def getDigits(n:int):
 
 print(getDigits(123))  #[3,2,1]
 ```
-OR 
+
+OR
 
 ```
 getDigits = lambda n: list(map(int, str(n)))[::-1]
@@ -31,6 +32,7 @@ list(...): Converts the map object to a list.
 ## In Order
 
 - To get the digits of a positive integer in order
+
 ```
 def getDigits(n:int):
     lst = []
@@ -42,15 +44,13 @@ def getDigits(n:int):
 
 print(getDigits(123))  #[1,2,3]
 ```
+
 OR
 
 ```
 getDigits = lambda n: list(map(int, str(n)))
 print(getDigits(12345))  # [1, 2, 3, 4, 5]
 ```
-
-
-
 
 # Make Number from Digits
 
@@ -61,6 +61,7 @@ def makeNumber(digits:List[int]):
         num = num*10+digit
         return num
 ```
+
 OR
 
 ```
@@ -71,19 +72,16 @@ makeNumber = lambda digits: reduce(lambda num, dig: num * 10 + dig, digits, 0)
 OR
 
 - Not Recommended it is a work around
+
 ```
 makeNumber = lambda digits: int(''.join(map(str, digits)))
 
 print(makeNumber([1,2,3,4,5])) # 12345
 ```
 
-
-
-
 # Factorial
 
 - Given n is a non-negative integer i.e <span>n ∈ ℤ<sup>+</sup></span> return its factorial.
-
 
 ```
 def factorial(n:int):
@@ -96,9 +94,11 @@ def factorial(n:int):
         return nb[i]
     return f(n)
 ```
+
 OR
 
 - No memory DP/iterative approach
+
 ```
 def factorial(n:int):
     if n==0 or n==1:
@@ -117,7 +117,36 @@ from math import factorial
 factorial(n)
 ```
 
+# Factorial Trailing Zeroes
 
+- Given an integer n, return the number of trailing zeroes in n!.
+
+> Recursion
+
+```
+def trailingZeroes(n: int) -> int:
+    nb={}
+    def f(i):
+        if i==0:
+            return 0
+        if i in nb:
+            return nb[i]
+        i = i // 5
+        nb[i] =  i + f(i)
+        return nb[i]
+    return f(n)
+```
+
+> Iteration
+
+```
+def trailingZeros(n: int) -> int:
+    ans = 0
+    while n >0:
+        n = n // 5
+        ans = ans + n
+    return ans
+```
 
 # Reverse a positive integer
 
@@ -132,16 +161,17 @@ def reverse(n:int):
         n = n//10
     return ans
 ```
+
 OR
+
 ```
 reverse = lambda n: int(str(n)[::-1])
 ```
 
-
 # Reverse a String
 
 - Given a string s reverse it in place,.
-  I:s = 'Hello World'   O:'dlroW olleH'
+  I:s = 'Hello World' O:'dlroW olleH'
 
 ```
 def reverseString(s:str):
@@ -153,23 +183,24 @@ def reverseString(s:str):
         r-=1
     return ''.join(chars)
 ```
+
 - Strings are immutable in python
-OR
+  OR
+
 ```
 def reverseString(s:str):
     return s[::-1]
 ```
+
 OR
+
 ```
 reverseString = lambda s:s[::-1]
 ```
 
 # Reverse words in a sentence
 
-- Given a 
-
-
-
+- Given a
 
 # Reverse a List/Array
 
@@ -182,27 +213,33 @@ def reverseList(arr:List):
         r-=1
     return arr
 ```
-OR 
+
+OR
+
 ```
 def reverseList(arr:List):
     return arr[::-1]
 ```
+
 or
+
 ```
 reverseList = lambda arr: arr[::-1]
 ```
+
 OR
+
 ```
 def reverseList(arr:List):
     n = len(arr)
-    for i in range(n//2):       #<------- Note we need to traverse till the middle (n//2) because we can swap elements around it , 
-      arr[i],arr[n-1-i] = arr[n-1-i],arr[i]        #do not got till n otherwise we will swap them back 
+    for i in range(n//2):       #<------- Note we need to traverse till the middle (n//2) because we can swap elements around it ,
+      arr[i],arr[n-1-i] = arr[n-1-i],arr[i]        #do not got till n otherwise we will swap them back
     return arr
 ```
 
 # Transpose of Matrix/Grid
 
-- Given an m x n 2D matrix where m ≠ n , return its transpose 
+- Given an m x n 2D matrix where m ≠ n , return its transpose
 
 ```
 def transpose(grid:List[List[int]]):
@@ -222,7 +259,7 @@ def transpose(self, matrix: List[List[int]]) -> List[List[int]]:
     return list(zip(*matrix))
 ```
 
-OR 
+OR
 
 ```
 transpose = lambda matrix:list(zip(*matrix))
@@ -234,11 +271,11 @@ transpose = lambda matrix:list(zip(*matrix))
 def transposeInPlace(grid:List[List[int]]):
       m = len(grid)
       for r in range(m):
-          for c in range(r):  #<------- Note we need to traverse till the diagonal of each row (r) because we can swap elements around the diagonal in one pass ,    
+          for c in range(r):  #<------- Note we need to traverse till the diagonal of each row (r) because we can swap elements around the diagonal in one pass ,
               grid[r][c] , grid[c][r] = grid[c][r], grid[r][c]
 ```
-      
-# Rotate an image 
+
+# Rotate an image
 
 ```
 def rotated(array_2d):
@@ -246,17 +283,14 @@ def rotated(array_2d):
     return [list(row) for row in list_of_tuples]
     # return map(list, list_of_tuples)
 ```
+
 OR
+
 ```
 def rotateImage(matrix):
     rotated = [list(tupleRow) for tupleRow in zip(*matrix[::-1])]
     return rotated
 ```
-
-
-
-
-
 
 # Function To Check if all character are unique in a string:
 
@@ -266,7 +300,6 @@ def checkUniqueCharacter(s:str):
 
 TC:O(N)
 ```
-
 
 # Function to Check if a number is even or odd
 
@@ -278,7 +311,7 @@ If we observe the binary representation of a number we will know that the rightm
 
 ```
 def isEvenOdd(n):
- 
+
   # if n&1 == 0, then num is even
   if n & 1:
     return 'odd'
@@ -296,7 +329,7 @@ Or reverse them for a little speed improvement, since any number above 0 is also
 
 ```
 def isEvenOdd(n):
- 
+
   # if n%2 == 0, then num is even
   if n%2:
     return False
@@ -307,13 +340,10 @@ def isEvenOdd(n):
 ```
 
 # Sort an Array
+
 - Using Sorting Algorithm
 
-
-
-
-
-## Merge Two Sorted Array Using Two Pointer 
+## Merge Two Sorted Array Using Two Pointer
 
 Given two sorted arrays/lists, if we want to merge it, we can do this optimally using two pointers in O(N+M) where N and M are the sizes of the two sorted array/list respectively.
 
@@ -344,7 +374,7 @@ def mergeTwoSortedArray(a:List[int],b:List[int])->List[int]:
 
 ```
 
-## MergeSort 
+## MergeSort
 
 - Based on this we can recursive apply merging sorting algorithm to a list. We continuously divide the list into equal two parts. When the partition size is small enough (one element or none), we know it is by natural sorted. Then we start merge these small partitions into bigger partitions until we get the entire list sorted.
 
@@ -378,8 +408,6 @@ def mergeSort(nums: List[int]) -> List[int]:
 
 - **The quick sorting algorithm is not stable – as the keys of same values after sorting may not keep their original order.**
 
-
-
 ```
 Input: nums = [5,2,3,1]
 Output: [1,2,3,5]
@@ -387,10 +415,10 @@ Output: [1,2,3,5]
 def quickSort(self, nums: List[int]) -> List[int]:
         if len(nums)<=1:
             return nums
-        
+
         pivot = random.choice(nums)
         eq,smaller,bigger = [],[],[]
-        
+
         for num in nums:
             if num == pivot:
                 eq+=[num]
@@ -398,15 +426,12 @@ def quickSort(self, nums: List[int]) -> List[int]:
                 smaller+=[num]
             else:
                 bigger+=[num]
-        
+
         return quickSort(smaller)+eq+quickSort(bigger)
 ```
 
-
-
-
-
 # Check if a string is Palindrome
+
 ```
 def isPalindrome(s:str):
     l , r = 0 ,len(s)-1
@@ -419,19 +444,25 @@ def isPalindrome(s:str):
 print(isPalindrome('racecar'))  #True
 print(isPalindrome('Akhil'))    #False
 ```
+
 OR
+
 ```
 def isPalindrome(s:str):
     return s==s[::-1]
 ```
+
 OR
+
 ```
 isPalindrome = lambda s:s==s[::-1]
 ```
+
 OR
+
 ```
 def is_palindromic(s:str):
-    return all(s[i] == s[~i] for i in range(len(s) // 2)) 
+    return all(s[i] == s[~i] for i in range(len(s) // 2))
 ```
 
 # Reverse a Graph (Adjacency List)
@@ -441,7 +472,7 @@ def reverseGraph(graph:List[List[int]]):
     n = len(graph)                      #no of vertices
     rev = [[] for _ in range(n)]        #create the graph with just vertices
 
-    for u , v in enumerate(graph):      
+    for u , v in enumerate(graph):
         for k in v:                     # iterate over each edge
             res[k].append(u)            # add reversed edge
 
@@ -463,7 +494,7 @@ def convertGraphInput(edges: List[List[int]]):
         G[e].append(s)
     return G
 
-//G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]}) 
+//G is now defaultdict(list[int], {0: [1, 2], 1: [0, 2], 2: [1, 0]})
 ```
 
 ## Convert Graph Adjacency Matrix input to Adjacency List output
@@ -480,7 +511,7 @@ def adj_list(grid):
     for i in range(len(grid)):
         neighbors = []
         for j in range(len(grid[i])):
-            if grid[i][j]==1 and i!=j: #Exclude self loop           
+            if grid[i][j]==1 and i!=j: #Exclude self loop
                 neighbors.append(j)
         G[i] = neighbors
     return G
@@ -501,66 +532,43 @@ def adj_list(grid):
     G=defaultdict(list)
     for i in range(len(grid)):
         for j in range(len(grid[i])):
-            if grid[i][j]==1 and i!=j: #Exclude self loop           
+            if grid[i][j]==1 and i!=j: #Exclude self loop
                 G[i].append(j)
     return G
 
 print(G) // G is now defaultdict(<class 'list'>, {0: [1], 1: [0]})
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # Merge K Sorted Arrays/Lists
+
 ```
 def mergeKSortedArrays(self, lists: List[List[int]]) -> List[int]:
-    pq= [] 
+    pq= []
     # Initialize the priority queue with the first element of each sorted list
     for i, arr in enumerate(lists):
         if arr: # Check if the list is not empty
             pq.append((arr[0], i , 0))
     heapify(pq)
-    
+
     merged_list = []
-    
+
     while pq:
         # Extract the smallest element from the heap
         s_val, li, ei = heappop(pq)
         merged_list.append(s_val)
-        
+
         # If there is a next element in the same list, add it to the heap
         n_ei = ei + 1
         if n_ei < len(lists[li]):
             next_val = lists[li][n_ei]
             heappush(pq, (next_val, li, n_ei))
-    
+
     return merged_list
 ```
+
 OR
 **Note**:The heapq.merge function expects the input to be iterables, such as lists or generators. However, ListNode objects are not directly iterable,
+
 ```
 def mergeKSortedArrays(self, lists: List[List[int]]) -> List[int]:
     return list(heapq.merge(*lists))

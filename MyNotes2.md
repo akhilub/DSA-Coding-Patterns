@@ -88,14 +88,14 @@ Memonic (>> resembles to R)
 
 ```
 >>> from itertools import pairwise
->>> a = ['a','b','c']
->>> pairwise(a)
+>>> arr = ['a','b','c']
+>>> pairwise(arr)
 <itertools.pairwise object at 0x108458730>
->>> list(pairwise(a))
+>>> list(pairwise(arr))
 [('a', 'b'), ('b', 'c')]
 
-# same as pairwise()
->>> zip(a, a[1:])
+# equivalent to pairwise()
+>>> zip(arr, arr[1:])
 [('a', 'b'), ('b', 'c')]
 ```
 

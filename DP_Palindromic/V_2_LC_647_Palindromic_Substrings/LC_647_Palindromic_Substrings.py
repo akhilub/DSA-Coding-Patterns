@@ -37,11 +37,7 @@ class Solution:
 
 class Solution:
     def countSubstrings(self, s: str) -> int:
-        def f(
-            l: int, r: int
-        ) -> (
-            int
-        ):  # f() aka extendPalindromes() aka expand() - a function that return the count of palindromic substring in a given string
+        def f(l: int, r: int) -> (int):  # f() aka extendPalindromes() aka expand() - a function that return the count of palindromic substring in a given string
             count = 0
             while l >= 0 and r < len(s) and s[l] == s[r]:
                 count += 1

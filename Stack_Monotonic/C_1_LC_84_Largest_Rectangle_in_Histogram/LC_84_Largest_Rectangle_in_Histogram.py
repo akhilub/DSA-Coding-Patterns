@@ -48,7 +48,8 @@ class Solution:
 
 
 
-#Another way of writing monotonic stack
+#Another way of writing monotonic stack (Increasing)
+#Write this approach in interviews
 
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:
@@ -70,7 +71,7 @@ class Solution:
 
 
 #Best optimized solution
-#Write this approach in interviews
+
 
 class Solution:
     def largestRectangleArea(self, heights: List[int]) -> int:

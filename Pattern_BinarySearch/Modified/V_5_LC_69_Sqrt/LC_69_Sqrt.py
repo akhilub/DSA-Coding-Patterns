@@ -25,7 +25,7 @@ class Solution:
         while l<=r:
             m = floor((l+r)/2) #stick to this
             if m*m == x:
-                return mid
+                return m
             elif m*m > x:
                 r = m - 1
             else:

@@ -14,3 +14,6 @@ class Solution:
                 duplicateNumbers+=[nums[i]] # Add the duplicates to the list.
                 
         return duplicateNumbers
+    
+
+

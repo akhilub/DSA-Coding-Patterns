@@ -4,7 +4,6 @@
 
 '''
 To find total no of edges , we calculate the height/depth of the left & right subtrees
-
 '''
 
 # #Defination of binary TreeNode
